@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-navigation-drawer v-model="drawer" fixed app>
       <v-list>
         <v-list-item
@@ -19,7 +19,14 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar :clipped-left="clipped" fixed app>
+    <v-app-bar
+      fixed
+      flat
+      app
+      hide-on-scroll
+      color="rgba(255,255,255,0.5)"
+      height="72px"
+    >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
     </v-app-bar>
@@ -40,7 +47,6 @@
 export default {
   data() {
     return {
-      clipped: false,
       drawer: false,
       items: [
         {
@@ -69,3 +75,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.v-app-bar.theme--light.v-sheet {
+  border-bottom: 1px solid #d3486a !important;
+}
+</style>
