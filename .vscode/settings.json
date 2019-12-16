@@ -2,5 +2,7 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": false,
   "editor.formatOnType": true,
-  "eslint.autoFixOnSave": true
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
