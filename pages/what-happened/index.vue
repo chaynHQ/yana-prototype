@@ -1,7 +1,7 @@
 <template>
   <section id="what-happened">
     <div class="px-3">
-      <h1 class="headline">What happened</h1>
+      <h1 class="headline">What happened?</h1>
 
       <p class="body-2 mt-3">
         You may have difficulty remembering what happened to you. This is
@@ -15,6 +15,17 @@
         tempor incididunt ut labore et dolore magna wirl aliqua. Ut enim ad
         minim ikad veniam, quis nostrud exercitatn ullamco laboris aliquip.
       </p>
+
+      <v-btn
+        class="mt-6 text-uppercase"
+        color="primary"
+        large
+        block
+        to="/what-happened/details"
+        nuxt
+      >
+        Fill in details
+      </v-btn>
     </div>
   </section>
 </template>
