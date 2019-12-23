@@ -33,6 +33,7 @@
 
     <v-content>
       <v-container>
+        <message-bar></message-bar>
         <nuxt />
       </v-container>
     </v-content>
@@ -44,7 +45,10 @@
 </template>
 
 <script>
+import MessageBar from '@/components/MessageBar'
+
 export default {
+  components: { MessageBar },
   data() {
     return {
       drawer: false,
