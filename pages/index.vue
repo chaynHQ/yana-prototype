@@ -1,6 +1,6 @@
 <template>
   <section id="landing">
-    <div class="mt-7 px-3">
+    <div class="mt-4 px-3">
       <p class="title font-weight-bold">
         If you've been touched in a way that has made you feel uncomfortable or
         violated, use this site to find out how to get to safety, feel better

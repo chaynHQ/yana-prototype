@@ -1,10 +1,14 @@
 <template>
-  <v-row justify="space-between" class="px-3">
-    <v-col md="8" class="py-0">
+  <v-row justify="space-between" class="pb-6">
+    <v-col cols="7" class="py-0">
       <!-- TODO: messages/alerts -->
     </v-col>
-    <v-col md="4" class="py-0 pb-3 text-right">
-      <a href="#" class="text-uppercase" color="primary">
+    <v-col cols="5" class="py-0 pl-0 text-right">
+      <a
+        href="#"
+        class="subtitle-2 font-weight-bold text-uppercase"
+        color="primary"
+      >
         Leave this site
       </a>
     </v-col>

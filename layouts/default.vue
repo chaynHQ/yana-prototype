@@ -32,7 +32,7 @@
     </v-app-bar>
 
     <v-content>
-      <v-container>
+      <v-container class="mb-6">
         <message-bar></message-bar>
         <nuxt />
       </v-container>
