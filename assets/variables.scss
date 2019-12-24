@@ -5,10 +5,12 @@
 
 $border-radius-root: 2px;
 
+$background-color: #f2d5cb;
+
 @import '~vuetify/src/styles/styles.sass';
 $material-light: map-merge(
   $material-light,
   (
-    background: #f2d5cb
+    background: $background-color
   )
 );
