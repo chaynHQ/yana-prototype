@@ -76,9 +76,19 @@
         No entries recorded yet.
       </p>
 
-      <v-card v-for="e in entries" :key="e.id" class="mb-2">
-        <v-card-title>
-          <span>Entry</span>
+      <v-card
+        v-for="e in entries"
+        :key="e.id"
+        v-on:click="selectedEntry = e"
+        class="mb-2"
+      >
+        <v-card-title class="subtitle-2 flex-nowrap">
+          <span
+            v-if="e.description"
+            class="d-block text-truncate text-no-wrap"
+            >{{ e.description }}</span
+          >
+          <span v-else class="font-italic">No info yet</span>
           <v-spacer></v-spacer>
           <v-icon>
             mdi-chevron-right
