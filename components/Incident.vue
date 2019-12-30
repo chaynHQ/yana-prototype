@@ -69,7 +69,7 @@
 
     <div class="mt-6">
       <h2 class="px-3 mb-3 subtitle-2 font-weight-bold">
-        Details
+        Entries
       </h2>
 
       <p v-if="entries.length == 0" class="px-3 body-2 font-italic">
@@ -84,9 +84,9 @@
       >
         <v-card-title class="subtitle-2 flex-nowrap">
           <span
-            v-if="e.description"
+            v-if="e.what.description"
             class="d-block text-truncate text-no-wrap"
-            >{{ e.description }}</span
+            >{{ e.what.description }}</span
           >
           <span v-else class="font-italic">No info yet</span>
           <v-spacer></v-spacer>
@@ -139,7 +139,14 @@ export default {
   },
   methods: {
     newEntry() {
-      const entry = { id: nanoid(8) }
+      const entry = {
+        id: nanoid(8),
+        what: {},
+        when: {},
+        where: {},
+        people: {},
+        evidence: {}
+      }
       this.entries.push(entry)
       this.selectedEntry = entry
     }
