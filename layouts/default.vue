@@ -32,23 +32,22 @@
     </v-app-bar>
 
     <v-content>
-      <v-container class="mb-6">
+      <v-container class="px-3 py-5">
         <message-bar></message-bar>
         <nuxt />
       </v-container>
     </v-content>
 
-    <v-footer app>
-      <span>&copy; 2019 Chayn</span>
-    </v-footer>
+    <app-footer></app-footer>
   </v-app>
 </template>
 
 <script>
 import MessageBar from '@/components/MessageBar'
+import AppFooter from '@/components/AppFooter'
 
 export default {
-  components: { MessageBar },
+  components: { MessageBar, AppFooter },
   data() {
     return {
       drawer: false,
