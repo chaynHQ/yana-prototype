@@ -102,25 +102,36 @@
         </v-btn>
       </v-col>
     </v-row>
+
+    <incident-entry-form
+      :entry="selectedEntry"
+      v-on:done="selectedEntry = null"
+    ></incident-entry-form>
   </div>
 </template>
 
 <script>
 import nanoid from 'nanoid'
 
+import IncidentEntryForm from '@/components/IncidentEntryForm'
+
 export default {
+  components: { IncidentEntryForm },
   data() {
     return {
       fromDateModal: false,
       toDateModal: false,
       fromDate: null,
       toDate: null,
-      entries: []
+      entries: [],
+      selectedEntry: null
     }
   },
   methods: {
     newEntry() {
-      this.entries.push({ id: nanoid(8) })
+      const entry = { id: nanoid(8) }
+      this.entries.push(entry)
+      this.selectedEntry = entry
     }
   }
 }
