@@ -2,7 +2,7 @@
   <div>
     <div class="mt-10 px-3">
       <h2 class="subtitle-2 font-weight-bold">
-        Time period
+        Time period for the whole incident
       </h2>
 
       <v-row>
@@ -69,17 +69,17 @@
 
     <div class="mt-6">
       <h2 class="px-3 mb-3 subtitle-2 font-weight-bold">
-        Entries
+        Timeline of events within the incident
       </h2>
 
-      <p v-if="entries.length == 0" class="px-3 body-2 font-italic">
-        No entries recorded yet.
+      <p v-if="events.length == 0" class="px-3 body-2 font-italic">
+        No events recorded yet.
       </p>
 
       <v-card
-        v-for="e in entries"
+        v-for="e in events"
         :key="e.id"
-        v-on:click="selectedEntry = e"
+        v-on:click="selectedEvent = e"
         class="mb-2"
       >
         <v-card-title class="subtitle-2 flex-nowrap">
@@ -103,43 +103,43 @@
           class="mb-0 align-self-center grey--text text--darken-2"
           style="font-size: 12px; line-height: 1.33;"
         >
-          Use the plus button to add a new entry.
+          Use the plus button to add a new event to the timeline.
         </p>
       </v-col>
       <v-col cols="4" class="py-0 text-right">
-        <v-btn v-on:click="newEntry()" color="primary" fab dark depressed>
+        <v-btn v-on:click="newEvent()" color="primary" fab dark depressed>
           <v-icon>mdi-plus</v-icon>
         </v-btn>
       </v-col>
     </v-row>
 
-    <incident-entry-form
-      :entry="selectedEntry"
-      v-on:done="selectedEntry = null"
-    ></incident-entry-form>
+    <incident-event-form
+      :event="selectedEvent"
+      v-on:done="selectedEvent = null"
+    ></incident-event-form>
   </div>
 </template>
 
 <script>
 import nanoid from 'nanoid'
 
-import IncidentEntryForm from '@/components/IncidentEntryForm'
+import IncidentEventForm from '@/components/IncidentEventForm'
 
 export default {
-  components: { IncidentEntryForm },
+  components: { IncidentEventForm },
   data() {
     return {
       fromDateModal: false,
       toDateModal: false,
       fromDate: null,
       toDate: null,
-      entries: [],
-      selectedEntry: null
+      events: [],
+      selectedEvent: null
     }
   },
   methods: {
-    newEntry() {
-      const entry = {
+    newEvent() {
+      const event = {
         id: nanoid(8),
         what: {},
         when: {},
@@ -147,8 +147,8 @@ export default {
         people: {},
         evidence: {}
       }
-      this.entries.push(entry)
-      this.selectedEntry = entry
+      this.events.push(event)
+      this.selectedEvent = event
     }
   }
 }

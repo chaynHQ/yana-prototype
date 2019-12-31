@@ -7,7 +7,7 @@
   >
     <v-card v-if="show">
       <v-card-title>
-        <span class="headline">Entry</span>
+        <span class="headline">Event</span>
         <v-spacer></v-spacer>
         <v-btn v-on:click.stop="done()" color="primary">Done</v-btn>
       </v-card-title>
@@ -20,7 +20,7 @@
             </v-stepper-step>
             <v-stepper-content step="1">
               <v-textarea
-                v-model="entry.what.description"
+                v-model="event.what.description"
                 filled
                 label="Briefly describe what happened"
               ></v-textarea>
@@ -35,24 +35,24 @@
                   <v-dialog
                     ref="dateDialog"
                     v-model="dateModal"
-                    :return-value.sync="entry.when.date"
+                    :return-value.sync="event.when.date"
                     persistent
                   >
                     <template v-slot:activator="{ on }">
                       <v-text-field
-                        v-model="entry.when.date"
+                        v-model="event.when.date"
                         v-on="on"
                         label="Date"
                         readonly
                       ></v-text-field>
                     </template>
-                    <v-date-picker v-model="entry.when.date" scrollable>
+                    <v-date-picker v-model="event.when.date" scrollable>
                       <v-spacer></v-spacer>
                       <v-btn @click="dateModal = false" text color="primary"
                         >Cancel</v-btn
                       >
                       <v-btn
-                        @click="$refs.dateDialog.save(entry.when.date)"
+                        @click="$refs.dateDialog.save(event.when.date)"
                         text
                         color="primary"
                         >OK</v-btn
@@ -64,24 +64,24 @@
                   <v-dialog
                     ref="timeDialog"
                     v-model="timeModal"
-                    :return-value.sync="entry.when.time"
+                    :return-value.sync="event.when.time"
                     persistent
                   >
                     <template v-slot:activator="{ on }">
                       <v-text-field
-                        v-model="entry.when.time"
+                        v-model="event.when.time"
                         v-on="on"
                         label="Time"
                         readonly
                       ></v-text-field>
                     </template>
-                    <v-time-picker v-model="entry.when.time">
+                    <v-time-picker v-model="event.when.time">
                       <v-spacer></v-spacer>
                       <v-btn @click="timeModal = false" text color="primary"
                         >Cancel</v-btn
                       >
                       <v-btn
-                        @click="$refs.timeDialog.save(entry.when.time)"
+                        @click="$refs.timeDialog.save(event.when.time)"
                         text
                         color="primary"
                         >OK</v-btn
@@ -92,7 +92,7 @@
               </v-row>
 
               <v-checkbox
-                v-model="entry.when.approximate"
+                v-model="event.when.approximate"
                 label="Check this box if these times are approximate"
               ></v-checkbox>
             </v-stepper-content>
@@ -108,7 +108,7 @@
                 think may be helpful later.
               </p>
 
-              <v-radio-group v-model="entry.where.place" :mandatory="false">
+              <v-radio-group v-model="event.where.place" :mandatory="false">
                 <v-radio
                   v-for="o in whereOptions"
                   :key="o"
@@ -118,7 +118,7 @@
               </v-radio-group>
 
               <v-textarea
-                v-model="entry.where.notes"
+                v-model="event.where.notes"
                 filled
                 label="Extra notes"
               ></v-textarea>
@@ -145,7 +145,7 @@
 <script>
 export default {
   props: {
-    entry: {
+    event: {
       type: Object,
       required: false,
       default: null
@@ -166,7 +166,7 @@ export default {
   },
   computed: {
     show() {
-      return !!this.entry
+      return !!this.event
     }
   },
   methods: {
