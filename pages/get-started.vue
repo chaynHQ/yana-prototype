@@ -1,12 +1,12 @@
 <template>
   <section id="get-started">
     <div class="px-3">
-      <h1 class="headline">Get Started</h1>
+      <h1 class="headline">Your case</h1>
 
       <p class="body-2 mt-3">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna wirl aliqua. Ut enim ad
-        minim ikad veniam, quis nostrud exercitatn ullamco laboris aliquip.
+        Using the following buttons you can make a record of the event, access
+        support and learn more about what to expect should you decide to report
+        your experience.
       </p>
     </div>
 
@@ -19,7 +19,7 @@
         </v-icon>
       </v-card-title>
       <v-card-text>
-        Secondary line text lorem ipsum dapibus, neque id cursus faucibus
+        Here you can make notes of anything you remember.
       </v-card-text>
     </v-card>
 
@@ -32,7 +32,7 @@
         </v-icon>
       </v-card-title>
       <v-card-text>
-        Secondary line text lorem ipsum dapibus, neque id cursus faucibus
+        Information about the process involved in reporting.
       </v-card-text>
     </v-card>
   </section>

@@ -2,9 +2,9 @@
   <section id="landing">
     <div class="mt-4 px-3">
       <p class="title font-weight-bold">
-        If you've been touched in a way that has made you feel uncomfortable or
-        violated, use this site to find out how to get to safety, feel better
-        and report the assault.
+        If you’ve been touched in a way that has made you feel uncomfortable or
+        violated, use this site to find out how to get to safety, get help and
+        how to report the assault.
       </p>
 
       <v-btn
@@ -19,7 +19,8 @@
       </v-btn>
 
       <p class="mt-4 body-2">
-        Context text lorem ipsum sit dolor amet
+        We’re here to help you understand your options and what support is
+        available.
       </p>
     </div>
 
@@ -32,7 +33,7 @@
         </span>
       </p>
       <p class="body-2">
-        Context text…
+        If you need help taking care of yourself have a look at these
         <span class="text-uppercase font-weight-bold primary--text">
           First aid steps
         </span>

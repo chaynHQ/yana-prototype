@@ -4,8 +4,9 @@
       <h1 class="headline">What to expect</h1>
 
       <p class="body-2 mt-3">
-        Here you will find all the procedures these institutions need to follow,
-        and how long each step will take.
+        Here you will find information on the procedures that organisations need
+        to follow when dealing with an assault and a rough idea of how long each
+        of these steps will take.
       </p>
     </div>
 
@@ -37,6 +38,10 @@ export default {
     return {
       checklists: [
         {
+          name: 'Victim support',
+          image: 'victim-support'
+        },
+        {
           name: 'Reporting',
           image: 'reporting'
         },
@@ -55,10 +60,6 @@ export default {
         {
           name: 'Post-trial',
           image: 'post-trial'
-        },
-        {
-          name: 'Long-term victim support',
-          image: 'long-term-victim-support'
         }
       ]
     }

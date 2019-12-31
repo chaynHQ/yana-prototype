@@ -19,10 +19,16 @@
               What happened?
             </v-stepper-step>
             <v-stepper-content step="1">
+              <p class="body-2">
+                Use this form to write in as much detail as you wish to describe
+                what happened. Any details you can think of may be useful, but
+                don’t be disheartened if you can’t remember much.
+              </p>
+
               <v-textarea
                 v-model="event.what.description"
                 filled
-                label="Briefly describe what happened"
+                label=""
               ></v-textarea>
             </v-stepper-content>
 
@@ -104,8 +110,8 @@
             <v-stepper-content step="3">
               <p class="body-2">
                 Can you remember the location of your assault? Was it any of the
-                following? Feel free to click through and make any notes you
-                think may be helpful later.
+                following? Feel free to select any of these options and make any
+                notes you think may be helpful later.
               </p>
 
               <v-radio-group v-model="event.where.place" :mandatory="false">
@@ -114,6 +120,7 @@
                   :key="o"
                   :label="o"
                   :value="o"
+                  :ripple="false"
                 ></v-radio>
               </v-radio-group>
 
@@ -156,11 +163,14 @@ export default {
       dateModal: false,
       timeModal: false,
       whereOptions: [
-        'Own home',
-        "Someone's residence",
-        "Abuser's residence",
+        'Home',
+        'Perpetrator’s Residence',
         'Office',
-        'Other'
+        'Hotel',
+        'University Campus',
+        'Other public place',
+        'Other',
+        "Don't know"
       ]
     }
   },

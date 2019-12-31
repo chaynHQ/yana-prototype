@@ -5,17 +5,17 @@
 
       <p class="body-2 mt-3">
         You may have difficulty remembering what happened to you. This is
-        natural. You can fill as much or as little as you want. You can email
-        this information to yourself and show it any support worker or law
-        enforcement if you find it hard to remember.
+        natural. You can fill in as much or as little as you want and feel free
+        to step away and come back as often as you need. You can later choose to
+        email yourself these notes and show them to support workers or the
+        police if you find it hard to remember.
       </p>
     </div>
 
     <div v-if="intro" class="px-3">
       <p class="body-2">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna wirl aliqua. Ut enim ad
-        minim ikad veniam, quis nostrud exercitatn ullamco laboris aliquip.
+        We will ask you questions to help you fill out as many details as you
+        can.
       </p>
 
       <v-btn
