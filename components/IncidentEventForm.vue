@@ -13,6 +13,11 @@
       </v-card-title>
       <v-divider></v-divider>
       <v-card-text class="pa-0" style="height: 500px;">
+        <p class="body-2 px-3 pt-3 ma-0">
+          Use this form to log a single event that occurred as part of the
+          overall incident.
+        </p>
+
         <v-form>
           <v-stepper non-linear vertical class="elevation-0">
             <v-stepper-step editable step="1">
@@ -20,15 +25,17 @@
             </v-stepper-step>
             <v-stepper-content step="1">
               <p class="body-2">
-                Use this form to write in as much detail as you wish to describe
-                what happened. Any details you can think of may be useful, but
-                don’t be disheartened if you can’t remember much.
+                Write in as much detail as you wish to describe what happened.
+                Any details you can think of may be useful, but don’t be
+                disheartened if you can’t remember much.
               </p>
 
               <v-textarea
                 v-model="event.what.description"
                 filled
-                label=""
+                solo
+                dense
+                hide-details
               ></v-textarea>
             </v-stepper-content>
 
@@ -36,6 +43,15 @@
               When did it happen?
             </v-stepper-step>
             <v-stepper-content step="2">
+              <v-checkbox
+                v-model="event.when.dontKnow"
+                label="Check this box if you don't know"
+              ></v-checkbox>
+
+              <p class="body-2 font-weight-bold">
+                OR
+              </p>
+
               <v-row>
                 <v-col cols="6" class="py-0">
                   <v-dialog
@@ -48,6 +64,7 @@
                       <v-text-field
                         v-model="event.when.date"
                         v-on="on"
+                        :disabled="event.when.dontKnow"
                         label="Date"
                         readonly
                       ></v-text-field>
@@ -77,6 +94,7 @@
                       <v-text-field
                         v-model="event.when.time"
                         v-on="on"
+                        :disabled="event.when.dontKnow"
                         label="Time"
                         readonly
                       ></v-text-field>
@@ -99,6 +117,7 @@
 
               <v-checkbox
                 v-model="event.when.approximate"
+                :disabled="event.when.dontKnow"
                 label="Check this box if these times are approximate"
               ></v-checkbox>
             </v-stepper-content>
@@ -177,6 +196,18 @@ export default {
   computed: {
     show() {
       return !!this.event
+    },
+    whenDontKnow() {
+      return this.show && this.event.when.dontKnow
+    }
+  },
+  watch: {
+    whenDontKnow(value) {
+      if (this.show && value === true) {
+        this.event.when.date = undefined
+        this.event.when.time = undefined
+        this.event.when.approximate = undefined
+      }
     }
   },
   methods: {

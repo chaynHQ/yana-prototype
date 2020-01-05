@@ -81,19 +81,53 @@
         :key="e.id"
         v-on:click="selectedEvent = e"
         class="mb-2"
+        elevation="0"
       >
         <v-card-title class="subtitle-2 flex-nowrap">
-          <span
-            v-if="e.what.description"
-            class="d-block text-truncate text-no-wrap"
-            >{{ e.what.description }}</span
-          >
-          <span v-else class="font-italic">No info yet</span>
+          <span>
+            <span v-if="e.when.dontKnow" class="font-italic grey--text">
+              Date/time not known
+            </span>
+            <span v-else>
+              <span
+                v-if="!e.when.date && !e.when.time"
+                class="font-italic grey--text"
+              >
+                No date/time specified
+              </span>
+              <span v-else>
+                <span v-if="e.when.date">{{ e.when.date }}</span>
+                <span v-else class="font-italic grey--text">
+                  unknown date
+                </span>
+                <span v-if="e.when.time">
+                  <span v-if="e.when.date"> – </span>
+                  {{ e.when.time }}
+                </span>
+                <span v-else class="font-italic grey--text">
+                  unknown time
+                </span>
+                <span v-if="e.when.approximate">
+                  (approx)
+                </span>
+              </span>
+            </span>
+          </span>
           <v-spacer></v-spacer>
           <v-icon>
             mdi-chevron-right
           </v-icon>
         </v-card-title>
+        <v-card-text>
+          <div class="flex-nowrap">
+            <span
+              v-if="e.what.description"
+              class="d-block text-truncate text-no-wrap"
+              >{{ e.what.description }}</span
+            >
+            <span v-else class="font-italic">No info yet</span>
+          </div>
+        </v-card-text>
       </v-card>
     </div>
 
