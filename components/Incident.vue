@@ -97,15 +97,15 @@
               </span>
               <span v-else>
                 <span v-if="e.when.date">{{ e.when.date }}</span>
-                <span v-else class="font-italic grey--text">
-                  unknown date
+                <span v-if="!e.when.date" class="font-italic grey--text">
+                  no date
                 </span>
                 <span v-if="e.when.time">
                   <span v-if="e.when.date"> – </span>
                   {{ e.when.time }}
                 </span>
-                <span v-else class="font-italic grey--text">
-                  unknown time
+                <span v-if="!e.when.time" class="font-italic grey--text">
+                  no time
                 </span>
                 <span v-if="e.when.approximate">
                   (approx)
@@ -128,6 +128,11 @@
             <span v-else class="font-italic">No info yet</span>
           </div>
         </v-card-text>
+        <v-card-actions>
+          <v-btn v-on:click.stop="deleteEvent(e.id)" text color="warning">
+            Remove
+          </v-btn>
+        </v-card-actions>
       </v-card>
     </div>
 
@@ -155,6 +160,7 @@
 </template>
 
 <script>
+import _ from 'lodash'
 import nanoid from 'nanoid'
 
 import IncidentEventForm from '@/components/IncidentEventForm'
@@ -183,6 +189,9 @@ export default {
       }
       this.events.push(event)
       this.selectedEvent = event
+    },
+    deleteEvent(id) {
+      this.events = _.filter(this.events, (e) => e.id !== id)
     }
   }
 }
