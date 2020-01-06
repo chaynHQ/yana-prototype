@@ -39,6 +39,7 @@
     "lint-staged": "^8.2.1",
     "lodash": "^4.17.15",
     "nanoid": "^2.1.8",
-    "prettier": "^1.16.4"
+    "prettier": "^1.16.4",
+    "vuetify-dialog": "^2.0.0-rc.2"
   }
 }

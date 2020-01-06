@@ -47,7 +47,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    'vuetify-dialog/nuxt'
   ],
   /*
    ** Axios module configuration
@@ -83,5 +84,19 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  vuetifyDialog: {
+    confirm: {
+      icon: false
+    },
+    warning: {
+      icon: 'mdi-alert-circle'
+    },
+    error: {
+      icon: 'mdi-alert'
+    },
+    prompt: {
+      icon: false
+    }
   }
 }

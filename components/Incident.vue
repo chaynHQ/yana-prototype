@@ -129,7 +129,7 @@
           </div>
         </v-card-text>
         <v-card-actions>
-          <v-btn v-on:click.stop="deleteEvent(e.id)" text color="warning">
+          <v-btn v-on:click.stop="deleteEvent(e.id)" text small color="warning">
             Remove
           </v-btn>
         </v-card-actions>
@@ -191,7 +191,17 @@ export default {
       this.selectedEvent = event
     },
     deleteEvent(id) {
-      this.events = _.filter(this.events, (e) => e.id !== id)
+      this.$dialog
+        .warning({
+          text: 'Are you sure you want remove this event?',
+          title: 'Confirm',
+          persistent: true
+        })
+        .then((result) => {
+          if (result) {
+            this.events = _.filter(this.events, (e) => e.id !== id)
+          }
+        })
     }
   }
 }
