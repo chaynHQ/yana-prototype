@@ -85,7 +85,7 @@
       >
         <v-card-title class="subtitle-2 flex-nowrap">
           <span>
-            <span v-if="e.when.dontKnow" class="font-italic grey--text">
+            <span v-if="e.when.dontKnow">
               Date/time not known
             </span>
             <span v-else>
@@ -120,12 +120,26 @@
         </v-card-title>
         <v-card-text>
           <div class="flex-nowrap">
-            <span
-              v-if="e.what.description"
-              class="d-block text-truncate text-no-wrap"
-              >{{ e.what.description }}</span
+            <p
+              v-if="e.what.details"
+              class="body-2 d-block text-truncate text-no-wrap"
             >
-            <span v-else class="font-italic">No info yet</span>
+              {{ e.what.details }}
+            </p>
+            <p v-else class="body-2 font-italic grey--text">No details yet</p>
+          </div>
+          <div>
+            <v-chip
+              v-if="e.where.place"
+              small
+              color="#F2D5CB"
+              text-color="primary"
+            >
+              {{ e.where.place }}
+            </v-chip>
+            <span v-else class="font-italic grey--text">
+              No location specified
+            </span>
           </div>
         </v-card-text>
         <v-card-actions>

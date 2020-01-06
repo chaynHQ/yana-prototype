@@ -32,7 +32,36 @@
         </v-icon>
       </v-card-title>
       <v-card-text>
-        Information about the process involved in reporting.
+        See the processes involved in reporting to the police and how long it
+        takes.
+      </v-card-text>
+    </v-card>
+
+    <v-card class="mt-3">
+      <v-card-title>
+        <span>Get support</span>
+        <v-spacer></v-spacer>
+        <v-icon>
+          mdi-chevron-right
+        </v-icon>
+      </v-card-title>
+      <v-card-text>
+        Find a directory of support organisations and resources that can help
+        you.
+      </v-card-text>
+    </v-card>
+
+    <v-card class="mt-3">
+      <v-card-title>
+        <span>Track your case</span>
+        <v-spacer></v-spacer>
+        <v-icon>
+          mdi-chevron-right
+        </v-icon>
+      </v-card-title>
+      <v-card-text>
+        Use checklists to track if the right procedures are taking place in your
+        case.
       </v-card-text>
     </v-card>
   </section>

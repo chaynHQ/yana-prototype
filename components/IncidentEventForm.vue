@@ -31,7 +31,7 @@
               </p>
 
               <v-textarea
-                v-model="event.what.description"
+                v-model="event.what.details"
                 filled
                 solo
                 dense
@@ -43,6 +43,12 @@
               When did it happen?
             </v-stepper-step>
             <v-stepper-content step="2">
+              <p class="body-2">
+                Do you remember the date and time of this part of the incident?
+                This will add to your timeline. Don’t worry if you can’t
+                remember the exact date and time.
+              </p>
+
               <v-checkbox
                 v-model="event.when.dontKnow"
                 label="Check this box if you don't know"
@@ -128,9 +134,9 @@
             </v-stepper-step>
             <v-stepper-content step="3">
               <p class="body-2">
-                Can you remember the location of your assault? Was it any of the
-                following? Feel free to select any of these options and make any
-                notes you think may be helpful later.
+                Can you remember the location of your assault? Select any option
+                and make notes that may be helpful later such as what your
+                surroundings were like and any memorable items.
               </p>
 
               <v-radio-group v-model="event.where.place" :mandatory="false">
@@ -144,8 +150,11 @@
               </v-radio-group>
 
               <v-textarea
-                v-model="event.where.notes"
+                v-model="event.where.details"
                 filled
+                solo
+                dense
+                hide-details
                 label="Extra notes"
               ></v-textarea>
             </v-stepper-content>
@@ -154,13 +163,41 @@
               Who was there?
               <small>This section is optional</small>
             </v-stepper-step>
-            <v-stepper-content step="4"> </v-stepper-content>
+            <v-stepper-content step="4">
+              <p class="body-2">
+                Add details about who you remember being there or was involved
+                in this part of the incident. This information may help find
+                suspects or witnesses during an investigation.
+              </p>
+
+              <v-textarea
+                v-model="event.people.details"
+                filled
+                solo
+                dense
+                hide-details
+              ></v-textarea>
+            </v-stepper-content>
 
             <v-stepper-step editable step="5">
               Evidence
               <small>This section is optional</small>
             </v-stepper-step>
-            <v-stepper-content step="5"> </v-stepper-content>
+            <v-stepper-content step="5">
+              <p class="body-2">
+                Use this space to add details of anything that may be used as
+                physical evidence for this part of the incident. E.g screenshots
+                of call logs, messages, social media files, taxi receipts.
+              </p>
+
+              <v-textarea
+                v-model="event.evidence.details"
+                filled
+                solo
+                dense
+                hide-details
+              ></v-textarea>
+            </v-stepper-content>
           </v-stepper>
         </v-form>
       </v-card-text>

@@ -2,9 +2,9 @@
   <section id="landing">
     <div class="mt-4 px-3">
       <p class="title font-weight-bold">
-        If you’ve been touched in a way that has made you feel uncomfortable or
-        violated, use this site to find out how to get to safety, get help and
-        how to report the assault.
+        If you’ve been touched or treated in a way that has made you feel
+        uncomfortable or violated, use this site to find out how to get to
+        safety, get help and report the sexual assault.
       </p>
 
       <v-btn
@@ -19,8 +19,8 @@
       </v-btn>
 
       <p class="mt-4 body-2">
-        We’re here to help you understand your options and what support is
-        available.
+        This has been co-designed with survivors of sexual assault. We will
+        respect your privacy.
       </p>
     </div>
 
