@@ -32,9 +32,7 @@
         <p v-if="!intro" class="body-2">
           Add information about the incident in as much detail as you’re
           comfortable with. Start with what you remember first. Enter each part
-          of the incident separately. For example: I arrived at [location] and
-          spoke to [x]. Click the ‘plus’ button to add what happened next. For
-          example: I then spoke to [x]. Breaking down the incident in this way
+          of the incident separately. Breaking down the incident in this way
           will help if you’re reporting your assault to the police and you can
           refer back to this. You can come back to this and add more details if
           other details come to you later.

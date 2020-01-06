@@ -73,9 +73,16 @@
       </h2>
 
       <div class="timeline pt-3 pl-3">
-        <p v-if="events.length == 0" class="body-2 px-2 font-italic">
-          No events recorded yet.
-        </p>
+        <div v-if="events.length == 0" class="px-2">
+          <p class="body-2 font-italic">
+            No events recorded yet.
+          </p>
+          <p class="body-2">
+            Add separate events using the '+' button below. For example: one
+            event can be "I arrived at [location] and spoke to [x]", then the
+            next event can be "I then spoke to [y]".
+          </p>
+        </div>
 
         <v-card
           v-for="e in events"
