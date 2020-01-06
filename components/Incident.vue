@@ -129,14 +129,19 @@
             <p v-else class="body-2 font-italic grey--text">No details yet</p>
           </div>
           <div>
-            <v-chip
-              v-if="e.where.place"
-              small
-              color="#F2D5CB"
-              text-color="primary"
-            >
-              {{ e.where.place }}
-            </v-chip>
+            <span v-if="e.where.place">
+              Location:
+              <v-chip
+                pill
+                small
+                label
+                color="#F2D5CB"
+                text-color="primary"
+                class="px-2 ml-1"
+              >
+                {{ e.where.place }}
+              </v-chip>
+            </span>
             <span v-else class="font-italic grey--text">
               No location specified
             </span>
