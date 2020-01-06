@@ -1,3 +1,8 @@
 .theme--light.v-expansion-panels .v-expansion-panel.checklist {
   background-color: $background-color;
 }
+
+.timeline {
+  border-left: 2px dashed lighten(#D3486A, 20%);
+  margin-left: 3px;
+}

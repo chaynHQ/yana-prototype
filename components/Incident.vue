@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div class="mt-10 px-3">
+    <div class="mt-10 px-1">
       <h2 class="subtitle-2 font-weight-bold">
         Time period for the whole incident
       </h2>
 
-      <v-row>
+      <v-row class="px-3">
         <v-col cols="6" class="py-0">
           <v-dialog
             ref="fromDateDialog"
@@ -67,109 +67,116 @@
       </v-row>
     </div>
 
-    <div class="mt-6">
-      <h2 class="px-3 mb-3 subtitle-2 font-weight-bold">
+    <div class="mt-4 px-1">
+      <h2 class="mb-1 subtitle-2 font-weight-bold">
         Timeline of events within the incident
       </h2>
 
-      <p v-if="events.length == 0" class="px-3 body-2 font-italic">
-        No events recorded yet.
-      </p>
+      <div class="timeline pt-3 pl-3">
+        <p v-if="events.length == 0" class="body-2 px-2 font-italic">
+          No events recorded yet.
+        </p>
 
-      <v-card
-        v-for="e in events"
-        :key="e.id"
-        v-on:click="selectedEvent = e"
-        class="mb-2"
-        elevation="0"
-      >
-        <v-card-title class="subtitle-2 flex-nowrap">
-          <span>
-            <span v-if="e.when.dontKnow">
-              Date/time not known
-            </span>
-            <span v-else>
-              <span
-                v-if="!e.when.date && !e.when.time"
-                class="font-italic grey--text"
-              >
-                No date/time specified
+        <v-card
+          v-for="e in events"
+          :key="e.id"
+          v-on:click="selectedEvent = e"
+          class="mb-2"
+          elevation="0"
+        >
+          <v-card-title class="subtitle-2 flex-nowrap">
+            <span>
+              <span v-if="e.when.dontKnow">
+                Date/time not known
               </span>
               <span v-else>
-                <span v-if="e.when.date">{{ e.when.date }}</span>
-                <span v-if="!e.when.date" class="font-italic grey--text">
-                  no date
+                <span
+                  v-if="!e.when.date && !e.when.time"
+                  class="font-italic grey--text"
+                >
+                  No date/time specified
                 </span>
-                <span v-if="e.when.time">
-                  <span v-if="e.when.date"> – </span>
-                  {{ e.when.time }}
-                </span>
-                <span v-if="!e.when.time" class="font-italic grey--text">
-                  no time
-                </span>
-                <span v-if="e.when.approximate">
-                  (approx)
+                <span v-else>
+                  <span v-if="e.when.date">{{ e.when.date }}</span>
+                  <span v-if="!e.when.date" class="font-italic grey--text">
+                    no date
+                  </span>
+                  <span v-if="e.when.time">
+                    <span v-if="e.when.date"> – </span>
+                    {{ e.when.time }}
+                  </span>
+                  <span v-if="!e.when.time" class="font-italic grey--text">
+                    no time
+                  </span>
+                  <span v-if="e.when.approximate">
+                    (approx)
+                  </span>
                 </span>
               </span>
             </span>
-          </span>
-          <v-spacer></v-spacer>
-          <v-icon>
-            mdi-chevron-right
-          </v-icon>
-        </v-card-title>
-        <v-card-text>
-          <div class="flex-nowrap">
-            <p
-              v-if="e.what.details"
-              class="body-2 d-block text-truncate text-no-wrap"
-            >
-              {{ e.what.details }}
-            </p>
-            <p v-else class="body-2 font-italic grey--text">No details yet</p>
-          </div>
-          <div>
-            <span v-if="e.where.place">
-              Location:
-              <v-chip
-                pill
-                small
-                label
-                color="#F2D5CB"
-                text-color="primary"
-                class="px-2 ml-1"
+            <v-spacer></v-spacer>
+            <v-icon>
+              mdi-chevron-right
+            </v-icon>
+          </v-card-title>
+          <v-card-text>
+            <div class="flex-nowrap">
+              <p
+                v-if="e.what.details"
+                class="body-2 d-block text-truncate text-no-wrap"
               >
-                {{ e.where.place }}
-              </v-chip>
-            </span>
-            <span v-else class="font-italic grey--text">
-              No location specified
-            </span>
-          </div>
-        </v-card-text>
-        <v-card-actions>
-          <v-btn v-on:click.stop="deleteEvent(e.id)" text small color="warning">
-            Remove
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </div>
+                {{ e.what.details }}
+              </p>
+              <p v-else class="body-2 font-italic grey--text">No details yet</p>
+            </div>
+            <div>
+              <span v-if="e.where.place">
+                Location:
+                <v-chip
+                  pill
+                  small
+                  label
+                  color="#F2D5CB"
+                  text-color="primary"
+                  class="px-2 ml-1"
+                >
+                  {{ e.where.place }}
+                </v-chip>
+              </span>
+              <span v-else class="font-italic grey--text">
+                No location specified
+              </span>
+            </div>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn
+              v-on:click.stop="deleteEvent(e.id)"
+              text
+              small
+              color="warning"
+            >
+              Remove
+            </v-btn>
+          </v-card-actions>
+        </v-card>
 
-    <v-row class="mt-6 px-3">
-      <v-col cols="8" class="py-0 d-flex">
-        <p
-          class="mb-0 align-self-center grey--text text--darken-2"
-          style="font-size: 12px; line-height: 1.33;"
-        >
-          Use the plus button to add a new event to the timeline.
-        </p>
-      </v-col>
-      <v-col cols="4" class="py-0 text-right">
-        <v-btn v-on:click="newEvent()" color="primary" fab dark depressed>
-          <v-icon>mdi-plus</v-icon>
-        </v-btn>
-      </v-col>
-    </v-row>
+        <v-row class="mt-4 px-2">
+          <v-col cols="8" class="py-0 d-flex">
+            <p
+              class="mb-0 align-self-center grey--text text--darken-2"
+              style="font-size: 12px; line-height: 1.33;"
+            >
+              Use the plus button to add a new event to the timeline.
+            </p>
+          </v-col>
+          <v-col cols="4" class="py-0 text-right">
+            <v-btn v-on:click="newEvent()" color="primary" fab dark depressed>
+              <v-icon>mdi-plus</v-icon>
+            </v-btn>
+          </v-col>
+        </v-row>
+      </div>
+    </div>
 
     <incident-event-form
       :event="selectedEvent"
