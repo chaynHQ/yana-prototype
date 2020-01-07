@@ -93,7 +93,7 @@
         </div>
 
         <v-card
-          v-for="e in events"
+          v-for="e in sortedEvents"
           :key="e.id"
           v-on:click="selectedEvent = e"
           class="mb-2"
@@ -195,7 +195,7 @@
 
     <incident-event-form
       :event="selectedEvent"
-      v-on:done="selectedEvent = null"
+      v-on:done="eventUpdated()"
     ></incident-event-form>
   </div>
 </template>
@@ -205,6 +205,7 @@ import _ from 'lodash'
 import nanoid from 'nanoid'
 import parseISO from 'date-fns/parseISO'
 import format from 'date-fns/format'
+import compareAsc from 'date-fns/compareAsc'
 
 import IncidentEventForm from '@/components/IncidentEventForm'
 
@@ -226,7 +227,155 @@ export default {
     },
     formattedToDate() {
       return this.formatDate(this.toDate)
+    },
+    sortedEvents() {
+      // Make sure not to mutate the underlying list
+      return [...this.events].sort((a, b) => {
+        if (a.when.dontKnow) {
+          if (b.when.dontKnow) {
+            return 0
+          } else if (b.when.date) {
+            return -1
+          } else {
+            return 1
+          }
+        } else if (a.when.date) {
+          if (b.when.dontKnow) {
+            return 1
+          } else if (b.when.date) {
+            if (a.when.date === b.when.date) {
+              if (!a.when.time || !b.when.time) {
+                if (!a.when.time && !b.when.time) {
+                  return 0
+                } else if (!a.when.time) {
+                  return -1
+                } else {
+                  return 1
+                }
+              }
+
+              return a.when.time.localeCompare(b.when.time)
+            } else {
+              return compareAsc(parseISO(a.when.date), parseISO(b.when.date))
+            }
+          } else {
+            return 1
+          }
+        } else if (b.when.dontKnow) {
+          return -1
+        } else if (b.when.date) {
+          return -1
+        } else {
+          return 0
+        }
+      })
     }
+  },
+  mounted() {
+    // ONLY FOR TESTING:
+    // this.events = [
+    //   {
+    //     id: nanoid(8),
+    //     what: {},
+    //     when: {
+    //       dontKnow: true
+    //     },
+    //     where: {},
+    //     people: {},
+    //     evidence: {}
+    //   },
+    //   {
+    //     id: nanoid(8),
+    //     what: {},
+    //     when: {},
+    //     where: {},
+    //     people: {},
+    //     evidence: {}
+    //   },
+    //   {
+    //     id: nanoid(8),
+    //     what: {},
+    //     when: {
+    //       date: '2019-01-03',
+    //       approximate: true
+    //     },
+    //     where: {},
+    //     people: {},
+    //     evidence: {}
+    //   },
+    //   {
+    //     id: nanoid(8),
+    //     what: {},
+    //     when: {
+    //       date: '2019-01-01',
+    //       time: '13:00'
+    //     },
+    //     where: {},
+    //     people: {},
+    //     evidence: {}
+    //   },
+    //   {
+    //     id: nanoid(8),
+    //     what: {},
+    //     when: {
+    //       date: '2019-01-01'
+    //     },
+    //     where: {},
+    //     people: {},
+    //     evidence: {}
+    //   },
+    //   {
+    //     id: nanoid(8),
+    //     what: {},
+    //     when: {
+    //       date: '2019-01-01',
+    //       time: '11:00'
+    //     },
+    //     where: {},
+    //     people: {},
+    //     evidence: {}
+    //   },
+    //   {
+    //     id: nanoid(8),
+    //     what: {},
+    //     when: {
+    //       date: '2019-01-05',
+    //       time: '19:00'
+    //     },
+    //     where: {},
+    //     people: {},
+    //     evidence: {}
+    //   },
+    //   {
+    //     id: nanoid(8),
+    //     what: {},
+    //     when: {},
+    //     where: {},
+    //     people: {},
+    //     evidence: {}
+    //   },
+    //   {
+    //     id: nanoid(8),
+    //     what: {},
+    //     when: {
+    //       dontKnow: true
+    //     },
+    //     where: {},
+    //     people: {},
+    //     evidence: {}
+    //   },
+    //   {
+    //     id: nanoid(8),
+    //     what: {},
+    //     when: {
+    //       date: '2019-01-01',
+    //       time: '12:00'
+    //     },
+    //     where: {},
+    //     people: {},
+    //     evidence: {}
+    //   }
+    // ]
   },
   methods: {
     formatDate(value) {
@@ -256,6 +405,9 @@ export default {
             this.events = _.filter(this.events, (e) => e.id !== id)
           }
         })
+    },
+    eventUpdated() {
+      this.selectedEvent = null
     }
   }
 }
