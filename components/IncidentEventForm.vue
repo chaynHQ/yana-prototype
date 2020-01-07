@@ -68,11 +68,13 @@
                   >
                     <template v-slot:activator="{ on }">
                       <v-text-field
-                        v-model="event.when.date"
+                        :value="formatDate(event.when.date)"
                         v-on="on"
+                        @click:clear="event.when.date = null"
                         :disabled="event.when.dontKnow"
                         label="Date"
                         readonly
+                        clearable
                       ></v-text-field>
                     </template>
                     <v-date-picker v-model="event.when.date" scrollable>
@@ -103,6 +105,7 @@
                         :disabled="event.when.dontKnow"
                         label="Time"
                         readonly
+                        clearable
                       ></v-text-field>
                     </template>
                     <v-time-picker v-model="event.when.time">
@@ -206,6 +209,9 @@
 </template>
 
 <script>
+import parseISO from 'date-fns/parseISO'
+import format from 'date-fns/format'
+
 export default {
   props: {
     event: {
@@ -248,6 +254,9 @@ export default {
     }
   },
   methods: {
+    formatDate(value) {
+      return value ? format(parseISO(value), 'MMM Do yyyy') : ''
+    },
     done() {
       this.$emit('done')
     }

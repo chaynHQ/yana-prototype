@@ -5,7 +5,7 @@
         Time period for the whole incident
       </h2>
 
-      <v-row class="px-3">
+      <v-row class="mt-3 px-3">
         <v-col cols="6" class="py-0">
           <v-dialog
             ref="fromDateDialog"
@@ -15,10 +15,12 @@
           >
             <template v-slot:activator="{ on }">
               <v-text-field
-                v-model="fromDate"
+                :value="formattedFromDate"
                 v-on="on"
+                @click:clear="fromDate = null"
                 label="From"
                 readonly
+                clearable
               ></v-text-field>
             </template>
             <v-date-picker v-model="fromDate" scrollable>
@@ -44,10 +46,12 @@
           >
             <template v-slot:activator="{ on }">
               <v-text-field
-                v-model="toDate"
+                :value="formattedToDate"
                 v-on="on"
+                @click:clear="toDate = null"
                 label="To"
                 readonly
+                clearable
               ></v-text-field>
             </template>
             <v-date-picker v-model="toDate" :min="fromDate" scrollable>
@@ -65,9 +69,13 @@
           </v-dialog>
         </v-col>
       </v-row>
+
+      <p class="px-3 body-2">
+        Leave either blank if you're not sure
+      </p>
     </div>
 
-    <div class="mt-4 px-1">
+    <div class="mt-8 px-1">
       <h2 class="mb-1 subtitle-2 font-weight-bold">
         Timeline of events within the incident
       </h2>
@@ -104,7 +112,7 @@
                   No date/time specified
                 </span>
                 <span v-else>
-                  <span v-if="e.when.date">{{ e.when.date }}</span>
+                  <span v-if="e.when.date">{{ formatDate(e.when.date) }}</span>
                   <span v-if="!e.when.date" class="font-italic grey--text">
                     no date
                   </span>
@@ -195,6 +203,8 @@
 <script>
 import _ from 'lodash'
 import nanoid from 'nanoid'
+import parseISO from 'date-fns/parseISO'
+import format from 'date-fns/format'
 
 import IncidentEventForm from '@/components/IncidentEventForm'
 
@@ -210,7 +220,18 @@ export default {
       selectedEvent: null
     }
   },
+  computed: {
+    formattedFromDate() {
+      return this.formatDate(this.fromDate)
+    },
+    formattedToDate() {
+      return this.formatDate(this.toDate)
+    }
+  },
   methods: {
+    formatDate(value) {
+      return value ? format(parseISO(value), 'MMM Do yyyy') : ''
+    },
     newEvent() {
       const event = {
         id: nanoid(8),
