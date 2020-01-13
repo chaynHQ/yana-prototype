@@ -15,11 +15,11 @@
     <div class="mt-6">
       <v-expansion-panels>
         <v-expansion-panel
-          v-for="l in checklists"
-          :key="l.name"
-          class="checklist"
+          v-for="section in sections"
+          :key="section.name"
+          class="process-section"
         >
-          <v-expansion-panel-header class="font-weight-bold">
+          <v-expansion-panel-header class="font-weight-bold px-3">
             <v-btn
               class="mr-4"
               fab
@@ -29,15 +29,14 @@
               elevation="0"
               style="flex: none"
             >
-              <v-icon dark>mdi-{{ l.icon }}</v-icon>
+              <v-icon dark>mdi-{{ icons[section.name] || defaultIcon }}</v-icon>
             </v-btn>
-            {{ l.name }}
+            {{ section.name }}
           </v-expansion-panel-header>
           <v-expansion-panel-content>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            <process-section-content
+              :section="section"
+            ></process-section-content>
           </v-expansion-panel-content>
         </v-expansion-panel>
       </v-expansion-panels>
@@ -46,42 +45,26 @@
 </template>
 
 <script>
+import processSections from '@/data/process-sections.json'
+
+import ProcessSectionContent from '@/components/ProcessSectionContent'
+
 export default {
+  components: { ProcessSectionContent },
   data() {
     return {
-      checklists: [
-        {
-          id: 'victim-support',
-          name: 'Victim support',
-          icon: 'account-group'
-        },
-        {
-          id: 'reporting',
-          name: 'Reporting',
-          icon: 'file-document'
-        },
-        {
-          id: 'police-investigation',
-          name: 'Police Investigation',
-          icon: 'shield-star'
-        },
-        {
-          id: 'prosecution',
-          name: 'Prosecution',
-          icon: 'gavel'
-        },
-        {
-          id: 'trial',
-          name: 'Trial',
-          icon: 'gavel'
-        },
-        {
-          id: 'post-trial',
-          name: 'Post-trial',
-          icon: 'gavel'
-        }
-      ]
+      sections: processSections.sections,
+      defaultIcon: 'ballot',
+      icons: {
+        'Reporting to the police': 'file-document',
+        'Medical examination': 'medical-bag',
+        'Police Investigation': 'shield-star',
+        'Decision to prosecute': 'gavel'
+      }
     }
+  },
+  mounted() {
+    console.log(`processSections.dateLastActivity = ${processSections.dateLastActivity}`); // eslint-disable-line
   }
 }
 </script>

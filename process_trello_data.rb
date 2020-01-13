@@ -4,7 +4,7 @@
 require 'json'
 
 SOURCE_FILE = 'mCQAYiAL.json'
-OUTPUT_FILE = 'data/process-map.json'
+OUTPUT_FILE = 'data/process-sections.json'
 EXPECTED_ID = '5dbedf15df09908808443d74'
 PROTOYPE_LABEL_NAME = 'Prototype'
 RESOURCES_LIST_NAME = 'Resources'

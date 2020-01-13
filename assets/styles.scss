@@ -1,5 +1,18 @@
-.theme--light.v-expansion-panels .v-expansion-panel.checklist {
+.theme--light.v-expansion-panels .v-expansion-panel.process-section {
   background-color: $background-color;
+}
+
+.theme--light.v-expansion-panels .v-expansion-panel.process-section {
+  .v-expansion-panel-content__wrap {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.theme--light.v-expansion-panels .v-expansion-panel.process-section-step {
+  &::before {
+    box-shadow: none;
+  }
 }
 
 .timeline {
