@@ -90,3 +90,6 @@ sw.*
 *.swp
 
 .firebase
+
+# Trello data for the processes/checklists
+mCQAYiAL.json

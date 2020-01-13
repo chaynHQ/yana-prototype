@@ -4,9 +4,11 @@
       <h1 class="headline">What to expect</h1>
 
       <p class="body-2 mt-3">
-        Here you will find information on the procedures that organisations need
-        to follow when dealing with an assault and a rough idea of how long each
-        of these steps will take.
+        Dealing with authorities regarding your assault can be daunting
+        especially if you don’t know what to expect. We’ve simplified this
+        information so you know the procedures they need to follow when dealing
+        with an assault and a rough idea of how long each step takes. You can
+        also spot if there is a miscarriage of justice.
       </p>
     </div>
 
@@ -18,6 +20,17 @@
           class="checklist"
         >
           <v-expansion-panel-header class="font-weight-bold">
+            <v-btn
+              class="mr-4"
+              fab
+              dark
+              small
+              color="primary"
+              elevation="0"
+              style="flex: none"
+            >
+              <v-icon dark>mdi-{{ l.icon }}</v-icon>
+            </v-btn>
             {{ l.name }}
           </v-expansion-panel-header>
           <v-expansion-panel-content>
@@ -38,28 +51,34 @@ export default {
     return {
       checklists: [
         {
+          id: 'victim-support',
           name: 'Victim support',
-          image: 'victim-support'
+          icon: 'account-group'
         },
         {
+          id: 'reporting',
           name: 'Reporting',
-          image: 'reporting'
+          icon: 'file-document'
         },
         {
+          id: 'police-investigation',
           name: 'Police Investigation',
-          image: 'police-investigation'
+          icon: 'shield-star'
         },
         {
+          id: 'prosecution',
           name: 'Prosecution',
-          image: 'prosecution'
+          icon: 'gavel'
         },
         {
+          id: 'trial',
           name: 'Trial',
-          image: 'trial'
+          icon: 'gavel'
         },
         {
+          id: 'post-trial',
           name: 'Post-trial',
-          image: 'post-trial'
+          icon: 'gavel'
         }
       ]
     }
