@@ -1,0 +1,269 @@
+{
+  "dateLastActivity": "2020-01-13T14:28:11.378Z",
+  "sections": [
+    {
+      "name": "Reporting to the police",
+      "resources": [
+        {
+          "name": "Metropolitan Police (UK) advice about how to report rape and sexual assault",
+          "url": "https://www.met.police.uk/advice/advice-and-information/rsa/rape-and-sexual-assault/how-to-report-rape-and-sexual-assault/"
+        },
+        {
+          "name": "Metropolitan Police (UK) provides advice on what happens after you report a rape/ sexual assault",
+          "url": "https://www.met.police.uk/advice/advice-and-information/rsa/rape-and-sexual-assault/what-happens-after-you-report-rape-or-sexual-assault/"
+        },
+        {
+          "name": "Victim Support (UK) provide confidential and free information on how to get support information on reporting rape and sexual assault",
+          "url": "https://www.victimsupport.org.uk/crime-info/types-crime/rape-and-sexual-assault"
+        },
+        {
+          "name": "If you need help understanding how to report sexual violence, this Rape Crisis (UK) guide can help you",
+          "url": "https://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=36"
+        },
+        {
+          "name": "Rights of Women (UK) provides comprehensive guidance on reporting sexual assault to the police",
+          "url": "https://rightsofwomen.org.uk/wp-content/uploads/2014/10/Reporting-an-offence-to-the-police-a-guide-to-criminal-investigations.pdf"
+        }
+      ],
+      "processMap": [
+        {
+          "name": "Different ways you can report the assault to the police",
+          "text": "Time: 1hr - 3hrs\n\nIf you feel comfortable, you or someone you know should report the assault to the police. This can be done in a number of ways: \n\n- Phone 101 or 999\n- Report the assault online at https://www.met.police.uk/ro/report/ocr/af/how-to-report-a-crime/\n- Visit police station - https://www.met.police.uk/advice/advice-and-information/rsa/rape-and-sexual-assault/how-to-report-rape-and-sexual-assault/\n- Visit a Haven: https://www.thehavens.org.uk/contact-us/\n- Provide information anonymously through Crimestoppers\n\nYour safety will be the most important thing. For non-emergency cases they may ask you about how they can make contact with you again. If you are living with the suspect you can make arrangements to speak to an officer without the suspect knowing about it, at a time convenient to you. If the sexual violence occurred recently you may be asked whether you need any medical treatment and be advised on how you can preserve evidence. \n\nSource: Met Police, https://www.met.police.uk/advice/advice-and-information/rsa/rape-and-sexual-assault/what-happens-after-you-report-rape-or-sexual-assault/\nDate checked: 10.11.2019\n\nSource: More ways to report than call & police station: https://www.met.police.uk/advice/advice-and-information/rsa/rape-and-sexual-assault/how-to-report-rape-and-sexual-assault/\nDate checked: 7.11.2019\n\nSource: Rape Crisis UK, https://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\nDate checked: 10.11.2019"
+        },
+        {
+          "name": "Your first police interview",
+          "text": "Time: 2-5hrs\n\nAs soon as possible after you report rape or sexual assault, the Police will arrange for a uniformed officer to talk to you. Their first priority will be to check on your welfare and find out if you need any emergency medical assistance.\n\nYou ask to be spoken to in a comfort suite. Comfort suites are dedicated rooms where victims of rape and serious sexual assault.\n\nInterview questions asked:\nWho did this?\nWhat happened?\nWhere did it happen?\nWhen did it happen?\n\nFAQs\nWaiting time before officers can interview you: ?\nCan someone accompany me? \nWho would be involved?\n\nSource: Met Police, https://www.met.police.uk/advice/advice-and-information/rsa/rape-and-sexual-assault/what-happens-after-you-report-rape-or-sexual-assault/\nDate checked: 10.11.2019\n"
+        }
+      ],
+      "checklist": [
+        {
+          "text": "The Police will arrange for a uniformed officer to talk to you. "
+        },
+        {
+          "text": "Your interview happens in a private room or comfort suite."
+        },
+        {
+          "text": "If the sexual violence occurred recently you may be asked whether you need any medical treatment and be advised on how you can preserve evidence "
+        },
+        {
+          "text": "A dedicated officer may be assigned to your case."
+        },
+        {
+          "text": "You are referred you through to specialist support advocacy services, such as Independent Sexual Violence Advisors."
+        },
+        {
+          "text": "Your dedicated officer will take a detailed account from you in the form of a written statement or a visually recorded interview."
+        },
+        {
+          "text": "Your officer will keep you informed of how the investigation is going at least every 28 days or sooner if there are any updates."
+        },
+        {
+          "text": "Your dedicated police officer refers to victim support organisations such as ISVAs and/or Haven."
+        },
+        {
+          "text": "If needed, you were referred to the forensic medical examination."
+        }
+      ]
+    },
+    {
+      "name": "Medical examination",
+      "resources": [
+        {
+          "name": "Rape Crisis (UK) advice on where to see medical support to gather evidence to support your case",
+          "url": "https://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=40"
+        },
+        {
+          "name": "If you need to know where to access medical support after rape/ sexual assault NHS (UK) can direct you",
+          "url": "https://www.nhs.uk/live-well/sexual-health/help-after-rape-and-sexual-assault/"
+        }
+      ],
+      "processMap": [
+        {
+          "name": "How you can get a medical exam without involving the police",
+          "text": "Scenario:\n-------------------------------------------------------\n-------------------------------------------------------- \n\n*ADDED AS A SEPARATE CARD*\n\n1) If you go to the police-\n- Police officers who attend incidents of sexual violence should have an early evidence kit with them (to preserve evidence; cannot replace a full medical examination; needs consent)\n- If you have contacted the police, they may take you to the SARC \n\n-------------------------------------------------------\n-------------------------------------------------------- \n\n2) Independently -\n- You can go to a SARC independently without contacting the police\n\n3) No police, no SARC - \nYou can get medical treatment by visiting your local hospital accident and emergency department or by going to see your GP.\n\n(If you decide that you do want to report the incident you will be put in touch with a specially trained police officer. The services provided by SARCs are free, confidential and entirely independent from the police and other agencies in the criminal justice system.)\n\n"
+        }
+      ],
+      "checklist": [
+        {
+          "text": "As a result of the examination, the doctor will produce a report about the investigation in terms of samples taken from you and observations made."
+        },
+        {
+          "text": "If the decision to prosecute is made at a later stage, the specific doctor who examined you and the forensic scientist together will have to provide written statements and may be required to attend court to give their statements about the medical examination."
+        },
+        {
+          "text": "In case of sexual violence, the Police officers should have an early evidence kit with them and/or they can take you to the Sexual Assault Referral Centre (SARC)"
+        },
+        {
+          "text": "The forensic medical examination cannot take place without your consent. You have the right to ask to be examined by either a female or male FME. By agreeing to the forensic medical examination, you are agreeing to the results and the evidence gathered to being given to the police."
+        },
+        {
+          "text": "You have the right to be accompanied by a family member or a friend during the medical examination if you wish. It is also possible to ask for an interpreter if you need one!"
+        },
+        {
+          "text": "If you have washed before you have the examination, the doctor may still find physical evidence."
+        },
+        {
+          "text": "A good idea to take a change of clothes and underwear with you to change into after the examination. Because the clothes you were wearing during the incident may be evidence, they may not be returned to you until the criminal proceedings have ended."
+        }
+      ]
+    },
+    {
+      "name": "Police investigation",
+      "resources": [
+        {
+          "name": "Handbook from UK Rape Crisis to guide you through many steps of the police reporting process",
+          "url": "https://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf"
+        },
+        {
+          "name": "Website of the UK Metropolitan Police explaining what happens when you come to report a sexual assault",
+          "url": "https://www.met.police.uk/advice/advice-and-information/rsa/rape-and-sexual-assault/what-happens-after-you-report-rape-or-sexual-assault/"
+        },
+        {
+          "name": "Website of the Crown Prosecution Service explaining many steps of reporting a crime from the view of someone who has been victimised",
+          "url": "https://www.cps.gov.uk/victims-witnesses"
+        }
+      ],
+      "processMap": [
+        {
+          "name": "If the initial report was by a third party then the police will take a detailed account from them",
+          "text": "Time: [?]\n\nIn an instance where the sexual assault was reported by a third party then the police will need to take a detailed account from that person. This can be in the form of a written statement or a visually recorded interview. They’ll talk through both of these options with you beforehand.\n\nSource: \nRape Crisis UK, https://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf\nDate Checked: 10.11.2019"
+        }
+      ],
+      "checklist": [
+        {
+          "text": "If the assault was reported by a third party, police will interview them."
+        },
+        {
+          "text": "Police will collect as much physical evidence as they can."
+        },
+        {
+          "text": "Police may call you back for further interviews to review information."
+        },
+        {
+          "text": "Police may request your help in identifying the suspect"
+        },
+        {
+          "text": "The suspect(s) may be arrested"
+        },
+        {
+          "text": "Once identified, the suspects(s) will be interviewed."
+        },
+        {
+          "text": "Any third parties who may have information relevant to the case will be interviewed."
+        },
+        {
+          "text": "Police decide to pass the case to the CPS."
+        },
+        {
+          "text": "Police decide to close the investigation without charging."
+        }
+      ]
+    },
+    {
+      "name": "Decision to prosecute",
+      "resources": [
+        {
+          "name": "Here is a resource from Rape Crisis UK for more legal information about sexual violence and the criminal justice system.",
+          "url": "https://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54"
+        },
+        {
+          "name": "Here is a resource from the Crown Prosecution Service (the CPS) on their policy for prosecuting cases of rape.",
+          "url": "https://www.cps.gov.uk/publication/cps-policy-prosecuting-cases-rape"
+        },
+        {
+          "name": "Here is some advice from the Crown Prosecution Service for witnesses including tips on giving evidence.",
+          "url": "https://www.cps.gov.uk/sites/default/files/documents/publications/CPS-advice-for-witnesses-leaflet.pdf"
+        },
+        {
+          "name": "Helpful information from the Crown Prosecution Service on the Victims’ Right to Review.",
+          "url": "https://www.cps.gov.uk/sites/default/files/documents/publications/VRR_leaflet.pdf"
+        },
+        {
+          "name": "This resource from the Crown Prosecution Service provides detailed information on the right to an interpreter and its provisions.",
+          "url": "https://www.cps.gov.uk/legal-guidance/interpreters"
+        },
+        {
+          "name": "Find free legal help from barristers across England and Wales here.",
+          "url": "https://weareadvocate.org.uk/"
+        }
+      ],
+      "processMap": [
+        {
+          "name": "The Crown Prosecution Service may review your case",
+          "text": "Time: [?]\n\nDescription\nThe evidence and other information procured from the investigation could be passed on to the Crown Prosecution Service (the CPS). The CPS will then decide if the suspect(s) should be charged with a criminal offence. \n\n\nSource: (Name, URL)\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nDate checked\nThe information in the report is correct to March 2014.\n\nResources\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nCPS Policy for Prosecuting Cases of Rape\nhttps://www.cps.gov.uk/publication/cps-policy-prosecuting-cases-rape\n\nSupport organisations\nRape Crisis UK (?)\n"
+        },
+        {
+          "name": "The decision to charge the suspect(s) is taken",
+          "text": "Time: [?]\n\nDescription\nThe CPS, in most circumstances, takes the decisions to charge the suspect(s). After considering the evidence, the CPS uses a two-stage test to come to a decision. The first stage is the 'evidential stage' where the CPS considers whether there is adequate evidence to demonstrate a realistic prospect of conviction. The second stage or the 'public interest stage' takes into account whether it is in public interest to prosecute.\n\nThe police, on the other hand, only applies the 'evidential stage' of the test to make the decision to charge or discontinue the case.\n\nSource: (Name, URL)\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nDate checked\nThe information in the report is correct to March 2014.\n\nResources\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nCPS Policy for Prosecuting Cases of Rape\nhttps://www.cps.gov.uk/publication/cps-policy-prosecuting-cases-rape\n\nwww.cps.gov.uk/legal_resources.html.\n\nSupport organisations\nRape Crisis UK (?)\n"
+        },
+        {
+          "name": "The CPS reviews the evidence",
+          "text": "Time: [?]\n\nDescription\nA specially trained lawyer from the CPS along with a 'reviewing' lawyer evaluate the available evidence and decide whether there is adequate evidence to proceed to the trial stage. The CPS notifies the Officer In Charge of the outcome.\n\nSource: (Name, URL)\nLeicestershire Police \nhttps://www.leics.police.uk/advice/advice-and-information/rsa/rape-and-sexual-assault/what-happens-after-you-report-rape-or-sexual-assault/\n\nDate checked\n\nResources\nhttps://www.leics.police.uk/advice/advice-and-information/rsa/rape-and-sexual-assault/what-happens-after-you-report-rape-or-sexual-assault/\n\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nCPS Policy for Prosecuting Cases of Rape\nhttps://www.cps.gov.uk/publication/cps-policy-prosecuting-cases-rape\n\nwww.cps.gov.uk/legal_resources.html.\n\nSupport organisations\nRape Crisis UK (?)\n\n\n"
+        },
+        {
+          "name": "Your case is assigned to a Crown Prosecutor once reviewed",
+          "text": "Time: [?]\n\nDescription\nThe case is assigned to a Crown Prosecutor who is a specialist lawyer dealing with sexual offences. Only prosecutors who have undertaken training courses and have the requisite skills can prosecute rape cases. \n\nSource: (Name, URL)\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nDate checked\nThe information in the report is correct to March 2014.\n\nResources\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nCPS Policy for Prosecuting Cases of Rape\nhttps://www.cps.gov.uk/publication/cps-policy-prosecuting-cases-rape\n\nwww.cps.gov.uk/legal_resources.html.\n\nSupport organisations\nRape Crisis UK (?)\n\n"
+        },
+        {
+          "name": "Alternatives to charging",
+          "text": "Time: [?]\n\nDescription\nThe suspect may be provided with the option to accept a caution for the offence. If the offender accepts the same, the case cannot go to court. It will become a part of the offender's criminal record. You cannot appeal against the administration of a caution. You can, however, make a complaint to the police about the same.\n\nSource: (Name, URL)\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nDate checked\nThe information in the report is correct to March 2014.\n\nResources\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nCPS Policy for Prosecuting Cases of Rape\nhttps://www.cps.gov.uk/publication/cps-policy-prosecuting-cases-rape\n\nwww.cps.gov.uk/legal_resources.html.\n\nSupport organisations\nRape Crisis UK (?)\n\n\n"
+        },
+        {
+          "name": "The Pre-trial Witness Interview",
+          "text": "Time: [?]\n\nDescription\nThe Crown Prosecutor assigned to your case may ask for a Pre Trial Witness Interview (PTWI). It could take place at any point in time after the witness provides a statement and prior to giving evidence in court. The PTWI could be used to assist the Crown Prosecution Service in making the decision to charge the suspect(s) or preparing the case for trial. \n\nSource: (Name, URL)\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nDate checked\nThe information in the report is correct to March 2014.\n\nResources\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nCPS Policy for Prosecuting Cases of Rape\nhttps://www.cps.gov.uk/publication/cps-policy-prosecuting-cases-rape\n\nwww.cps.gov.uk/legal_resources.html.\n\nSupport organisations\nRape Crisis UK (?)\n\n"
+        },
+        {
+          "name": "If the suspect is charged",
+          "text": "Time: [?]\n\nDescription\nThe suspect (now referred to as the defendant) is either released on police bail to attend the court on a decided date or remanded in custody to take to the court the next day. If held in prison, the suspect(s) could make a bail application.\n\n\nSource: (Name, URL)\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nDate checked\nThe information in the report is correct to March 2014.\n\nResources\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nCPS Policy for Prosecuting Cases of Rape\nhttps://www.cps.gov.uk/publication/cps-policy-prosecuting-cases-rape\n\nwww.cps.gov.uk/legal_resources.html.\n\nSupport organisations\nRape Crisis UK (?)\n\n"
+        },
+        {
+          "name": "If the suspect is not charged",
+          "text": "Time: [?]\n\nDescription\nThe case will be closed and no further action will be taken. The files would be kept on record in case new evidence emerges or the suspect commits any further offences.\n\nSource: (Name, URL)\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nDate checked\nThe information in the report is correct to March 2014.\n\nResources\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nCPS Policy for Prosecuting Cases of Rape\nhttps://www.cps.gov.uk/publication/cps-policy-prosecuting-cases-rape\n\nwww.cps.gov.uk/legal_resources.html.\n\nSupport organisations\nRape Crisis UK (?)\n\n\n"
+        },
+        {
+          "name": "Information on the decision by the CPS",
+          "text": "Time: [?]\n\nDescription\nThe CPS should write to you to provide information on any decision to drop or alter charges. You should also be given the opportunity to access a face-to-face meeting with the Prosecutor to personally hear the reasons for the final decision.\n\nSource: (Name, URL)\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nDate checked\nThe information in the report is correct to March 2014.\n\nResources\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nCPS Policy for Prosecuting Cases of Rape\nhttps://www.cps.gov.uk/publication/cps-policy-prosecuting-cases-rape\n\nwww.cps.gov.uk/legal_resources.html.\n\nSupport organisations\nRape Crisis UK (?)\n\n\n\n"
+        },
+        {
+          "name": "Acquiring information on decisions made the CPS",
+          "text": "Time: [?]\n\nDescription\nIn cases of rape, a rape specialist will work closely with the Investigating Officer. In other cases of sexual violence, a rape specialist or another experienced CPS Prosecutor may make the decision. You will be informed of the decision whether or not to prosecute within one working day. \n\nSource: (Name, URL)\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nDate checked\nThe information in the report is correct to March 2014.\n\nResources\nRape Crisis UK - From Report to Court\nA handbook for adult survivors of sexual violence\nhttps://rapecrisis.org.uk/includes/media/From-Report-to-Court-a-handbook-for-adult-survivors-of-sexual-violence.pdf#page=54\n\nCPS Policy for Prosecuting Cases of Rape\nhttps://www.cps.gov.uk/publication/cps-policy-prosecuting-cases-rape\n\nwww.cps.gov.uk/legal_resources.html.\n\nSupport organisations\nRape Crisis UK (?)\n\n\n\n"
+        }
+      ],
+      "checklist": [
+        {
+          "text": "The Crown Prosecution Service (CPS) assign a specialist lawyer to review your case alongside a second lawyer."
+        },
+        {
+          "text": "They review all the evidence gathered to determine whether or not to prosecute the case."
+        },
+        {
+          "text": "The first question they answer is \"Is there enough evidence to prosecute?\""
+        },
+        {
+          "text": "The second question is \"Is it within the public's interest to prosecute?\""
+        },
+        {
+          "text": "A prosecuter may in rare cases want to meet with you before making any final decisions."
+        },
+        {
+          "text": "The suspect is charged and the case proceeds to trial."
+        },
+        {
+          "text": "The suspect is not charged and the case is dropped."
+        },
+        {
+          "text": "The suspect is cautioned rather than prosecuted (usually reserved for minor cases)."
+        },
+        {
+          "text": "The CPS will write to you to inform you of any decisions."
+        },
+        {
+          "text": "You have the challenge the decision made by the CPS and can lodge a formal request with the Right to Review."
+        },
+        {
+          "text": "If you have the means available, you may choose to take up a private prosecution if a criminal prosecution was dropped / unsuccessful."
+        }
+      ]
+    }
+  ]
+}
