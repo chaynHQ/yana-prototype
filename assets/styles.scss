@@ -1,11 +1,53 @@
-.theme--light.v-expansion-panels .v-expansion-panel.process-section {
-  background-color: $background-color;
+// ---
+// General styles
+// ---
+
+.v-application {
+  ul.simple-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      font-size: 13px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      padding: 12px 14px;
+
+      &:last-child {
+        border: none;
+      }
+
+      a {
+        color: #d3486a;
+        display: block;
+      }
+    }
+  }
 }
 
+// ---
+// "What happened" section
+// ---
+
+.timeline {
+  border-left: 2px dashed lighten(#d3486a, 20%);
+  margin-left: 3px;
+}
+
+// ---
+// "What to expect" section
+// ---
+
 .theme--light.v-expansion-panels .v-expansion-panel.process-section {
+  background-color: $background-color;
+
   .v-expansion-panel-content__wrap {
     padding-left: 12px;
     padding-right: 12px;
+  }
+
+  .v-chip:hover::before {
+    opacity: 0;
   }
 }
 
@@ -50,34 +92,6 @@
       top: 33%;
       width: 16px;
       height: 16px;
-    }
-  }
-}
-
-.timeline {
-  border-left: 2px dashed lighten(#d3486a, 20%);
-  margin-left: 3px;
-}
-
-.v-application {
-  ul.simple-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      font-size: 13px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-      padding: 12px 14px;
-
-      &:last-child {
-        border: none;
-      }
-
-      a {
-        color: #d3486a;
-        display: block;
-      }
     }
   }
 }
