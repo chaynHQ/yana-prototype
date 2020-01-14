@@ -14,7 +14,7 @@
   padding-left: 12px;
 
   &::before {
-    background-color: #D3486A;
+    background-color: #d3486a;
     width: 2px;
     content: '';
     position: absolute;
@@ -29,6 +29,8 @@
 }
 
 .theme--light.v-expansion-panels .v-expansion-panel.process-section-step {
+  background-color: $background-color;
+
   &::before {
     box-shadow: none;
   }
@@ -53,6 +55,46 @@
 }
 
 .timeline {
-  border-left: 2px dashed lighten(#D3486A, 20%);
+  border-left: 2px dashed lighten(#d3486a, 20%);
   margin-left: 3px;
+}
+
+.v-application {
+  ul.simple-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      font-size: 13px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      padding: 12px 14px;
+
+      &:last-child {
+        border: none;
+      }
+
+      a {
+        color: #d3486a;
+        display: block;
+      }
+    }
+  }
+}
+
+.checklist {
+  .v-input--checkbox {
+    margin: 0;
+    padding: 0;
+
+    &.v-input--selection-controls .v-input__slot {
+      margin: 0;
+      padding: 0;
+    }
+
+    .v-label {
+      margin-left: 8px;
+      font-size: 13px;
+    }
+  }
 }
