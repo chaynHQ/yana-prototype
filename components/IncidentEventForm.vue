@@ -77,7 +77,11 @@
                         clearable
                       ></v-text-field>
                     </template>
-                    <v-date-picker v-model="event.when.date" scrollable>
+                    <v-date-picker
+                      ref="datePicker"
+                      v-model="event.when.date"
+                      :max="new Date().toISOString().substr(0, 10)"
+                    >
                       <v-spacer></v-spacer>
                       <v-btn @click="dateModal = false" text color="primary"
                         >Cancel</v-btn
@@ -251,11 +255,16 @@ export default {
         this.event.when.time = undefined
         this.event.when.approximate = undefined
       }
+    },
+    dateModal(value) {
+      value &&
+        !this.event.when.date &&
+        setTimeout(() => (this.$refs.datePicker.activePicker = 'YEAR'))
     }
   },
   methods: {
     formatDate(value) {
-      return value ? format(parseISO(value), 'MMM Do yyyy') : ''
+      return value ? format(parseISO(value), 'MMM do yyyy') : ''
     },
     done() {
       this.$emit('done')
