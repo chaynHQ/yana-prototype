@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="mt-10 px-1">
+    <!-- <div class="mt-10 px-1">
       <h2 class="subtitle-2 font-weight-bold">
         Time period for the whole incident
       </h2>
@@ -73,14 +73,36 @@
       <p class="px-3 body-2">
         Leave either blank if you're not sure
       </p>
-    </div>
+    </div> -->
 
-    <div class="mt-8 px-1">
+    <div class="mt-6 px-3">
       <h2 class="mb-1 subtitle-2 font-weight-bold">
         Timeline of events within the incident
       </h2>
 
       <div class="timeline pt-3 pl-3">
+        <p v-if="events.length != 0" class="body-2">
+          <span>
+            <strong>From:</strong>
+            <span v-if="inferredTimeline.from">
+              {{ formatDate(inferredTimeline.from) }}
+            </span>
+            <span v-else class="none-text">
+              unknown
+            </span>
+          </span>
+
+          <span class="ml-3">
+            <strong>To:</strong>
+            <span v-if="inferredTimeline.to">
+              {{ formatDate(inferredTimeline.to) }}
+            </span>
+            <span v-else class="none-text">
+              unknown
+            </span>
+          </span>
+        </p>
+
         <div v-if="events.length == 0" class="px-2">
           <p class="body-2 font-italic">
             No events recorded yet.
@@ -213,21 +235,21 @@ export default {
   components: { IncidentEventForm },
   data() {
     return {
-      fromDateModal: false,
-      toDateModal: false,
-      fromDate: null,
-      toDate: null,
+      // fromDateModal: false,
+      // toDateModal: false,
+      // fromDate: null,
+      // toDate: null,
       events: [],
       selectedEvent: null
     }
   },
   computed: {
-    formattedFromDate() {
-      return this.formatDate(this.fromDate)
-    },
-    formattedToDate() {
-      return this.formatDate(this.toDate)
-    },
+    // formattedFromDate() {
+    //   return this.formatDate(this.fromDate)
+    // },
+    // formattedToDate() {
+    //   return this.formatDate(this.toDate)
+    // },
     sortedEvents() {
       // Make sure not to mutate the underlying list
       return [...this.events].sort((a, b) => {
@@ -269,117 +291,133 @@ export default {
           return 0
         }
       })
+    },
+    inferredTimeline() {
+      if (this.sortedEvents.length) {
+        const firstEventWithDate = this.sortedEvents.find((e) => e.when.date)
+        let from = null
+        if (firstEventWithDate) {
+          from = firstEventWithDate.when.date
+        }
+
+        // Based on the sorting, we can assume that the last item is the chronologically last one (assuming it has a date set)
+        const to = this.sortedEvents[this.sortedEvents.length - 1].when.date
+
+        return { from, to }
+      } else {
+        return {}
+      }
     }
   },
   mounted() {
     // ONLY FOR TESTING:
-    // this.events = [
-    //   {
-    //     id: nanoid(8),
-    //     what: {},
-    //     when: {
-    //       dontKnow: true
-    //     },
-    //     where: {},
-    //     people: {},
-    //     evidence: {}
-    //   },
-    //   {
-    //     id: nanoid(8),
-    //     what: {},
-    //     when: {},
-    //     where: {},
-    //     people: {},
-    //     evidence: {}
-    //   },
-    //   {
-    //     id: nanoid(8),
-    //     what: {},
-    //     when: {
-    //       date: '2019-01-03',
-    //       approximate: true
-    //     },
-    //     where: {},
-    //     people: {},
-    //     evidence: {}
-    //   },
-    //   {
-    //     id: nanoid(8),
-    //     what: {},
-    //     when: {
-    //       date: '2019-01-01',
-    //       time: '13:00'
-    //     },
-    //     where: {},
-    //     people: {},
-    //     evidence: {}
-    //   },
-    //   {
-    //     id: nanoid(8),
-    //     what: {},
-    //     when: {
-    //       date: '2019-01-01'
-    //     },
-    //     where: {},
-    //     people: {},
-    //     evidence: {}
-    //   },
-    //   {
-    //     id: nanoid(8),
-    //     what: {},
-    //     when: {
-    //       date: '2019-01-01',
-    //       time: '11:00'
-    //     },
-    //     where: {},
-    //     people: {},
-    //     evidence: {}
-    //   },
-    //   {
-    //     id: nanoid(8),
-    //     what: {},
-    //     when: {
-    //       date: '2019-01-05',
-    //       time: '19:00'
-    //     },
-    //     where: {},
-    //     people: {},
-    //     evidence: {}
-    //   },
-    //   {
-    //     id: nanoid(8),
-    //     what: {},
-    //     when: {},
-    //     where: {},
-    //     people: {},
-    //     evidence: {}
-    //   },
-    //   {
-    //     id: nanoid(8),
-    //     what: {},
-    //     when: {
-    //       dontKnow: true
-    //     },
-    //     where: {},
-    //     people: {},
-    //     evidence: {}
-    //   },
-    //   {
-    //     id: nanoid(8),
-    //     what: {},
-    //     when: {
-    //       date: '2019-01-01',
-    //       time: '12:00'
-    //     },
-    //     where: {},
-    //     people: {},
-    //     evidence: {}
-    //   }
-    // ]
+    this.events = [
+      {
+        id: nanoid(8),
+        what: {},
+        when: {
+          dontKnow: true
+        },
+        where: {},
+        people: {},
+        evidence: {}
+      },
+      {
+        id: nanoid(8),
+        what: {},
+        when: {},
+        where: {},
+        people: {},
+        evidence: {}
+      },
+      {
+        id: nanoid(8),
+        what: {},
+        when: {
+          date: '2019-01-03',
+          approximate: true
+        },
+        where: {},
+        people: {},
+        evidence: {}
+      },
+      {
+        id: nanoid(8),
+        what: {},
+        when: {
+          date: '2019-01-01',
+          time: '13:00'
+        },
+        where: {},
+        people: {},
+        evidence: {}
+      },
+      {
+        id: nanoid(8),
+        what: {},
+        when: {
+          date: '2019-01-01'
+        },
+        where: {},
+        people: {},
+        evidence: {}
+      },
+      {
+        id: nanoid(8),
+        what: {},
+        when: {
+          date: '2019-01-01',
+          time: '11:00'
+        },
+        where: {},
+        people: {},
+        evidence: {}
+      },
+      {
+        id: nanoid(8),
+        what: {},
+        when: {
+          date: '2019-01-05',
+          time: '19:00'
+        },
+        where: {},
+        people: {},
+        evidence: {}
+      },
+      {
+        id: nanoid(8),
+        what: {},
+        when: {},
+        where: {},
+        people: {},
+        evidence: {}
+      },
+      {
+        id: nanoid(8),
+        what: {},
+        when: {
+          dontKnow: true
+        },
+        where: {},
+        people: {},
+        evidence: {}
+      },
+      {
+        id: nanoid(8),
+        what: {},
+        when: {
+          date: '2019-01-01',
+          time: '12:00'
+        },
+        where: {},
+        people: {},
+        evidence: {}
+      }
+    ]
   },
   methods: {
     formatDate(value) {
-      return value ? format(parseISO(value), 'MMM Do yyyy') : ''
+      return value ? format(parseISO(value), 'MMM do yyyy') : ''
     },
     newEvent() {
       const event = {
