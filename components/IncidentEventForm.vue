@@ -15,13 +15,15 @@
       <v-card-text class="pa-0" style="height: 500px;">
         <p class="body-2 px-3 pt-3 ma-0">
           Use this form to log a single event that occurred as part of the
-          overall incident.
+          overall incident. All sections are optional, but please provide info
+          in at least one section, as much as you can remember.
         </p>
 
         <v-form>
           <v-stepper non-linear vertical class="elevation-0">
             <v-stepper-step editable step="1">
               What happened?
+              <small>Optional</small>
             </v-stepper-step>
             <v-stepper-content step="1">
               <p class="body-2">
@@ -41,6 +43,7 @@
 
             <v-stepper-step editable step="2">
               When did it happen?
+              <small>Optional</small>
             </v-stepper-step>
             <v-stepper-content step="2">
               <p class="body-2">
@@ -137,7 +140,7 @@
 
             <v-stepper-step editable step="3">
               Where did it happen?
-              <small>This section is optional</small>
+              <small>Optional</small>
             </v-stepper-step>
             <v-stepper-content step="3">
               <p class="body-2">
@@ -168,7 +171,7 @@
 
             <v-stepper-step editable step="4">
               Who was there?
-              <small>This section is optional</small>
+              <small>Optional</small>
             </v-stepper-step>
             <v-stepper-content step="4">
               <p class="body-2">
@@ -188,7 +191,7 @@
 
             <v-stepper-step editable step="5">
               Evidence
-              <small>This section is optional</small>
+              <small>Optional</small>
             </v-stepper-step>
             <v-stepper-content step="5">
               <p class="body-2">
