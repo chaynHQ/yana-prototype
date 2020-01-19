@@ -196,8 +196,8 @@
             <v-stepper-content step="5">
               <p class="body-2">
                 Use this space to add details of anything that may be used as
-                physical evidence for this part of the incident. E.g screenshots
-                of call logs, messages, social media files, taxi receipts.
+                evidence for this part of the incident. E.g screenshots of call
+                logs, messages, social media files, taxi receipts.
               </p>
 
               <v-textarea
@@ -233,11 +233,11 @@ export default {
       timeModal: false,
       whereOptions: [
         'Home',
-        'Perpetrator’s Residence',
+        'Perpetrator’s residence',
         'Office',
         'Hotel',
-        'University Campus',
-        'Other public place',
+        'University campus',
+        'Public place (train station, etc.)',
         'Other',
         "Don't know"
       ]

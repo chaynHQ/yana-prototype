@@ -108,9 +108,9 @@
             No events recorded yet.
           </p>
           <p class="body-2">
-            Add separate events using the '+' button below. For example: one
-            event can be "I arrived at [location] and spoke to [x]", then the
-            next event can be "I then spoke to [y]".
+            Add <strong>separate</strong> events using the '+' button below. For
+            example: one event can be "I arrived at [location] and spoke to
+            [x]", then the next event can be "I then spoke to [y]".
           </p>
         </div>
 

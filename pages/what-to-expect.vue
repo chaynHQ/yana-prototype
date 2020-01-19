@@ -19,7 +19,10 @@
           :key="section.name"
           class="process-section"
         >
-          <v-expansion-panel-header class="font-weight-bold px-3">
+          <v-expansion-panel-header
+            @click="scrollToTarget"
+            class="font-weight-bold px-3"
+          >
             <v-btn
               class="mr-4"
               fab
@@ -65,6 +68,13 @@ export default {
   },
   mounted() {
     console.log(`processSections.dateLastActivity = ${processSections.dateLastActivity}`); // eslint-disable-line
+  },
+  methods: {
+    scrollToTarget(event) {
+      if (event) {
+        setTimeout(() => this.$vuetify.goTo(event.target), 350)
+      }
+    }
   }
 }
 </script>

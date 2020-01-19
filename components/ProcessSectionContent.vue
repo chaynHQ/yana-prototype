@@ -13,7 +13,11 @@
           :key="index"
           class="process-section-step"
         >
-          <v-expansion-panel-header class="subtitle-2" color="transparent">
+          <v-expansion-panel-header
+            @click="scrollToTarget"
+            class="subtitle-2"
+            color="transparent"
+          >
             <div class="process-section-step-header">
               {{ step.name }}
             </div>
@@ -71,6 +75,14 @@ export default {
     section: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    scrollToTarget(event) {
+      if (event) {
+        console.log(event)  // eslint-disable-line
+        setTimeout(() => this.$vuetify.goTo(event.target), 350)
+      }
     }
   }
 }
