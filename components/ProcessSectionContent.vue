@@ -80,7 +80,6 @@ export default {
   methods: {
     scrollToTarget(event) {
       if (event) {
-        console.log(event)  // eslint-disable-line
         setTimeout(() => this.$vuetify.goTo(event.target), 350)
       }
     }

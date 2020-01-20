@@ -111,6 +111,16 @@
             Add <strong>separate</strong> events using the '+' button below. For
             example: one event can be "I arrived at [location] and spoke to
             [x]", then the next event can be "I then spoke to [y]".
+            <v-tooltip class="ml-3" top>
+              <template v-slot:activator="{ on }">
+                <v-icon v-on="on">mdi-help-circle</v-icon>
+              </template>
+              <span>
+                Another example: Event 1: I arrived at Stockport station and
+                spoke to my friend, Rohan; Event 2: I arrived at Amsterdam, NL
+                and went to a bar with Rohan's friend Jack
+              </span>
+            </v-tooltip>
           </p>
         </div>
 
