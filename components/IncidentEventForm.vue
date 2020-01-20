@@ -134,7 +134,6 @@
                 filled
                 solo
                 dense
-                hide-details
                 hint="E.g. I arrived at the Owl & The Pussycat pub to meet my friends."
                 persistent-hint
               ></v-textarea>
@@ -146,9 +145,12 @@
             </v-stepper-step>
             <v-stepper-content step="3">
               <p class="body-2">
-                Can you remember the location of your assault? Select any option
-                and make notes that may be helpful later such as what your
-                surroundings were like and any memorable items.
+                Can you remember the location where this part of the incident
+                occured?
+              </p>
+              <p class="body-2">
+                Select any option and make notes that may be helpful later such
+                as what your surroundings were like and any memorable items.
               </p>
 
               <v-radio-group v-model="event.where.place" :mandatory="false">
@@ -187,7 +189,8 @@
                 filled
                 solo
                 dense
-                hide-details
+                hint="E.g. I met my friend Sarah and her boyfriend Jack. Or: A tall, fair-skinned man with brown hair in a denim jacket approached me at the bar."
+                persistent-hint
               ></v-textarea>
             </v-stepper-content>
 
@@ -200,6 +203,14 @@
                 Use this space to add details of anything that may be used as
                 evidence for this part of the incident. E.g screenshots of call
                 logs, messages, social media files, taxi receipts.
+              </p>
+              <p class="body-2">
+                Evidence is defined as "information given to the court and the
+                jury to help them decide if a crime has been committed or not
+                and that tends to prove the truth or probability of truth about
+                a fact put before the court and jury." This is very open and
+                allows for a wide range of materials to be used, so it is worth
+                listing anything you think might be relevant.
               </p>
 
               <v-textarea
@@ -238,8 +249,8 @@ export default {
         'Perpetrator’s residence',
         'Office',
         'Hotel',
-        'University campus',
         'Public place (train station, etc.)',
+        'University campus',
         'Other',
         "Don't know"
       ]
