@@ -81,7 +81,7 @@
       </h2>
 
       <div class="timeline pt-3 pl-3">
-        <p v-if="events.length != 0" class="body-2">
+        <p v-if="events.length != 0" class="inferred-dates body-2">
           <span>
             <strong>From:</strong>
             <span v-if="inferredTimeline.from">
@@ -117,11 +117,10 @@
         <v-card
           v-for="e in sortedEvents"
           :key="e.id"
-          class="mb-2"
-          elevation="0"
+          class="mb-3 event-card"
           @click="selectedEvent = e"
         >
-          <v-card-title class="subtitle-2 flex-nowrap">
+          <v-card-title class="subtitle-2 flex-nowrap font-weight-bold">
             <span>
               <span v-if="e.when.dontKnow">
                 Date/time not known
@@ -135,15 +134,8 @@
                 </span>
                 <span v-else>
                   <span v-if="e.when.date">{{ formatDate(e.when.date) }}</span>
-                  <span v-if="!e.when.date" class="font-italic grey--text">
-                    no date
-                  </span>
                   <span v-if="e.when.time">
-                    <span v-if="e.when.date"> – </span>
                     {{ e.when.time }}
-                  </span>
-                  <span v-if="!e.when.time" class="font-italic grey--text">
-                    no time
                   </span>
                   <span v-if="e.when.approximate">
                     (approx)
@@ -160,13 +152,25 @@
             <div class="flex-nowrap">
               <p
                 v-if="e.what.details"
-                class="body-2 d-block text-truncate text-no-wrap"
+                class="body-2 mb-2 d-block text-truncate text-no-wrap"
               >
                 {{ e.what.details }}
               </p>
-              <p v-else class="body-2 font-italic grey--text">No details yet</p>
+              <p v-else class="body-2 mb-2 font-italic grey--text">
+                No details yet
+              </p>
             </div>
             <div>
+              <v-btn
+                icon
+                small
+                color="warning"
+                class="float-right"
+                @click.stop="deleteEvent(e.id)"
+              >
+                <v-icon>mdi-delete-circle</v-icon>
+              </v-btn>
+
               <span v-if="e.where.place">
                 Location:
                 <v-chip
@@ -185,11 +189,6 @@
               </span>
             </div>
           </v-card-text>
-          <v-card-actions>
-            <v-btn text small color="warning" @click.stop="deleteEvent(e.id)">
-              Remove
-            </v-btn>
-          </v-card-actions>
         </v-card>
 
         <v-row class="mt-4 px-2">
@@ -344,5 +343,3 @@ export default {
   }
 }
 </script>
-
-<style></style>
