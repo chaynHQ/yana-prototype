@@ -22,30 +22,10 @@
         <v-form>
           <v-stepper non-linear vertical class="elevation-0">
             <v-stepper-step editable step="1">
-              What happened?
-              <small>Optional</small>
-            </v-stepper-step>
-            <v-stepper-content step="1">
-              <p class="body-2">
-                Write in as much detail as you wish to describe what happened.
-                Any details you can think of may be useful, but don’t be
-                disheartened if you can’t remember much.
-              </p>
-
-              <v-textarea
-                v-model="event.what.details"
-                filled
-                solo
-                dense
-                hide-details
-              ></v-textarea>
-            </v-stepper-content>
-
-            <v-stepper-step editable step="2">
               When did it happen?
               <small>Optional</small>
             </v-stepper-step>
-            <v-stepper-content step="2">
+            <v-stepper-content step="1">
               <p class="body-2">
                 Do you remember the date and time of this part of the incident?
                 This will add to your timeline. Don’t worry if you can’t
@@ -136,6 +116,26 @@
                 :disabled="event.when.dontKnow"
                 label="Check this box if these times are approximate"
               ></v-checkbox>
+            </v-stepper-content>
+
+            <v-stepper-step editable step="2">
+              What happened?
+              <small>Optional</small>
+            </v-stepper-step>
+            <v-stepper-content step="2">
+              <p class="body-2">
+                Write in as much detail as you wish to describe what happened.
+                Any details you can think of may be useful, but don’t be
+                disheartened if you can’t remember much.
+              </p>
+
+              <v-textarea
+                v-model="event.what.details"
+                filled
+                solo
+                dense
+                hide-details
+              ></v-textarea>
             </v-stepper-content>
 
             <v-stepper-step editable step="3">
