@@ -44,9 +44,13 @@
 
         <p class="body-2">
           You can add as many events as you want.
-          <v-tooltip class="ml-3" top>
+          <v-tooltip
+            bottom
+            color="white grey--text text--darken-2"
+            content-class="app-tooltip"
+          >
             <template v-slot:activator="{ on }">
-              <v-icon v-on="on">mdi-help-circle</v-icon>
+              <v-icon v-on="on" class="ml-1">mdi-help-circle</v-icon>
             </template>
             <span>
               For example: Event 1: I arrived at Stockport station and spoke to
