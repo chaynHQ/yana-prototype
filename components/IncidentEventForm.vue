@@ -135,6 +135,8 @@
                 solo
                 dense
                 hide-details
+                hint="E.g. I arrived at the Owl & The Pussycat pub to meet my friends."
+                persistent-hint
               ></v-textarea>
             </v-stepper-content>
 

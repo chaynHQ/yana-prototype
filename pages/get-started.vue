@@ -4,9 +4,9 @@
       <h1 class="headline">Your case</h1>
 
       <p class="body-2 mt-3">
-        Using the following buttons you can make a record of the event, access
+        Using the following buttons you can make a record of the assault, access
         support and learn more about what to expect should you decide to report
-        your experience.
+        to the police.
       </p>
     </div>
 
@@ -19,7 +19,7 @@
         </v-icon>
       </v-card-title>
       <v-card-text>
-        Here you can make notes of anything you remember.
+        Make notes of anything you remember around the assault.
       </v-card-text>
     </v-card>
 
