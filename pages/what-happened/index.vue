@@ -67,18 +67,32 @@
       </div>
     </div>
 
-    <incident v-if="!intro"></incident>
+    <incident v-if="!intro" :events="events"></incident>
   </section>
 </template>
 
 <script>
+import testData from '@/data/test-data'
+
 import Incident from '@/components/Incident'
 
 export default {
   components: { Incident },
+  asyncData({ query }) {
+    return Promise.resolve({
+      test: query.test
+    })
+  },
+  watchQuery: ['test'],
   data() {
     return {
-      intro: true
+      intro: true,
+      events: []
+    }
+  },
+  mounted() {
+    if (this.test) {
+      this.events = testData.events
     }
   }
 }
