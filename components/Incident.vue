@@ -117,9 +117,9 @@
         <v-card
           v-for="e in sortedEvents"
           :key="e.id"
-          v-on:click="selectedEvent = e"
           class="mb-2"
           elevation="0"
+          @click="selectedEvent = e"
         >
           <v-card-title class="subtitle-2 flex-nowrap">
             <span>
@@ -186,12 +186,7 @@
             </div>
           </v-card-text>
           <v-card-actions>
-            <v-btn
-              v-on:click.stop="deleteEvent(e.id)"
-              text
-              small
-              color="warning"
-            >
+            <v-btn text small color="warning" @click.stop="deleteEvent(e.id)">
               Remove
             </v-btn>
           </v-card-actions>
@@ -207,7 +202,7 @@
             </p>
           </v-col>
           <v-col cols="4" class="py-0 text-right">
-            <v-btn v-on:click="newEvent()" color="primary" fab dark depressed>
+            <v-btn color="primary" fab dark depressed @click="newEvent()">
               <v-icon>mdi-plus</v-icon>
             </v-btn>
           </v-col>
@@ -217,7 +212,7 @@
 
     <incident-event-form
       :event="selectedEvent"
-      v-on:done="eventUpdated()"
+      @done="eventUpdated()"
     ></incident-event-form>
   </div>
 </template>

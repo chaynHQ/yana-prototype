@@ -14,9 +14,9 @@
           class="process-section-step"
         >
           <v-expansion-panel-header
-            @click="scrollToTarget"
             class="subtitle-2"
             color="transparent"
+            @click="scrollToTarget"
           >
             <div class="process-section-step-header">
               {{ step.name }}

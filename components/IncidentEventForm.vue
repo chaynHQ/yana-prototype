@@ -9,7 +9,7 @@
       <v-card-title>
         <span class="headline">Event</span>
         <v-spacer></v-spacer>
-        <v-btn v-on:click.stop="done()" color="primary">Done</v-btn>
+        <v-btn color="primary" @click.stop="done()">Done</v-btn>
       </v-card-title>
       <v-divider></v-divider>
       <v-card-text class="pa-0" style="height: 500px;">
@@ -52,12 +52,12 @@
                     <template v-slot:activator="{ on }">
                       <v-text-field
                         :value="formatDate(event.when.date)"
-                        v-on="on"
-                        @click:clear="event.when.date = null"
                         :disabled="event.when.dontKnow"
                         label="Date"
                         readonly
                         clearable
+                        v-on="on"
+                        @click:clear="event.when.date = null"
                       ></v-text-field>
                     </template>
                     <v-date-picker
@@ -66,13 +66,13 @@
                       :max="new Date().toISOString().substr(0, 10)"
                     >
                       <v-spacer></v-spacer>
-                      <v-btn @click="dateModal = false" text color="primary"
+                      <v-btn text color="primary" @click="dateModal = false"
                         >Cancel</v-btn
                       >
                       <v-btn
-                        @click="$refs.dateDialog.save(event.when.date)"
                         text
                         color="primary"
+                        @click="$refs.dateDialog.save(event.when.date)"
                         >OK</v-btn
                       >
                     </v-date-picker>
@@ -88,22 +88,22 @@
                     <template v-slot:activator="{ on }">
                       <v-text-field
                         v-model="event.when.time"
-                        v-on="on"
                         :disabled="event.when.dontKnow"
                         label="Time"
                         readonly
                         clearable
+                        v-on="on"
                       ></v-text-field>
                     </template>
                     <v-time-picker v-model="event.when.time">
                       <v-spacer></v-spacer>
-                      <v-btn @click="timeModal = false" text color="primary"
+                      <v-btn text color="primary" @click="timeModal = false"
                         >Cancel</v-btn
                       >
                       <v-btn
-                        @click="$refs.timeDialog.save(event.when.time)"
                         text
                         color="primary"
+                        @click="$refs.timeDialog.save(event.when.time)"
                         >OK</v-btn
                       >
                     </v-time-picker>
@@ -132,8 +132,8 @@
               <v-textarea
                 v-model="event.what.details"
                 filled
-                solo
                 dense
+                auto-grow
                 hint="E.g. I arrived at the Owl & The Pussycat pub to meet my friends."
                 persistent-hint
               ></v-textarea>
@@ -166,9 +166,9 @@
               <v-textarea
                 v-model="event.where.details"
                 filled
-                solo
                 dense
                 hide-details
+                auto-grow
                 label="Extra notes"
               ></v-textarea>
             </v-stepper-content>
@@ -187,8 +187,8 @@
               <v-textarea
                 v-model="event.people.details"
                 filled
-                solo
                 dense
+                auto-grow
                 hint="E.g. I met my friend Sarah and her boyfriend Jack. Or: A tall, fair-skinned man with brown hair in a denim jacket approached me at the bar."
                 persistent-hint
               ></v-textarea>
@@ -216,8 +216,8 @@
               <v-textarea
                 v-model="event.evidence.details"
                 filled
-                solo
                 dense
+                auto-grow
                 hide-details
               ></v-textarea>
             </v-stepper-content>

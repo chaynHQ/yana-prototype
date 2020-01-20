@@ -107,6 +107,7 @@
     padding: 0;
 
     &.v-input--selection-controls .v-input__slot {
+      align-items: start;
       margin: 0;
       padding: 0;
     }
@@ -114,6 +115,7 @@
     .v-label {
       margin-left: 8px;
       font-size: 13px;
+      height: auto;
     }
   }
 }

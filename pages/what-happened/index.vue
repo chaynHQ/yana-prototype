@@ -18,11 +18,11 @@
         </p>
 
         <v-btn
-          v-on:click="intro = false"
           class="mt-4 text-uppercase"
           color="primary"
           large
           block
+          @click="intro = false"
         >
           Fill in details
         </v-btn>
@@ -50,7 +50,7 @@
             content-class="app-tooltip"
           >
             <template v-slot:activator="{ on }">
-              <v-icon v-on="on" class="ml-1">mdi-help-circle</v-icon>
+              <v-icon class="ml-1" v-on="on">mdi-help-circle</v-icon>
             </template>
             <span>
               For example: Event 1: I arrived at Stockport station and spoke to

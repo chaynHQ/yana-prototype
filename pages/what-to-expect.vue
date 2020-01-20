@@ -20,8 +20,8 @@
           class="process-section"
         >
           <v-expansion-panel-header
-            @click="scrollToTarget"
             class="font-weight-bold px-3"
+            @click="scrollToTarget"
           >
             <v-btn
               class="mr-4"
