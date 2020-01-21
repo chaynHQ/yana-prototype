@@ -67,11 +67,17 @@
       </div>
     </div>
 
-    <incident v-if="!intro" :events="events"></incident>
+    <incident
+      v-if="!intro"
+      :events="events"
+      @delete="deleteEvent($event)"
+    ></incident>
   </section>
 </template>
 
 <script>
+import _ from 'lodash'
+
 import testData from '@/data/test-data'
 
 import Incident from '@/components/Incident'
@@ -93,6 +99,21 @@ export default {
   mounted() {
     if (this.test) {
       this.events = testData.events
+    }
+  },
+  methods: {
+    deleteEvent(id) {
+      this.$dialog
+        .warning({
+          text: 'Are you sure you want remove this event?',
+          title: 'Confirm',
+          persistent: true
+        })
+        .then((result) => {
+          if (result) {
+            this.events = _.filter(this.events, (e) => e.id !== id)
+          }
+        })
     }
   }
 }
