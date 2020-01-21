@@ -94,8 +94,31 @@
         </v-btn>
 
         <v-expand-transition>
-          <div v-show="event.expanded" class="body-2 mt-2">
-            Foo
+          <div v-show="event.expanded">
+            <div v-if="event.where.details" class="mt-2 bordered-top">
+              <p class="body-2">Where did it happen?</p>
+
+              <vue-simple-markdown
+                :source="event.where.details"
+                class="body-2"
+              ></vue-simple-markdown>
+            </div>
+            <div v-if="event.people.details" class="mt-2 bordered-top">
+              <p class="body-2">Who was there?</p>
+
+              <vue-simple-markdown
+                :source="event.people.details"
+                class="body-2"
+              ></vue-simple-markdown>
+            </div>
+            <div v-if="event.evidence.details" class="mt-2 bordered-top">
+              <p class="body-2">Evidence</p>
+
+              <vue-simple-markdown
+                :source="event.evidence.details"
+                class="body-2"
+              ></vue-simple-markdown>
+            </div>
           </div>
         </v-expand-transition>
       </div>

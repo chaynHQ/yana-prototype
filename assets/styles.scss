@@ -25,9 +25,19 @@
   }
 }
 
+.markdown-body {
+  color: inherit !important;
+}
+
 .app-tooltip {
   margin-left: 12px;
   margin-right: 12px;
+}
+
+.bordered-top {
+  margin-top: 12px;
+  border-top: 1px dotted #ccc;
+  padding-top: 12px;
 }
 
 // ---
