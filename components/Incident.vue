@@ -118,6 +118,7 @@
           v-for="e in sortedEvents"
           :key="e.id"
           class="mb-3 event-card"
+          :class="{ invalid: !isValid(e) }"
           @click="selectedEvent = e"
         >
           <v-card-title class="subtitle-2 flex-nowrap font-weight-bold">
@@ -149,6 +150,18 @@
             </v-icon>
           </v-card-title>
           <v-card-text>
+            <v-alert
+              v-if="!isValid(e)"
+              type="error"
+              dense
+              outlined
+              class="caption pa-2"
+            >
+              Missing info
+              <br />
+              Fill in at least one section
+            </v-alert>
+
             <div class="flex-nowrap">
               <p
                 v-if="e.what.details"
@@ -322,12 +335,23 @@ export default {
     formatDateTime(value) {
       return value ? format(parseISO(value), 'MMM do yyyy p') : ''
     },
+    isValid(entry) {
+      return (
+        entry &&
+        (entry.when.dontKnow ||
+          entry.when.date ||
+          entry.what.details ||
+          entry.where.place ||
+          entry.people.details ||
+          entry.evidence.details)
+      )
+    },
     newEvent() {
       const event = {
         id: nanoid(8),
         created: new Date().toISOString(),
-        what: {},
         when: {},
+        what: {},
         where: {},
         people: {},
         evidence: {}
