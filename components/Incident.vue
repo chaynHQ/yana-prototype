@@ -161,16 +161,6 @@
               </p>
             </div>
             <div>
-              <v-btn
-                icon
-                small
-                color="warning"
-                class="float-right"
-                @click.stop="deleteEvent(e.id)"
-              >
-                <v-icon>mdi-delete-circle</v-icon>
-              </v-btn>
-
               <span v-if="e.where.place">
                 Location:
                 <v-chip
@@ -186,6 +176,23 @@
               </span>
               <span v-else class="font-italic grey--text">
                 No location specified
+              </span>
+            </div>
+            <div class="mt-3">
+              <v-btn
+                icon
+                small
+                color="warning"
+                class="float-right"
+                style="bottom: 4px;"
+                @click.stop="deleteEvent(e.id)"
+              >
+                <v-icon>mdi-delete-circle</v-icon>
+              </v-btn>
+
+              <span class="caption">
+                Created:
+                {{ formatDateTime(e.created) }}
               </span>
             </div>
           </v-card-text>
@@ -312,9 +319,13 @@ export default {
     formatDate(value) {
       return value ? format(parseISO(value), 'MMM do yyyy') : ''
     },
+    formatDateTime(value) {
+      return value ? format(parseISO(value), 'MMM do yyyy p') : ''
+    },
     newEvent() {
       const event = {
         id: nanoid(8),
+        created: new Date().toISOString(),
         what: {},
         when: {},
         where: {},

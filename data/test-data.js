@@ -4,6 +4,7 @@ export default {
   events: [
     {
       id: nanoid(8),
+      created: '2020-01-21T11:00:28.196Z',
       what: {},
       when: {
         dontKnow: true
@@ -14,6 +15,7 @@ export default {
     },
     {
       id: nanoid(8),
+      created: '2020-01-21T11:00:28.196Z',
       what: {},
       when: {},
       where: {},
@@ -22,6 +24,7 @@ export default {
     },
     {
       id: nanoid(8),
+      created: '2020-01-21T11:00:28.196Z',
       what: {},
       when: {
         date: '2019-01-03',
@@ -33,6 +36,7 @@ export default {
     },
     {
       id: nanoid(8),
+      created: '2020-01-21T11:00:28.196Z',
       what: {},
       when: {
         date: '2019-01-01',
@@ -44,6 +48,7 @@ export default {
     },
     {
       id: nanoid(8),
+      created: '2020-01-21T11:00:28.196Z',
       what: {},
       when: {
         date: '2019-01-01'
@@ -54,6 +59,7 @@ export default {
     },
     {
       id: nanoid(8),
+      created: '2020-01-21T11:00:28.196Z',
       what: {},
       when: {
         date: '2019-01-01',
@@ -65,6 +71,7 @@ export default {
     },
     {
       id: nanoid(8),
+      created: '2020-01-21T11:00:28.196Z',
       what: {},
       when: {
         date: '2019-01-05',
@@ -76,6 +83,7 @@ export default {
     },
     {
       id: nanoid(8),
+      created: '2020-01-21T11:00:28.196Z',
       what: {},
       when: {},
       where: {},
@@ -84,6 +92,7 @@ export default {
     },
     {
       id: nanoid(8),
+      created: '2020-01-21T11:00:28.196Z',
       what: {},
       when: {
         dontKnow: true
@@ -94,6 +103,7 @@ export default {
     },
     {
       id: nanoid(8),
+      created: '2020-01-21T11:00:28.196Z',
       what: {},
       when: {
         date: '2019-01-01',
