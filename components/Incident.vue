@@ -170,7 +170,7 @@
                 {{ e.what.details }}
               </p>
               <p v-else class="body-2 mb-2 font-italic grey--text">
-                No details yet
+                No details provided on what happened
               </p>
             </div>
             <div>
