@@ -6,10 +6,19 @@
       <div v-if="intro" class="mt-3">
         <p class="body-2">
           You may have difficulty remembering what happened to you. This is
-          natural. You can fill in as much or as little as you want and feel
-          free to step away and come back as often as you need. You can later
-          choose to email yourself these notes and show them to support workers
-          or the police if you find it hard to remember.
+          natural.
+        </p>
+
+        <p class="body-2">
+          We’ve created a space for you to log as much information as you can
+          remember, which you can later choose to email yourself and show them
+          to support workers or the police if you find it hard to remember or
+          repeatedly recall.
+        </p>
+
+        <p class="body-2">
+          You can fill in as much or as little as you want and feel free to step
+          away and come back as often as you need.
         </p>
 
         <p class="body-2">
@@ -24,46 +33,8 @@
           block
           @click="intro = false"
         >
-          Fill in details
+          Start Building Your Timeline
         </v-btn>
-      </div>
-
-      <div v-else class="mt-3">
-        <p class="body-2">
-          Add information about the incident in as much detail as you’re
-          comfortable with. Start with what you remember first. Enter each part
-          of the incident separately.
-        </p>
-
-        <p class="body-2">
-          Click the ‘plus’ button to add what happened next. Breaking down the
-          incident in this way will help if you’re reporting your assault to the
-          police and you can refer back to this. You can come back to this and
-          add more details if other details come to you later.
-        </p>
-
-        <p class="body-2">
-          You can add as many events as you want.
-          <v-tooltip
-            bottom
-            color="white grey--text text--darken-2"
-            content-class="app-tooltip"
-          >
-            <template v-slot:activator="{ on }">
-              <v-icon class="ml-1" v-on="on">mdi-help-circle</v-icon>
-            </template>
-            <span>
-              For example: Event 1: I arrived at Stockport station and spoke to
-              my friend, Rohan; Event 2: I arrived at Amsterdam, NL and went to
-              a bar with Rohan's friend Jack
-            </span>
-          </v-tooltip>
-        </p>
-
-        <p class="body-2">
-          We’ll use the cards to create a timeline so add approximate times if
-          you remember them. You can re-arrange these later.
-        </p>
       </div>
     </div>
 

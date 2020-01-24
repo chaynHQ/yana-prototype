@@ -1,5 +1,62 @@
 <template>
   <div>
+    <div class="mt-3 px-3">
+      <v-alert
+        v-if="onboardingFinished"
+        border="top"
+        colored-border
+        type="info"
+        elevation="1"
+      >
+        <p class="body-2 font-weight-bold">
+          Thank you!
+        </p>
+        <p class="body-2 mb-0">
+          These are now separate steps in your timeline. You can now click on
+          these to enter more information such as the time or information on who
+          was there. Press the ‘plus’ button to add a new step you remember.
+          Entering an approximate time if you can will rearrange your timeline
+          automatically.
+        </p>
+      </v-alert>
+
+      <p class="body-2">
+        Add information about the incident in as much detail as you’re
+        comfortable with. Start with what you remember first. Enter each part of
+        the incident separately.
+      </p>
+
+      <p class="body-2">
+        Click the ‘plus’ button to add what happened next. Breaking down the
+        incident in this way will help if you’re reporting your assault to the
+        police and you can refer back to this. You can come back to this and add
+        more details if other details come to you later.
+      </p>
+
+      <p class="body-2">
+        You can add as many events as you want.
+        <v-tooltip
+          bottom
+          color="white grey--text text--darken-2"
+          content-class="app-tooltip"
+        >
+          <template v-slot:activator="{ on }">
+            <v-icon class="ml-1" v-on="on">mdi-help-circle</v-icon>
+          </template>
+          <span>
+            For example: Event 1: I arrived at Stockport station and spoke to my
+            friend, Rohan; Event 2: I arrived at Amsterdam, NL and went to a bar
+            with Rohan's friend Jack
+          </span>
+        </v-tooltip>
+      </p>
+
+      <p class="body-2">
+        We’ll use the cards to create a timeline so add approximate times if you
+        remember them. You can re-arrange these later.
+      </p>
+    </div>
+
     <div class="mt-6 px-3">
       <h2 class="mb-1 subtitle-2 font-weight-bold">
         Timeline of events within the incident
@@ -65,6 +122,11 @@
       </div>
     </div>
 
+    <incident-timeline-onboarding
+      :show="showOnboarding"
+      @done="finishOnboarding($event)"
+    ></incident-timeline-onboarding>
+
     <incident-event-form
       :event="selectedEvent"
       @done="eventUpdated()"
@@ -78,11 +140,16 @@ import parseISO from 'date-fns/parseISO'
 import format from 'date-fns/format'
 import compareAsc from 'date-fns/compareAsc'
 
+import IncidentTimelineOnboarding from '@/components/IncidentTimelineOnboarding'
 import IncidentEventCard from '@/components/IncidentEventCard'
 import IncidentEventForm from '@/components/IncidentEventForm'
 
 export default {
-  components: { IncidentEventCard, IncidentEventForm },
+  components: {
+    IncidentTimelineOnboarding,
+    IncidentEventCard,
+    IncidentEventForm
+  },
   props: {
     events: {
       type: Array,
@@ -91,6 +158,8 @@ export default {
   },
   data() {
     return {
+      showOnboarding: false,
+      onboardingFinished: false,
       selectedEvent: null
     }
   },
@@ -154,22 +223,39 @@ export default {
       }
     }
   },
+  mounted() {
+    setTimeout(() => (this.showOnboarding = true), 400)
+  },
   methods: {
     formatDate(value) {
       return value ? format(parseISO(value), 'MMM do yyyy') : ''
     },
+    finishOnboarding(text) {
+      text.split(/\r?\n/).forEach((t) => {
+        if (t) {
+          this._newEvent(t)
+        }
+      })
+      this.showOnboarding = false
+      this.onboardingFinished = true
+    },
     newEvent() {
+      this.selectedEvent = this._newEvent()
+    },
+    _newEvent(whenDetails) {
       const event = {
         id: nanoid(8),
         created: new Date().toISOString(),
         when: {},
-        what: {},
+        what: {
+          details: whenDetails
+        },
         where: {},
         people: {},
         evidence: {}
       }
       this.events.push(event)
-      this.selectedEvent = event
+      return event
     },
     eventUpdated() {
       this.selectedEvent = null

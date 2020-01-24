@@ -3,16 +3,17 @@
     v-model="show"
     fullscreen
     hide-overlay
+    scrollable
     transition="dialog-bottom-transition"
   >
     <v-card v-if="show">
-      <v-card-title>
+      <v-card-title primary-title>
         <span class="headline">Event</span>
         <v-spacer></v-spacer>
         <v-btn color="primary" @click.stop="done()">Done</v-btn>
       </v-card-title>
       <v-divider></v-divider>
-      <v-card-text class="pa-0" style="height: 500px;">
+      <v-card-text class="pa-0">
         <p class="body-2 px-3 pt-3 ma-0">
           Use this form to log a single event that occurred as part of the
           overall incident. All sections are optional, but please provide info

@@ -11,7 +11,7 @@
     </div>
 
     <v-card to="/what-happened" nuxt>
-      <v-card-title>
+      <v-card-title primary-title>
         <span>What happened?</span>
         <v-spacer></v-spacer>
         <v-icon>
@@ -24,7 +24,7 @@
     </v-card>
 
     <v-card class="mt-3" to="/what-to-expect" nuxt>
-      <v-card-title>
+      <v-card-title primary-title>
         <span>What to expect</span>
         <v-spacer></v-spacer>
         <v-icon>
@@ -38,7 +38,7 @@
     </v-card>
 
     <v-card class="mt-3">
-      <v-card-title>
+      <v-card-title primary-title>
         <span>Get support</span>
         <v-spacer></v-spacer>
         <v-icon>
@@ -52,7 +52,7 @@
     </v-card>
 
     <v-card class="mt-3">
-      <v-card-title>
+      <v-card-title primary-title>
         <span>Track your case</span>
         <v-spacer></v-spacer>
         <v-icon>

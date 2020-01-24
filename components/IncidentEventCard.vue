@@ -5,7 +5,7 @@
     :class="{ invalid: !isValid(event) }"
     @click="$emit('click', $event)"
   >
-    <v-card-title class="subtitle-2 flex-nowrap font-weight-bold">
+    <v-card-title primary-title class="subtitle-2 flex-nowrap font-weight-bold">
       <span>
         <span v-if="event.when.dontKnow">
           Date/time not known
