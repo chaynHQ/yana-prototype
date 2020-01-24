@@ -98,5 +98,9 @@ export default {
     prompt: {
       icon: false
     }
+  },
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in'
   }
 }
