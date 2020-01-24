@@ -49,12 +49,11 @@
       </v-alert>
 
       <div class="flex-nowrap">
-        <p
+        <vue-simple-markdown
           v-if="event.what.details"
-          class="body-2 mb-2 d-block text-truncate text-no-wrap"
-        >
-          {{ event.what.details }}
-        </p>
+          :source="event.what.details"
+          class="body-2 mb-2"
+        ></vue-simple-markdown>
         <p v-else class="body-2 mb-2 font-italic grey--text">
           No details provided on what happened
         </p>
@@ -81,7 +80,6 @@
 
       <div v-if="hasMore(event)">
         <v-btn
-          v-if="!event.expanded"
           small
           text
           :ripple="false"
@@ -90,7 +88,12 @@
           style="display: block;"
           @click.stop="$set(event, 'expanded', !event.expanded)"
         >
-          More...
+          <span v-if="event.expanded">
+            Hide...
+          </span>
+          <span v-else>
+            More...
+          </span>
         </v-btn>
 
         <v-expand-transition>

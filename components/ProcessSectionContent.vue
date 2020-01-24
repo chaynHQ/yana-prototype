@@ -80,7 +80,7 @@ export default {
   methods: {
     scrollToTarget(event) {
       if (event) {
-        setTimeout(() => this.$vuetify.goTo(event.target), 350)
+        setTimeout(() => this.$vuetify.goTo(event.target), 300)
       }
     }
   }

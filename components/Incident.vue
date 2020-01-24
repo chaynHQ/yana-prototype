@@ -100,6 +100,7 @@
         <incident-event-card
           v-for="e in sortedEvents"
           :key="e.id"
+          ref="event"
           :event="e"
           @click="selectedEvent = e"
           @delete="$emit('delete', $event)"
@@ -225,7 +226,7 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => (this.showOnboarding = true), 400)
+    setTimeout(() => (this.showOnboarding = true), 300)
   },
   methods: {
     formatDate(value) {
@@ -258,8 +259,15 @@ export default {
       this.events.push(event)
       return event
     },
+    findElementForEvent(id) {
+      const index = this.events.findIndex((e) => e.id === id)
+      return this.$refs.event[index]
+    },
     eventUpdated() {
+      const id = this.selectedEvent.id
       this.selectedEvent = null
+      const element = this.findElementForEvent(id)
+      setTimeout(() => this.$vuetify.goTo(element), 200)
     }
   }
 }
