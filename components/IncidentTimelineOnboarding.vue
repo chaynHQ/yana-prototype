@@ -37,7 +37,7 @@
             </v-btn>
           </div>
 
-          <div class="mt-5 body-2 font-italic">
+          <div class="mt-3 body-2 font-italic">
             <p>Example:</p>
             <p>
               I met the perpetrator at a bar recently in downtown Soho. He was
