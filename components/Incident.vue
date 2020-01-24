@@ -8,6 +8,7 @@
         type="info"
         elevation="1"
         dismissible
+        class="long-alert"
       >
         <p class="body-2 font-weight-bold">
           Thank you!

@@ -40,6 +40,17 @@
   padding-top: 12px;
 }
 
+.v-alert.long-alert {
+  .v-alert__wrapper {
+    align-items: start;
+
+    .v-alert__dismissible {
+      margin-top: -2px;
+      margin-right: -10px;
+    }
+  }
+}
+
 // ---
 // "What happened" section
 // ---
