@@ -60,17 +60,17 @@ export default {
         {
           icon: 'mdi-information',
           title: 'About',
-          to: '/'
+          to: '/about'
         },
         {
           icon: 'mdi-account-multiple',
           title: 'Partners',
-          to: '/'
+          to: '/partners'
         },
         {
           icon: 'mdi-update',
           title: 'Updates',
-          to: '/'
+          to: '/updates'
         }
       ],
       title: 'YANA'
