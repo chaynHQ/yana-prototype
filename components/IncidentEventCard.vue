@@ -38,14 +38,14 @@
     <v-card-text>
       <v-alert
         v-if="!isValid(event)"
-        type="error"
-        dense
+        type="info"
         outlined
+        dense
         class="caption pa-2"
       >
-        Missing info
+        Oh no!
         <br />
-        Fill in at least one section
+        Did you want to add something here and forgot?
       </v-alert>
 
       <div class="flex-nowrap">

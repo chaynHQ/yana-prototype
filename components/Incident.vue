@@ -7,6 +7,7 @@
         colored-border
         type="info"
         elevation="1"
+        dismissible
       >
         <p class="body-2 font-weight-bold">
           Thank you!
