@@ -122,6 +122,12 @@
             </v-btn>
           </v-col>
         </v-row>
+
+        <div v-if="events.length" class="mt-8">
+          <v-btn color="warning" block @click="$emit('deleteAll')">
+            Delete all your data
+          </v-btn>
+        </div>
       </div>
     </div>
 
@@ -227,7 +233,9 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => (this.showOnboarding = true), 300)
+    if (this.events.length === 0) {
+      setTimeout(() => (this.showOnboarding = true), 300)
+    }
   },
   methods: {
     formatDate(value) {
@@ -239,6 +247,7 @@ export default {
           this._newEvent(t)
         }
       })
+      this.persistEvents()
       this.showOnboarding = false
       this.onboardingFinished = true
     },
@@ -260,15 +269,21 @@ export default {
       this.events.push(event)
       return event
     },
-    findElementForEvent(id) {
-      const index = this.events.findIndex((e) => e.id === id)
-      return this.$refs.event[index]
-    },
     eventUpdated() {
+      this.persistEvents()
+
       const id = this.selectedEvent.id
       this.selectedEvent = null
       const element = this.findElementForEvent(id)
       setTimeout(() => this.$vuetify.goTo(element), 200)
+    },
+    findElementForEvent(id) {
+      const index = this.events.findIndex((e) => e.id === id)
+      return this.$refs.event[index]
+    },
+    persistEvents() {
+      const serialised = JSON.stringify(this.events)
+      localStorage.setItem('events', serialised)
     }
   }
 }

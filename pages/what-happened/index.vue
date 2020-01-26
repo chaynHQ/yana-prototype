@@ -26,6 +26,11 @@
           can.
         </p>
 
+        <p class="body-2">
+          All data you enter will only be stored on your device. You will be
+          able to delete this data when you want.
+        </p>
+
         <v-btn
           class="mt-4 text-uppercase"
           color="primary"
@@ -42,6 +47,7 @@
       v-if="!intro"
       :events="events"
       @delete="deleteEvent($event)"
+      @deleteAll="deleteAll"
     ></incident>
   </section>
 </template>
@@ -70,6 +76,18 @@ export default {
   mounted() {
     if (this.test) {
       this.events = testData.events
+      this.intro = false
+    } else {
+      const data = localStorage.getItem('events')
+      if (data) {
+        try {
+          this.events = JSON.parse(data)
+          this.intro = false
+        } catch (e) {
+          console.error('Failed to parse events data from localStorage', e) // eslint-disable-line
+          localStorage.removeItem('events')
+        }
+      }
     }
   },
   methods: {
@@ -83,6 +101,21 @@ export default {
         .then((result) => {
           if (result) {
             this.events = _.filter(this.events, (e) => e.id !== id)
+          }
+        })
+    },
+    deleteAll() {
+      this.$dialog
+        .warning({
+          text: 'Are you sure you want delete all your timeline data?',
+          title: 'Confirm',
+          persistent: true
+        })
+        .then((result) => {
+          if (result) {
+            localStorage.removeItem('events')
+            this.events = []
+            this.intro = true
           }
         })
     }
