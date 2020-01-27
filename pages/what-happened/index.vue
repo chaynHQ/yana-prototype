@@ -40,7 +40,8 @@
     <incident
       v-if="!intro"
       :events="events"
-      @delete="deleteEvent($event)"
+      @save="save"
+      @delete="deleteEvent"
       @deleteAll="deleteAll"
     ></incident>
   </section>
@@ -79,12 +80,20 @@ export default {
           this.intro = false
         } catch (e) {
           console.error('Failed to parse events data from localStorage', e) // eslint-disable-line
-          localStorage.removeItem('events')
+          this.clear()
         }
       }
     }
   },
   methods: {
+    save() {
+      const serialised = JSON.stringify(this.events)
+      localStorage.setItem('events', serialised)
+    },
+    clear() {
+      this.events = []
+      localStorage.removeItem('events')
+    },
     deleteEvent(id) {
       this.$dialog
         .warning({
@@ -95,6 +104,7 @@ export default {
         .then((result) => {
           if (result) {
             this.events = _.filter(this.events, (e) => e.id !== id)
+            this.save()
           }
         })
     },
@@ -107,8 +117,7 @@ export default {
         })
         .then((result) => {
           if (result) {
-            localStorage.removeItem('events')
-            this.events = []
+            this.clear()
             this.intro = true
           }
         })

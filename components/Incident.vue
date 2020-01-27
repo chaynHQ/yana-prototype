@@ -272,8 +272,7 @@ export default {
       return this.$refs.event[index]
     },
     persistEvents() {
-      const serialised = JSON.stringify(this.events)
-      localStorage.setItem('events', serialised)
+      this.$emit('save')
     }
   }
 }
