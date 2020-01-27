@@ -9,8 +9,9 @@
       <v-card-title primary-title>
         <span class="headline">Start your timeline</span>
       </v-card-title>
+      <v-divider></v-divider>
       <v-card-text style="height: 500px;">
-        <div>
+        <div class="pt-3">
           <p class="body-2">
             Take a minute and try and write down anything you remember about
             what happened. Try to put each part of the incident into a new
