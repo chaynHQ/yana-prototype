@@ -14,29 +14,20 @@
           Thank you!
         </p>
         <p class="body-2 mb-0">
-          These are now separate steps in your timeline. You can now click on
-          these to enter more information such as the time or information on who
-          was there. Press the ‘plus’ button to add a new step you remember.
-          Entering an approximate time if you can will rearrange your timeline
-          automatically.
+          You did it! These are now separate events in your timeline.
         </p>
       </v-alert>
 
       <p class="body-2">
-        Add information about the incident in as much detail as you’re
-        comfortable with. Start with what you remember first. Enter each part of
-        the incident separately.
+        Click on events to enter more information like time and place. Press the
+        ‘plus’ button to add new events as you remember them.
       </p>
 
       <p class="body-2">
-        Click the ‘plus’ button to add what happened next. Breaking down the
-        incident in this way will help if you’re reporting your assault to the
-        police and you can refer back to this. You can come back to this and add
-        more details if other details come to you later.
-      </p>
+        You can fill in as much or as little as you want and feel free to step
+        away and come back as often as you need. Your timeline is saved
+        automatically on your device and you can use it if you decide to report.
 
-      <p class="body-2">
-        You can add as many events as you want.
         <v-tooltip
           bottom
           color="white grey--text text--darken-2"
@@ -46,16 +37,10 @@
             <v-icon class="ml-1" v-on="on">mdi-help-circle</v-icon>
           </template>
           <span>
-            For example: Event 1: I arrived at Stockport station and spoke to my
-            friend, Rohan; Event 2: I arrived at Amsterdam, NL and went to a bar
-            with Rohan's friend Jack
+            Entering an approximate time will rearrange your timeline
+            automatically.
           </span>
         </v-tooltip>
-      </p>
-
-      <p class="body-2">
-        We’ll use the cards to create a timeline so add approximate times if you
-        remember them. You can re-arrange these later.
       </p>
     </div>
 
