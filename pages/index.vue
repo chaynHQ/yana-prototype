@@ -27,7 +27,6 @@
     <div class="mt-12 px-3">
       <p class="body-2">
         If you are in an emergency situation
-        <br />
         <span class="text-uppercase font-weight-bold primary--text">
           DIAL 999
         </span>
