@@ -1,19 +1,22 @@
 <template>
   <v-footer app>
-    <v-row justify="space-between" no-gutters>
-      <v-col cols="7">
+    <div class="d-flex flex-row justify-space-between" style="width: 100%;">
+      <div>
         &copy; 2019 Chayn
-      </v-col>
-      <v-col cols="5" class="text-right">
-        <a
-          href="#"
-          class="subtitle-2 font-weight-bold text-uppercase"
-          color="primary"
-        >
-          Leave this site
-        </a>
-      </v-col>
-    </v-row>
+      </div>
+      <div class="">
+        <v-btn icon small color="primary">
+          <v-icon>mdi-heart</v-icon>
+        </v-btn>
+        <v-btn icon small color="primary" class="ml-3">
+          <v-icon>mdi-information</v-icon>
+        </v-btn>
+        <v-btn text small color="primary" class="ml-5">
+          Leave
+          <v-icon right>mdi-exit-to-app</v-icon>
+        </v-btn>
+      </div>
+    </div>
   </v-footer>
 </template>
 

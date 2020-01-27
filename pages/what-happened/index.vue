@@ -31,13 +31,7 @@
           able to delete this data when you want.
         </p>
 
-        <v-btn
-          class="mt-4 text-uppercase"
-          color="primary"
-          large
-          block
-          @click="intro = false"
-        >
+        <v-btn class="mt-4" color="primary" large block @click="intro = false">
           Start Building Your Timeline
         </v-btn>
       </div>
