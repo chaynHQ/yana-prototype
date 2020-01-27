@@ -31,13 +31,14 @@
             hide-details
             autofocus
           ></v-textarea>
-          <div class="mt-3 d-flex justify-end">
-            <v-btn color="primary" :disabled="!text" @click.stop="done()">
+          <div class="mt-3 d-flex justify-space-between">
+            <v-btn text @click.stop="skip">Skip</v-btn>
+            <v-btn color="primary" :disabled="!text" @click.stop="done">
               Done
             </v-btn>
           </div>
 
-          <div class="mt-3 body-2 font-italic">
+          <div class="mt-5 body-2 font-italic">
             <p>Example:</p>
             <p>
               I met the perpetrator at a bar recently in downtown Soho. He was
@@ -72,6 +73,9 @@ export default {
     }
   },
   methods: {
+    skip() {
+      this.$emit('skip')
+    },
     done() {
       const text = this.text
       this.text = null

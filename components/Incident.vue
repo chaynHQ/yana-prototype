@@ -2,7 +2,7 @@
   <div>
     <div class="mt-3 px-3">
       <v-alert
-        v-if="onboardingFinished"
+        v-if="onboardingCompleted"
         border="top"
         colored-border
         type="info"
@@ -133,7 +133,8 @@
 
     <incident-timeline-onboarding
       :show="showOnboarding"
-      @done="finishOnboarding($event)"
+      @skip="skipOnboarding"
+      @done="finishOnboarding"
     ></incident-timeline-onboarding>
 
     <incident-event-form
@@ -168,7 +169,7 @@ export default {
   data() {
     return {
       showOnboarding: false,
-      onboardingFinished: false,
+      onboardingCompleted: false,
       selectedEvent: null
     }
   },
@@ -241,6 +242,10 @@ export default {
     formatDate(value) {
       return value ? format(parseISO(value), 'MMM do yyyy') : ''
     },
+    skipOnboarding() {
+      this.showOnboarding = false
+      this.onboardingCompleted = false
+    },
     finishOnboarding(text) {
       text.split(/\r?\n/).forEach((t) => {
         if (t) {
@@ -249,7 +254,7 @@ export default {
       })
       this.persistEvents()
       this.showOnboarding = false
-      this.onboardingFinished = true
+      this.onboardingCompleted = true
     },
     newEvent() {
       this.selectedEvent = this._newEvent()
