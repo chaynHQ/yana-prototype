@@ -11,19 +11,13 @@
 
         <p class="body-2">
           We’ve created a space for you to log as much information as you can
-          remember, which you can later choose to email yourself and show them
-          to support workers or the police if you find it hard to remember or
-          repeatedly recall.
+          remember, which you can later email yourself and show to support
+          workers or the police if you find it hard to repeatedly recall.
         </p>
 
         <p class="body-2">
-          You can fill in as much or as little as you want and feel free to step
-          away and come back as often as you need.
-        </p>
-
-        <p class="body-2">
-          We will ask you questions to help you fill out as many details as you
-          can.
+          Fill in as much or as little as you want and feel free to step away
+          and come back as often as you need.
         </p>
 
         <p class="body-2">

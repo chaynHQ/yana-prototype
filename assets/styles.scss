@@ -52,14 +52,26 @@
 }
 
 // ---
+// App level components
+// ---
+
+.app-break-card {
+  background-image: url('/wave-background-v1-01.png');
+  background-position: center;
+  background-size: cover;
+}
+
+// ---
 // Page transitions
 // ---
 
-.page-enter-active, .page-leave-active {
-  transition: opacity .2s
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.2s;
 }
-.page-enter, .page-leave-active {
-  opacity: 0
+.page-enter,
+.page-leave-active {
+  opacity: 0;
 }
 
 // .slide-left-enter,

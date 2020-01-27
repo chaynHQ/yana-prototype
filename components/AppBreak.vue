@@ -5,7 +5,7 @@
     hide-overlay
     transition="dialog-bottom-transition"
   >
-    <v-card v-if="show">
+    <v-card v-if="show" class="app-break-card">
       <v-card-title primary-title>
         <span class="headline">Take a break</span>
         <v-spacer></v-spacer>
