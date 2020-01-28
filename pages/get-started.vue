@@ -19,7 +19,9 @@
         </v-icon>
       </v-card-title>
       <v-card-text>
-        Make notes of anything you remember around the assault.
+        A safe space for you to log anything you remember around your assault
+        and create a timeline, which can help build your case if you decide to
+        report.
       </v-card-text>
     </v-card>
 
@@ -48,20 +50,6 @@
       <v-card-text>
         Find a directory of support organisations and resources that can help
         you.
-      </v-card-text>
-    </v-card>
-
-    <v-card class="mt-3">
-      <v-card-title primary-title>
-        <span>Track your case</span>
-        <v-spacer></v-spacer>
-        <v-icon>
-          mdi-chevron-right
-        </v-icon>
-      </v-card-title>
-      <v-card-text>
-        Use checklists to track if the right procedures are taking place in your
-        case.
       </v-card-text>
     </v-card>
   </section>
