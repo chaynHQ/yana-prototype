@@ -156,7 +156,7 @@ export default {
   height: 260px;
   margin: 10px auto;
   padding: 10px;
-  background-color: #aff2bf;
+  background-color: #d5ecf4;
   border-radius: 50%;
   box-sizing: border-box;
   -webkit-animation: bgcolor2 10s infinite ease-in-out;
@@ -167,7 +167,7 @@ export default {
   width: 240px;
   height: 240px;
   margin: 0 auto;
-  background-color: #f9f7d2;
+  background-color: #eeb15c;
   border-radius: 50%;
 
   -webkit-transform: scale(0.1);
@@ -183,39 +183,39 @@ export default {
 
 @-webkit-keyframes scale {
   50% {
-    background-color: #f9f7c2;
+    background-color: #eda644;
     -webkit-transform: scale(1);
   }
 }
 
 @keyframes scale {
   50% {
-    background-color: #f9f7c2;
+    background-color: #eda644;
     transform: scale(1);
   }
 }
 
 @-webkit-keyframes bgcolor {
   50% {
-    background-color: #7ef2dd;
+    background-color: #d4e4f4;
   }
 }
 
 @keyframes bgcolor {
   50% {
-    background-color: #7ef2dd;
+    background-color: #d4e4f4;
   }
 }
 
 @-webkit-keyframes bgcolor2 {
   50% {
-    background-color: #57f2cd;
+    background-color: #c3def4;
   }
 }
 
 @keyframes bgcolor2 {
   50% {
-    background-color: #57f2cd;
+    background-color: #c3def4;
   }
 }
 </style>
