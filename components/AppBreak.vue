@@ -3,6 +3,7 @@
     v-model="show"
     fullscreen
     hide-overlay
+    scrollable
     transition="dialog-bottom-transition"
   >
     <v-card v-if="show" class="app-break-card">
@@ -15,10 +16,12 @@
       <v-card-text>
         <div class="pt-3">
           <p class="body-2">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Voluptatibus quam quaerat distinctio qui earum iusto quos modi!
-            Nobis, natus quo. Porro nesciunt, ducimus distinctio maiores
-            laudantium ab voluptate iure pariatur.
+            Feeling overwhelmed? That’s completely understandable. Take a break
+            and try to clear your mind by focusing on your breathing.
+          </p>
+
+          <p class="body-2">
+            Get comfortable and press start when you’re ready.
           </p>
 
           <breathing-exercise class="mt-6"></breathing-exercise>

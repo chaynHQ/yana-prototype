@@ -4,7 +4,7 @@
   <div
     class="breathing-exercise d-flex flex-column justify-center align-content-space-between elevation-1"
   >
-    <p class="title text-center">
+    <p class="title text-center mb-1">
       <v-fade-transition hide-on-leave>
         <span :key="`message-${message}`">
           {{ message }}
@@ -88,10 +88,10 @@ export default {
       this.message = INITIAL_MESSAGE
     },
     toggleMessage() {
-      if (!this.message || this.message === 'Breathe Out') {
-        this.message = 'Breathe In'
-      } else {
+      if (this.message === 'Breathe In') {
         this.message = 'Breathe Out'
+      } else {
+        this.message = 'Breathe In'
       }
     },
     startTimer(duration) {
