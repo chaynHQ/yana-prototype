@@ -39,7 +39,7 @@
       </v-card-text>
     </v-card>
 
-    <v-card class="mt-3">
+    <v-card class="mt-3" to="/get-support" nuxt>
       <v-card-title primary-title>
         <span>Get support</span>
         <v-spacer></v-spacer>
