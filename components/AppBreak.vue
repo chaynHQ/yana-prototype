@@ -14,7 +14,14 @@
       <v-divider></v-divider>
       <v-card-text>
         <div class="pt-3">
-          TODO
+          <p class="body-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Voluptatibus quam quaerat distinctio qui earum iusto quos modi!
+            Nobis, natus quo. Porro nesciunt, ducimus distinctio maiores
+            laudantium ab voluptate iure pariatur.
+          </p>
+
+          <breathing-exercise class="mt-6"></breathing-exercise>
         </div>
       </v-card-text>
     </v-card>
@@ -22,7 +29,10 @@
 </template>
 
 <script>
+import BreathingExercise from '@/components/BreathingExercise'
+
 export default {
+  components: { BreathingExercise },
   props: {
     show: {
       type: Boolean,
