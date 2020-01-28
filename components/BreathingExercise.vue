@@ -88,10 +88,10 @@ export default {
       this.message = INITIAL_MESSAGE
     },
     toggleMessage() {
-      if (!this.message || this.message === 'Breath Out') {
-        this.message = 'Breath In'
+      if (!this.message || this.message === 'Breathe Out') {
+        this.message = 'Breathe In'
       } else {
-        this.message = 'Breath Out'
+        this.message = 'Breathe Out'
       }
     },
     startTimer(duration) {
