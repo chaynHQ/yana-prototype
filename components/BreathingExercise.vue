@@ -1,8 +1,10 @@
 <template>
   <!-- Inspired by: https://github.com/rymbau/breath-focus -->
 
-  <div class="breathing-exercise d-flex flex-column justify-center elevation-1">
-    <p class="body-1 text-center">
+  <div
+    class="breathing-exercise d-flex flex-column justify-center align-content-space-between elevation-1"
+  >
+    <p class="title text-center">
       <v-fade-transition hide-on-leave>
         <span :key="`message-${message}`">
           {{ message }}
@@ -14,13 +16,13 @@
       <div ref="breathContent" class="breath-content"></div>
     </div>
 
-    <div class="mt-3 d-flex flex-column justify-center">
+    <div class="mt-3 d-flex flex-column justify-center align-center">
       <v-fade-transition hide-on-leave>
-        <v-btn v-if="!running" text color="primary" @click="start">
+        <v-btn v-if="!running" outlined color="primary" @click="start">
           Start
         </v-btn>
 
-        <div v-else class="body-1 text-center" refs="countdown">
+        <div v-else class="title text-center" refs="countdown">
           <v-fade-transition leave-absolute>
             <span :key="`timer-message-${timerMessage}`">
               {{ timerMessage }}
@@ -33,8 +35,7 @@
 </template>
 
 <script>
-const INITIAL_MESSAGE =
-  'Get yourself comfortable and start breathing when ready'
+const INITIAL_MESSAGE = 'Get comfortable and start breathing when ready'
 
 export default {
   data() {
@@ -138,6 +139,7 @@ export default {
 .breathing-exercise {
   border-radius: 4px;
   width: 100%;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
   padding: 1.33em;
