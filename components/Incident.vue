@@ -108,9 +108,15 @@
           </v-col>
         </v-row>
 
-        <div v-if="events.length" class="mt-8">
-          <v-btn color="warning" block @click="$emit('deleteAll')">
-            Delete all your data
+        <div v-if="events.length" class="mt-8 d-flex justify-space-between">
+          <v-btn color="primary">
+            <v-icon left>mdi-pdf-box</v-icon>
+            Download
+          </v-btn>
+
+          <v-btn color="warning" class="ml-3" @click="$emit('deleteAll')">
+            <v-icon left>mdi-delete</v-icon>
+            Delete all
           </v-btn>
         </div>
       </div>
