@@ -70,8 +70,13 @@ export default {
     theme: {
       themes: {
         light: {
-          primary: '#D3486A',
-          secondary: '#F2D5CB'
+          primary: '#1D2445',
+          secondary: '#D5ECF4',
+          accent: '#D5ECF4',
+          error: '#EEB15C',
+          warning: '#D44A6A',
+          info: '#EFA78E',
+          success: '#8BD4BE'
         }
       }
     }

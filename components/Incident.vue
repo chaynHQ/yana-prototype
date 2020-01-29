@@ -116,7 +116,7 @@
 
           <v-btn color="warning" class="ml-3" @click="$emit('deleteAll')">
             <v-icon left>mdi-delete</v-icon>
-            Delete all
+            Start again
           </v-btn>
         </div>
       </div>

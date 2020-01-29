@@ -105,7 +105,8 @@ export default {
     deleteAll() {
       this.$dialog
         .warning({
-          text: 'Are you sure you want delete all your timeline data?',
+          text:
+            'Are you sure you want delete ALL your timeline data and start again?',
           title: 'Confirm',
           persistent: true
         })

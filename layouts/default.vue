@@ -19,16 +19,11 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar
-      fixed
-      flat
-      app
-      hide-on-scroll
-      color="rgba(255,255,255,0.5)"
-      height="72px"
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title v-text="title" />
+    <v-app-bar fixed flat app hide-on-scroll color="#FFF8F5" height="80px">
+      <v-app-bar-nav-icon
+        x-large
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
     </v-app-bar>
 
     <v-content>
@@ -72,15 +67,16 @@ export default {
           title: 'Updates',
           to: '/updates'
         }
-      ],
-      title: 'YANA'
+      ]
     }
   }
 }
 </script>
 
 <style>
-.v-app-bar.theme--light.v-sheet {
-  border-bottom: 1px solid #d3486a !important;
+.v-app-bar.theme--light {
+  background-image: url('/logo.png');
+  background-position: center center;
+  background-size: 50px;
 }
 </style>

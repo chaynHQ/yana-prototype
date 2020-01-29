@@ -29,17 +29,16 @@
             <v-stepper-content step="1">
               <p class="body-2">
                 Do you remember the date and time of this part of the incident?
-                This will add to your timeline. Don’t worry if you can’t
-                remember the exact date and time.
+                Don’t worry if you can’t remember this exactly.
               </p>
 
               <v-checkbox
                 v-model="event.when.dontKnow"
-                label="Check this box if you don't know"
+                label="I don't know"
                 :ripple="false"
               ></v-checkbox>
 
-              <p class="body-2 font-weight-bold">
+              <p class="body-2 font-weight-bold primary--text ">
                 OR
               </p>
 
@@ -106,8 +105,9 @@
                         text
                         color="primary"
                         @click="$refs.timeDialog.save(event.when.time)"
-                        >OK</v-btn
                       >
+                        OK
+                      </v-btn>
                     </v-time-picker>
                   </v-dialog>
                 </v-col>
@@ -116,7 +116,7 @@
               <v-checkbox
                 v-model="event.when.approximate"
                 :disabled="event.when.dontKnow"
-                label="Check this box if these times are approximate"
+                label="These are approximate"
                 :ripple="false"
               ></v-checkbox>
             </v-stepper-content>
