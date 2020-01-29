@@ -19,7 +19,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar fixed flat app hide-on-scroll color="#FFF8F5" height="80px">
+    <v-app-bar fixed flat app hide-on-scroll color="#FFF8F5" height="75">
       <v-app-bar-nav-icon
         x-large
         @click.stop="drawer = !drawer"

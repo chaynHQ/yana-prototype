@@ -109,12 +109,12 @@
         </v-row>
 
         <div v-if="events.length" class="mt-8 d-flex justify-space-between">
-          <v-btn color="primary">
+          <v-btn color="primary" small>
             <v-icon left>mdi-pdf-box</v-icon>
             Download
           </v-btn>
 
-          <v-btn color="warning" class="ml-3" @click="$emit('deleteAll')">
+          <v-btn color="warning" class="ml-3" small @click="$emit('deleteAll')">
             <v-icon left>mdi-delete</v-icon>
             Start again
           </v-btn>

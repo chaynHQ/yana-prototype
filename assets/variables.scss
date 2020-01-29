@@ -7,17 +7,20 @@ $border-radius-root: 3px;
 
 $background-color: #FFF5F0;
 $background-color-dark: #1D2445;
+$btn-font-weight: bold;
 
 @import '~vuetify/src/styles/styles.sass';
 $material-light: map-merge(
   $material-light,
   (
-    background: $background-color
+    background: $background-color,
+    btn-font-weight: $btn-font-weight
   )
 );
 $material-dark: map-merge(
   $material-dark,
   (
-    background: $background-color-dark
+    background: $background-color-dark,
+    btn-font-weight: $btn-font-weight
   )
 );

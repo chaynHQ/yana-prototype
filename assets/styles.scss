@@ -2,6 +2,14 @@
 // General styles
 // ---
 
+h1,h2,h3,h4,h5 {
+  font-weight: bold !important;
+}
+
+.headline, .title {
+  font-weight: bold !important;
+}
+
 .v-application {
   ul.simple-list {
     list-style-type: none;
@@ -64,6 +72,16 @@
 
 .light-text {
   color: #FFF5F0;
+}
+
+// ---
+// App pages
+// ---
+
+.page-landing main.v-content > .v-content__wrap {
+  background-image: url('/YANA-background-03.png');
+  background-position: center 110%;
+  background-size: contain;
 }
 
 // ---

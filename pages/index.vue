@@ -1,30 +1,20 @@
 <template>
   <section id="landing">
-    <div class="mt-4 px-3">
-      <p class="title font-weight-bold">
+    <div class="px-3">
+      <v-img src="/Yana-illustrations-08.png" height="80" contain></v-img>
+
+      <p class="mt-4 mb-1 body-1 font-weight-bold">
         If you’ve been touched or treated in a way that has made you feel
         uncomfortable or violated, use this site to find out how to get to
         safety, get help and report the sexual assault.
       </p>
-
-      <v-btn
-        class="mt-10 text-uppercase"
-        color="primary"
-        large
-        block
-        to="/get-started"
-        nuxt
-      >
-        Get started
-      </v-btn>
-
-      <p class="mt-4 body-2">
+      <p class="body-2">
         This has been co-designed with survivors of sexual assault. We will
         respect your privacy.
       </p>
     </div>
 
-    <div class="mt-12 px-3">
+    <div class="mt-4 px-3">
       <p class="body-2">
         If you are in an emergency situation
         <span class="text-uppercase font-weight-bold primary--text">
@@ -38,9 +28,21 @@
         </span>
       </p>
     </div>
+
+    <div class="mt-8 d-flex justify-center">
+      <v-btn class="px-8" color="primary" large to="/begin" nuxt>
+        Begin
+      </v-btn>
+    </div>
   </section>
 </template>
 
 <script>
-export default {}
+export default {
+  head: {
+    bodyAttrs: {
+      class: 'page-landing'
+    }
+  }
+}
 </script>
