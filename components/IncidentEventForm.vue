@@ -36,6 +36,7 @@
               <v-checkbox
                 v-model="event.when.dontKnow"
                 label="Check this box if you don't know"
+                :ripple="false"
               ></v-checkbox>
 
               <p class="body-2 font-weight-bold">
@@ -116,6 +117,7 @@
                 v-model="event.when.approximate"
                 :disabled="event.when.dontKnow"
                 label="Check this box if these times are approximate"
+                :ripple="false"
               ></v-checkbox>
             </v-stepper-content>
 

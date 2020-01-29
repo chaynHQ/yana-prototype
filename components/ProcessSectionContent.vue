@@ -62,6 +62,7 @@
             :label="item.text"
             color="primary"
             hide-details
+            :ripple="false"
           ></v-checkbox>
         </li>
       </ul>
