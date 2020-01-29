@@ -24,6 +24,7 @@
         x-large
         @click.stop="drawer = !drawer"
       ></v-app-bar-nav-icon>
+      <v-toolbar-title class="visually-hidden" v-text="title" />
     </v-app-bar>
 
     <v-content>
@@ -67,13 +68,14 @@ export default {
           title: 'Updates',
           to: '/updates'
         }
-      ]
+      ],
+      title: 'YANA'
     }
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 .v-app-bar.theme--light {
   background-image: url('/logo.png');
   background-position: center center;

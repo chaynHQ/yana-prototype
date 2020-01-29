@@ -6,11 +6,18 @@
 $border-radius-root: 3px;
 
 $background-color: #FFF5F0;
+$background-color-dark: #1D2445;
 
 @import '~vuetify/src/styles/styles.sass';
 $material-light: map-merge(
   $material-light,
   (
     background: $background-color
+  )
+);
+$material-dark: map-merge(
+  $material-dark,
+  (
+    background: $background-color-dark
   )
 );
