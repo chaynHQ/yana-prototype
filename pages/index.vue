@@ -1,7 +1,7 @@
 <template>
   <section id="landing">
     <div class="px-3">
-      <v-img src="/Yana-illustrations-08.png" height="80" contain></v-img>
+      <v-img src="/Yana-illustrations-08.png" height="100" contain></v-img>
 
       <p class="mt-4 mb-1 body-1 font-weight-bold">
         If you’ve been touched or treated in a way that has made you feel
@@ -29,7 +29,7 @@
       </p>
     </div>
 
-    <div class="mt-8 d-flex justify-center">
+    <div class="mt-6 d-flex justify-center">
       <v-btn class="px-8" color="primary" large to="/begin" nuxt>
         Begin
       </v-btn>
