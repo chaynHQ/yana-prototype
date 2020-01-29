@@ -66,7 +66,7 @@
             pill
             small
             label
-            color="#FFF5F0"
+            color="secondary"
             text-color="primary"
             class="px-2 ml-1"
           >
