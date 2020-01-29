@@ -52,6 +52,10 @@
 
 .markdown-body {
   color: black !important;
+
+  a {
+    text-decoration: underline !important;
+  }
 }
 
 .app-tooltip {
@@ -181,6 +185,7 @@
 
 .theme--light.v-expansion-panels .v-expansion-panel.process-section {
   background-color: $background-color;
+  color: #1d2445;
 
   .v-expansion-panel-content__wrap {
     padding-left: 12px;
@@ -223,6 +228,8 @@
   }
 
   .process-section-step-header {
+    color: #1d2445;
+
     &::after {
       content: '';
       position: absolute;
@@ -238,6 +245,8 @@
 }
 
 .checklist {
+  color: #1d2445;
+
   .v-input--checkbox {
     margin: 0;
     padding: 0;
@@ -249,6 +258,7 @@
     }
 
     .v-label {
+      color: #1d2445;
       margin-left: 8px;
       font-size: 13px;
       height: auto;

@@ -2,7 +2,7 @@
   <div>
     <div v-if="section.processMap && section.processMap.length">
       <h3 class="subtitle-2 font-weight-bold mb-1 text-center">
-        <v-chip label color="pink lighten-5">
+        <v-chip label color="pink lighten-5" text-color="primary">
           Process
         </v-chip>
       </h3>
@@ -36,7 +36,7 @@
 
     <div v-if="section.resources && section.resources.length" class="mt-4">
       <h3 class="subtitle-2 font-weight-bold mb-1 text-center">
-        <v-chip label color="pink lighten-5">
+        <v-chip label color="pink lighten-5" text-color="primary">
           Resources
         </v-chip>
       </h3>
@@ -50,7 +50,7 @@
 
     <div v-if="section.checklist && section.checklist.length" class="mt-4">
       <h3 class="subtitle-2 font-weight-bold mb-1 text-center">
-        <v-chip label color="pink lighten-5">
+        <v-chip label color="pink lighten-5" text-color="primary">
           Checklist
         </v-chip>
       </h3>
@@ -60,7 +60,6 @@
           <v-checkbox
             v-model="item.done"
             :label="item.text"
-            color="primary"
             hide-details
             :ripple="false"
           ></v-checkbox>
