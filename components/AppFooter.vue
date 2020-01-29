@@ -5,7 +5,7 @@
       style="width: 100%;"
     >
       <div class="light-text caption font-weight-bold">
-        &copy; 2019 Chayn
+        &copy; 2020 Chayn
       </div>
       <div class="footer-buttons">
         <v-btn icon color="#FFF5F0" :ripple="false" @click="showBreak = true">
