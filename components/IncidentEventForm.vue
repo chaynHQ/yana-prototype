@@ -22,7 +22,7 @@
 
         <v-form>
           <v-stepper non-linear vertical class="elevation-0">
-            <v-stepper-step editable step="1">
+            <v-stepper-step editable step="1" text-color="primary">
               When did it happen?
               <small>Optional</small>
             </v-stepper-step>
@@ -121,7 +121,7 @@
               ></v-checkbox>
             </v-stepper-content>
 
-            <v-stepper-step editable step="2">
+            <v-stepper-step editable step="2" text-color="primary">
               What happened?
               <small>Optional</small>
             </v-stepper-step>
@@ -142,7 +142,7 @@
               ></v-textarea>
             </v-stepper-content>
 
-            <v-stepper-step editable step="3">
+            <v-stepper-step editable step="3" text-color="primary">
               Where did it happen?
               <small>Optional</small>
             </v-stepper-step>
@@ -176,7 +176,7 @@
               ></v-textarea>
             </v-stepper-content>
 
-            <v-stepper-step editable step="4">
+            <v-stepper-step editable step="4" text-color="primary">
               Who was there?
               <small>Optional</small>
             </v-stepper-step>
@@ -197,7 +197,7 @@
               ></v-textarea>
             </v-stepper-content>
 
-            <v-stepper-step editable step="5">
+            <v-stepper-step editable step="5" text-color="primary">
               Evidence
               <small>Optional</small>
             </v-stepper-step>
