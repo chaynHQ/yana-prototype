@@ -52,7 +52,7 @@ export default {
 
 <style lang="scss">
 .theme--dark.v-footer {
-  background-color: #1d2445;
+  background-color: #1d2445 !important;
 }
 
 .footer-buttons {

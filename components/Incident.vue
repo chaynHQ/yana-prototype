@@ -28,11 +28,7 @@
         away and come back as often as you need. Your timeline is saved
         automatically on your device and you can use it if you decide to report.
 
-        <v-tooltip
-          bottom
-          color="white grey--text text--darken-2"
-          content-class="app-tooltip"
-        >
+        <v-tooltip bottom content-class="app-tooltip">
           <template v-slot:activator="{ on }">
             <v-icon class="ml-1" v-on="on">mdi-help-circle</v-icon>
           </template>

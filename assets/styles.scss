@@ -2,15 +2,32 @@
 // General styles
 // ---
 
-h1,h2,h3,h4,h5 {
-  font-weight: bold !important;
-}
-
-.headline, .title {
-  font-weight: bold !important;
-}
-
 .v-application {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .headline,
+  .title {
+    font-weight: bold !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .headline,
+  .title,
+  .subtitle-1,
+  .subtitle-2,
+  .body-1,
+  .body-2,
+  .caption {
+    color: black;
+  }
+
   ul.simple-list {
     list-style-type: none;
     margin: 0;
@@ -71,7 +88,7 @@ h1,h2,h3,h4,h5 {
 }
 
 .light-text {
-  color: #FFF5F0;
+  color: #fff5f0;
 }
 
 // ---
