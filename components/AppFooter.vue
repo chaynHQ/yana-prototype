@@ -22,7 +22,13 @@
           <v-icon>mdi-information</v-icon>
           <span>purpose</span>
         </v-btn>
-        <v-btn icon color="#FFF5F0" :ripple="false" class="ml-4">
+        <v-btn
+          icon
+          color="#FFF5F0"
+          :ripple="false"
+          class="ml-4"
+          @click="exit()"
+        >
           <v-icon>mdi-exit-to-app</v-icon>
           <span>exit</span>
         </v-btn>
@@ -45,6 +51,15 @@ export default {
     return {
       showBreak: false,
       showInfo: false
+    }
+  },
+  methods: {
+    exit() {
+      window.open('http://www.wikipedia.org/', '_newtab', 'noopener,noreferrer')
+
+      window.location.replace(
+        'https://www.google.com/search?tbm=isch&q=cute+baby+animal+memes'
+      )
     }
   }
 }
