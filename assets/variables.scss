@@ -5,8 +5,10 @@
 
 $border-radius-root: 3px;
 
-$background-color: #FFF5F0;
-$background-color-dark: #1D2445;
+$text-color: #1d2445;
+
+$background-color: #fff5f0;
+$background-color-dark: #1d2445;
 $btn-font-weight: bold;
 
 @import '~vuetify/src/styles/styles.sass';
@@ -14,7 +16,15 @@ $material-light: map-merge(
   $material-light,
   (
     background: $background-color,
-    btn-font-weight: $btn-font-weight
+    btn-font-weight: $btn-font-weight,
+    text-color: $text-color,
+    text: (
+      primary: $text-color,
+      secondary: rgba($text-color, 0.95),
+      disabled: rgba($text-color, 0.38),
+      link: $text-color,
+      link-hover: $text-color
+    )
   )
 );
 $material-dark: map-merge(

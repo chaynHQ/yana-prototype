@@ -21,16 +21,16 @@
     }
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.9.3",
+    "@nuxtjs/axios": "^5.9.5",
     "@nuxtjs/dotenv": "^1.4.0",
-    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
     "nuxt": "^2.0.0",
     "vue-simple-markdown": "^1.1.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
-    "@nuxtjs/vuetify": "^1.10.2",
+    "@nuxtjs/vuetify": "^1.10.3",
     "babel-eslint": "^10.0.1",
     "date-fns": "^2.9.0",
     "eslint": "^6.1.0",
@@ -40,8 +40,8 @@
     "husky": "^2.6.0",
     "lint-staged": "^8.2.1",
     "lodash": "^4.17.15",
-    "nanoid": "^2.1.9",
+    "nanoid": "^2.1.11",
     "prettier": "^1.16.4",
-    "vuetify-dialog": "^2.0.0-rc.2"
+    "vuetify-dialog": "^2.0.0"
   }
 }

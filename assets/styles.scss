@@ -13,21 +13,6 @@
     font-weight: bold !important;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  .headline,
-  .title,
-  .subtitle-1,
-  .subtitle-2,
-  .body-1,
-  .body-2,
-  .caption {
-    color: #1D2445;
-  }
-
   ul.simple-list {
     list-style-type: none;
     margin: 0;
@@ -43,7 +28,6 @@
       }
 
       a {
-        color: #1d2445;
         display: block;
       }
     }
@@ -51,7 +35,7 @@
 }
 
 .markdown-body {
-  color: black !important;
+  color: $text-color !important;
 
   a {
     text-decoration: underline !important;
@@ -185,7 +169,6 @@
 
 .theme--light.v-expansion-panels .v-expansion-panel.process-section {
   background-color: $background-color;
-  color: #1d2445;
 
   .v-expansion-panel-content__wrap {
     padding-left: 12px;
@@ -228,8 +211,6 @@
   }
 
   .process-section-step-header {
-    color: #1d2445;
-
     &::after {
       content: '';
       position: absolute;
@@ -245,8 +226,6 @@
 }
 
 .checklist {
-  color: #1d2445;
-
   .v-input--checkbox {
     margin: 0;
     padding: 0;
@@ -258,7 +237,6 @@
     }
 
     .v-label {
-      color: #1d2445;
       margin-left: 8px;
       font-size: 13px;
       height: auto;

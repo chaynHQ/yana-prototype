@@ -1,5 +1,7 @@
 <template>
   <section id="begin">
+    <back-button :to="'/'" :text="'Home'"></back-button>
+
     <div class="px-3">
       <h1 class="headline">Your case</h1>
 
@@ -82,7 +84,11 @@
 </template>
 
 <script>
-export default {}
+import BackButton from '@/components/BackButton'
+
+export default {
+  components: { BackButton }
+}
 </script>
 
 <style lang="scss" scoped>
