@@ -1,30 +1,29 @@
 <template>
   <section id="landing">
     <div class="px-3">
+      <p
+        class="body-1 text-center font-weight-bold accent--text text--darken-3"
+      >
+        Built with survivors for survivors. You are not alone.
+      </p>
+
       <v-img src="/Yana-illustrations-08.png" height="100" contain></v-img>
 
       <p class="mt-4 mb-1 body-1 font-weight-bold">
-        If you’ve been touched or treated in a way that has made you feel
-        uncomfortable or violated, use this site to find out how to get to
-        safety, get help and report the sexual assault.
+        If you’ve been treated in a way that has made you feel uncomfortable or
+        violated, use yana to find out how to get support and report the
+        assault. Let yana be your companion because you’re not alone.
       </p>
       <p class="body-2">
-        This has been co-designed with survivors of sexual assault. We will
-        respect your privacy.
+        Built with survivors, for survivors. We will protect your privacy.
       </p>
     </div>
 
     <div class="mt-4 px-3">
       <p class="body-2">
-        If you are in an emergency situation
+        In an emergency
         <span class="text-uppercase font-weight-bold primary--text">
           DIAL 999
-        </span>
-      </p>
-      <p class="body-2">
-        If you need help taking care of yourself have a look at these
-        <span class="text-uppercase font-weight-bold primary--text">
-          First aid steps
         </span>
       </p>
     </div>

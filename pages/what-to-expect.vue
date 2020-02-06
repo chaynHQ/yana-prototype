@@ -1,5 +1,7 @@
 <template>
   <section id="what-to-expect">
+    <back-button :to="'/begin'" :text="'Your case'"></back-button>
+
     <div class="px-3">
       <h1 class="headline">What to expect</h1>
 
@@ -50,10 +52,11 @@
 <script>
 import processSections from '@/data/process-sections.json'
 
+import BackButton from '@/components/BackButton'
 import ProcessSectionContent from '@/components/ProcessSectionContent'
 
 export default {
-  components: { ProcessSectionContent },
+  components: { BackButton, ProcessSectionContent },
   data() {
     return {
       sections: processSections.sections,

@@ -1,5 +1,7 @@
 <template>
   <section id="what-happened">
+    <back-button :to="'/begin'" :text="'Your case'"></back-button>
+
     <div class="px-3">
       <h1 class="headline">What happened?</h1>
 
@@ -46,10 +48,11 @@ import _ from 'lodash'
 
 import testData from '@/data/test-data'
 
+import BackButton from '@/components/BackButton'
 import Incident from '@/components/Incident'
 
 export default {
-  components: { Incident },
+  components: { BackButton, Incident },
   asyncData({ query }) {
     return Promise.resolve({
       test: query.test

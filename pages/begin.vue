@@ -6,7 +6,13 @@
       <h1 class="headline">Your case</h1>
 
       <p class="body-2 mt-3">
-        One-line supportive text.
+        Trying to remember everything alone can be really hard. This tool will
+        help you to keep a record of the events, and guide you through the
+        process.
+      </p>
+
+      <p class="body-2">
+        Start here, you’re doing great!
       </p>
     </div>
 
