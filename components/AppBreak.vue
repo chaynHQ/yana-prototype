@@ -14,10 +14,12 @@
       </v-card-title>
       <v-divider></v-divider>
       <v-card-text>
-        <div class="pt-3">
+        <div class="pt-4">
           <p class="body-2">
-            Feeling overwhelmed? That’s completely understandable. Take a break
-            and try to clear your mind by focusing on your breathing.
+            Feeling overwhelmed? That’s completely understandable.
+            <br />
+            Take a break and try to clear your mind by focusing on your
+            breathing.
           </p>
 
           <p class="body-2">
