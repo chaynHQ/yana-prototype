@@ -6,11 +6,10 @@
       <h1 class="headline">What to expect</h1>
 
       <p class="body-2 mt-3">
-        Dealing with authorities regarding your assault can be daunting
-        especially if you don’t know what to expect. We’ve simplified this
-        information so you know the procedures they need to follow when dealing
-        with an assault and a rough idea of how long each step takes. You can
-        also spot if there is a miscarriage of justice.
+        Dealing with authorities can be daunting and isolating. We’ve simplified
+        information on processes. You can get familiar with what procedures they
+        need to follow and a rough idea of how long it should take. You can also
+        spot if something hasn’t been handled the way it should.
       </p>
     </div>
 

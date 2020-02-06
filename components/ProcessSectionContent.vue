@@ -41,6 +41,12 @@
         </v-chip>
       </h3>
 
+      <p class="body-2 px-3 mt-4">
+        We’ve tried to break all of the necessary information down into more
+        manageable chunks above, however if you’d like to read more in depth
+        then you can take a look at these resources.
+      </p>
+
       <ul class="simple-list body-2">
         <li v-for="(resource, index) in section.resources" :key="index">
           <a :href="resource.url">{{ resource.name }}</a>
@@ -54,6 +60,13 @@
           Checklist
         </v-chip>
       </h3>
+
+      <p class="body-2 px-3 mt-4">
+        It can be hard to know whether things are progressing as they should. To
+        help you be more in control, we’ve created this checklist. Mark events
+        that have taken place and raise with the relevant parties if you feel
+        any steps were missed.
+      </p>
 
       <ul class="simple-list checklist body-2">
         <li v-for="(item, index) in section.checklist" :key="index">
