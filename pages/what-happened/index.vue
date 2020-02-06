@@ -7,28 +7,26 @@
 
       <div v-if="intro" class="mt-3">
         <p class="body-2">
-          You may have difficulty remembering what happened to you. This is
-          natural.
+          You may have difficulty remembering what happened. This is natural.
         </p>
 
         <p class="body-2">
-          We’ve created a space for you to log as much information as you
-          remember which you can email yourself and show to authorities so you
-          don’t have to recall it repeatedly.
+          Use this space to write as much information as you can remember, which
+          you can later email yourself and show to people who can help if you
+          find it hard to recall what happened.
         </p>
 
         <p class="body-2">
-          Fill in as much as you want. Feel free to step away and come back
-          whenever you wish.
+          Feel free to step away and come back later. Use the breathe icon below
+          if you need to take a break.
         </p>
 
         <p class="body-2">
-          Data will be stored on your device only. Delete this whenever you
-          want.
+          Data will be stored on your device. Delete this whenever.
         </p>
 
         <v-btn class="mt-6" color="primary" large block @click="intro = false">
-          Start Building Your Timeline
+          Build the timeline
         </v-btn>
       </div>
     </div>

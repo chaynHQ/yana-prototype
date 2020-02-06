@@ -7,15 +7,15 @@
   >
     <v-card>
       <v-card-title primary-title>
-        <span class="headline">Start your timeline</span>
+        <span class="headline">Start the timeline</span>
       </v-card-title>
       <v-divider></v-divider>
       <v-card-text style="height: 500px;">
         <div class="pt-3">
           <p class="body-2">
             Take a minute and write down anything you remember about what
-            happened. We’ll call this an incident. Different parts of the
-            incident will be called 'events'. This will create your own record,
+            happened. We’ll call this an ‘incident’. Different parts of the
+            incident will be called ‘events’. This will create your own record,
             regardless of whether you report or not.
           </p>
 
