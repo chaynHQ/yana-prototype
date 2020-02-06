@@ -29,7 +29,7 @@
             <v-stepper-content step="1">
               <p class="body-2">
                 Do you remember the date and time of this part of the incident?
-                Don’t worry if you can’t remember this exactly.
+                Don’t worry if not, you can leave this section blank.
               </p>
 
               <v-checkbox
@@ -148,7 +148,7 @@
             </v-stepper-step>
             <v-stepper-content step="3">
               <p class="body-2">
-                Can you remember the location where this part of the incident
+                Can you remember the location where this part of the event
                 occured?
               </p>
               <p class="body-2">
@@ -204,14 +204,14 @@
             <v-stepper-content step="5">
               <p class="body-2">
                 Use this space to add details of anything that may be used as
-                evidence for this part of the incident. E.g screenshots of call
+                evidence for this part of the incident. E.g. screenshots of call
                 logs, messages, social media files, taxi receipts.
               </p>
               <p class="body-2">
-                Evidence is defined as "information given to the court and the
+                Evidence is defined as “information given to the court and the
                 jury to help them decide if a crime has been committed or not
                 and that tends to prove the truth or probability of truth about
-                a fact put before the court and jury." This is very open and
+                a fact put before the court and jury.” This is very open and
                 allows for a wide range of materials to be used, so it is worth
                 listing anything you think might be relevant.
               </p>
