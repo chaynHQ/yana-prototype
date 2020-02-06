@@ -4,7 +4,9 @@
       <p
         class="body-1 text-center font-weight-bold accent--text text--darken-3"
       >
-        Built with survivors for survivors. You are not alone.
+        Built with survivors for survivors.
+        <br />
+        You are not alone.
       </p>
 
       <v-img src="/Yana-illustrations-08.png" height="100" contain></v-img>
@@ -15,7 +17,7 @@
         assault. Let yana be your companion because you’re not alone.
       </p>
       <p class="body-2">
-        Built with survivors, for survivors. We will protect your privacy.
+        Data will be stored on this device only. We respect your privacy.
       </p>
     </div>
 
