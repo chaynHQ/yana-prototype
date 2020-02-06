@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mt-3 px-3">
-      <v-alert
+      <!-- <v-alert
         v-if="onboardingCompleted"
         border="top"
         colored-border
@@ -16,7 +16,19 @@
         <p class="body-2 mb-0">
           You did it! These are now separate events in your timeline.
         </p>
-      </v-alert>
+      </v-alert> -->
+
+      <v-snackbar v-model="onboardingCompleted" vertical multi-line top>
+        <p class="body-2 font-weight-bold">
+          Thank you!
+        </p>
+        <p class="body-2 mb-0">
+          You did it! These are now separate events in your timeline.
+        </p>
+        <v-btn color="pink" text @click="onboardingCompleted = false">
+          Close
+        </v-btn>
+      </v-snackbar>
 
       <p class="body-2">
         Click on events to enter more information like time and place. Press the
