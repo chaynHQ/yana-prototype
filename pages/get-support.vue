@@ -56,14 +56,6 @@
       </p>
 
       <p class="body-2">
-        <span class="font-weight-bold">
-          RASAC (Rape and Sexual Abuse Support Centre)
-        </span>
-        <br />
-        National Helpline: 0808 802 9999 (12-2.30 & 7-9.30)
-      </p>
-
-      <p class="body-2">
         <span class="font-weight-bold">The Survivors Trust</span>
         <br />
         Helpline: 0808 801 0818
@@ -92,6 +84,22 @@
         <br />
         <a href="https://www.rcne.com/" target="_blank" rel="noopener">
           https://www.rcne.com/
+        </a>
+      </p>
+
+      <p class="body-2">
+        <span class="font-weight-bold">
+          Foreign & Commonwealth Office
+        </span>
+        <br />
+        Rape and sexual assault abroad leaflet
+        <br />
+        <a
+          href="https://www.gov.uk/government/publications/rape-and-sexual-assault-abroad-returning-to-the-uk/rape-and-sexual-assault-abroad-returning-to-the-uk"
+          target="_blank"
+          rel="noopener"
+        >
+          https://www.gov.uk/government/publications/rape-and-sexual-assault-abroad-returning-to-the-uk/rape-and-sexual-assault-abroad-returning-to-the-uk
         </a>
       </p>
     </div>

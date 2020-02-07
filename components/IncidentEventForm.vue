@@ -204,8 +204,7 @@
             <v-stepper-content step="5">
               <p class="body-2">
                 Use this space to add details of anything that may be used as
-                evidence for this part of the incident. E.g. screenshots of call
-                logs, messages, social media files, taxi receipts.
+                evidence for this part of the incident.*
               </p>
               <p class="body-2">
                 Evidence is defined as “information given to the court and the
@@ -214,6 +213,10 @@
                 a fact put before the court and jury.” This is very open and
                 allows for a wide range of materials to be used, so it is worth
                 listing anything you think might be relevant.
+              </p>
+              <p class="body-2">
+                * We will later be adding the ability to upload screenshots of
+                call logs, messages, social media files, taxi receipts etc.
               </p>
 
               <v-textarea
