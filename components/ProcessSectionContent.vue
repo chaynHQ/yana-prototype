@@ -49,7 +49,9 @@
 
       <ul class="simple-list body-2">
         <li v-for="(resource, index) in section.resources" :key="index">
-          <a :href="resource.url">{{ resource.name }}</a>
+          <a :href="resource.url" target="_blank" rel="noopener">
+            {{ resource.name }}
+          </a>
         </li>
       </ul>
     </div>
