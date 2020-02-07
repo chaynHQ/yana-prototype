@@ -42,6 +42,6 @@
     "lodash": "^4.17.15",
     "nanoid": "^2.1.11",
     "prettier": "^1.16.4",
-    "vuetify-dialog": "^2.0.0"
+    "vuetify-dialog": "^2.0.1"
   }
 }
