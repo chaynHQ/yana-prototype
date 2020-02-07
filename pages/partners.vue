@@ -3,7 +3,7 @@
     <div class="px-3">
       <h1 class="headline">Partners</h1>
 
-      <p class="body-1 mt-3">
+      <p class="body-1 mt-4">
         yana is a groundbreaking digital platform that will empower survivors of
         sexual assault with accurate and timely support information, a space to
         record what happened and critical checklists of reporting and justice

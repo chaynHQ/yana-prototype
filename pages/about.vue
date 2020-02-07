@@ -3,7 +3,7 @@
     <div class="px-3">
       <h1 class="headline">About us</h1>
 
-      <p class="body-1 mt-3">
+      <p class="body-1 mt-4">
         yana provides survivors of sexual assault with information and
         connections to support that they need to understand their experience and
         make informed decisions.
