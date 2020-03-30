@@ -144,7 +144,7 @@
 </template>
 
 <script>
-import nanoid from 'nanoid'
+import { nanoid } from 'nanoid'
 import parseISO from 'date-fns/parseISO'
 import format from 'date-fns/format'
 import compareAsc from 'date-fns/compareAsc'

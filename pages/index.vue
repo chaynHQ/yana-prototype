@@ -40,9 +40,11 @@
 
 <script>
 export default {
-  head: {
-    bodyAttrs: {
-      class: 'page-landing'
+  head() {
+    return {
+      bodyAttrs: {
+        class: 'page-landing'
+      }
     }
   }
 }
