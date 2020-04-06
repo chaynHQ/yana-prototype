@@ -1,7 +1,7 @@
 <template>
   <section id="journey-a">
     <div v-if="!selected" class="px-3">
-      <h1 class="headline">Your Journey</h1>
+      <h1 class="headline">Your Journey [option A]</h1>
     </div>
     <div v-else>
       <v-btn text @click="back">
