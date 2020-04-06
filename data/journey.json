@@ -1,0 +1,30 @@
+{
+  "stages": [
+    { "id": "unaware", "title": "Unaware", "description": "Not yet aware of sexual abuse/assault or still trying to come to terms with it." },
+    { "id": "aware", "title": "Aware", "description": "Has recognised incident and/or pattern as abuse and assault." },
+    { "id": "connection", "title": "Connection", "description": "Wants to seek support from peers or professionals, including reporting it to authorities." },
+    { "id": "action", "title": "Action", "description": "Takes action towards recovery or seeks support." },
+    { "id": "recovery", "title": "Recovery", "description": "Starts and progresses the journey to healing and recovery." },
+    { "id": "closure", "title": "Closure", "description": "Though there may not be a permanent recovery, the feeling of having closure and justice is reached." }
+  ],
+  "questions": [
+    { "title": "Why am I feeling the way I am?", "stage_id": "unaware" },
+    { "title": "What is happening to me?", "stage_id": "unaware" },
+    { "title": "What happened to me?", "stage_id": "aware" },
+    { "title": "What should I do now?", "stage_id": "aware" },
+    { "title": "What support can I get?", "stage_id": "aware" },
+    { "title": "Where is my nearest police station/ medical centre?", "stage_id": "aware" },
+    { "title": "Who should I tell? How should I tell them?", "stage_id": "connection" },
+    { "title": "What do I say to work? Will this affect my career?", "stage_id": "connection" },
+    { "title": "What is going to happen when I tell the police/ medical professional?", "stage_id": "connection" }
+  ],
+  "phases": [
+    { "id": "looking-after-yourself", "title": "Looking after yourself" },
+    { "id": "reporting-to-the-police", "title": "Reporting to the police" },
+    { "id": "medical-examination", "title": "Medical examination" },
+    { "id": "police-investigation", "title": "Police investigation" },
+    { "id": "decision-to-prosecute", "title": "Decision to prosecute" },
+    { "id": "trial", "title": "Trial" },
+    { "id": "post-trial", "title": "Post-trial" }
+  ]
+}
