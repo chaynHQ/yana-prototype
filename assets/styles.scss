@@ -171,6 +171,7 @@
 // "What to expect" section
 // ---
 
+.theme--light .process-section,
 .theme--light.v-expansion-panels .v-expansion-panel.process-section {
   background-color: $background-color;
 
@@ -184,6 +185,7 @@
   }
 }
 
+.theme--light .process-section-steps,
 .theme--light.v-expansion-panels .process-section-steps {
   position: relative;
   padding-left: 12px;
@@ -203,6 +205,7 @@
   // &:last-child:before { height: 38%; }
 }
 
+.theme--light .process-section-step,
 .theme--light.v-expansion-panels .v-expansion-panel.process-section-step {
   background-color: $background-color;
 
