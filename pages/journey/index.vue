@@ -24,9 +24,15 @@
         </div>
 
         <v-card class="mt-3">
+          <h2 v-if="user" class="subtitle-2 pa-3">
+            Choose the outcomes you want to focus on by clicking on the heart
+          </h2>
+
+          <v-divider v-if="user"></v-divider>
+
           <v-list class="pa-0">
             <template v-for="(o, index) in paths.outcomes">
-              <v-list-item :key="o.id" @click="select(o)">
+              <v-list-item :key="o.id" :ripple="false" @click="select(o)">
                 <v-list-item-icon class="mr-4">
                   <v-btn
                     fab
@@ -48,9 +54,28 @@
                 </v-list-item-content>
 
                 <v-list-item-action v-if="user">
-                  <v-icon color="accent">
-                    mdi-heart-outline
-                  </v-icon>
+                  <v-btn
+                    v-if="user.favourites[o.id]"
+                    icon
+                    color="accent"
+                    :ripple="false"
+                    @click.stop="unfavourite(o)"
+                  >
+                    <v-icon>
+                      mdi-heart
+                    </v-icon>
+                  </v-btn>
+                  <v-btn
+                    v-else
+                    icon
+                    color="accent"
+                    :ripple="false"
+                    @click.stop="favourite(o)"
+                  >
+                    <v-icon>
+                      mdi-heart-outline
+                    </v-icon>
+                  </v-btn>
                 </v-list-item-action>
               </v-list-item>
 
@@ -90,13 +115,21 @@ export default {
   },
   methods: {
     signIn() {
-      this.user = {}
+      this.user = {
+        favourites: {}
+      }
     },
     back() {
       this.selected = null
     },
     select(o) {
       this.selected = o
+    },
+    favourite(o) {
+      this.$set(this.user.favourites, o.id, true)
+    },
+    unfavourite(o) {
+      this.$set(this.user.favourites, o.id, false)
     }
   }
 }
