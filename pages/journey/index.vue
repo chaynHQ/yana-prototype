@@ -12,7 +12,18 @@
 
     <div class="mt-4">
       <div v-if="!selected">
-        <v-card>
+        <div v-if="user">
+          <v-card outlined>
+            <v-card-text>
+              Hello!
+            </v-card-text>
+          </v-card>
+        </div>
+        <div v-else class="d-flex justify-center">
+          <v-btn color="primary" @click="signIn">Sign in</v-btn>
+        </div>
+
+        <v-card class="mt-3">
           <v-list class="pa-0">
             <template v-for="(o, index) in paths.outcomes">
               <v-list-item :key="o.id" @click="select(o)">
@@ -36,8 +47,8 @@
                   ></v-list-item-title>
                 </v-list-item-content>
 
-                <v-list-item-action>
-                  <v-icon color="grey lighten-1">
+                <v-list-item-action v-if="user">
+                  <v-icon color="accent">
                     mdi-heart-outline
                   </v-icon>
                 </v-list-item-action>
@@ -78,6 +89,9 @@ export default {
     }
   },
   methods: {
+    signIn() {
+      this.user = {}
+    },
     back() {
       this.selected = null
     },
