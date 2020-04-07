@@ -1,0 +1,49 @@
+{
+  "outcomes": [
+    {
+      "id": "legal-conviction",
+      "title": "Legal conviction"
+    },
+    {
+      "id": "telling-friend-family",
+      "title": "Telling a friend or family"
+    },
+    {
+      "id": "telling-partner",
+      "title": "Telling a partner"
+    },
+    {
+      "id": "moving-on",
+      "title": "Moving on with life"
+    },
+    {
+      "id": "rebuilding-trust",
+      "title": "Rebuilding trust in systems and people"
+    },
+    {
+      "id": "mental-health-recovery",
+      "title": "Mental health recovery"
+    },
+    {
+      "id": "self-acceptance-love",
+      "title": "Self-acceptance and love"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "forget",
+      "title": "I want to forget",
+      "outcomes": [ "legal-conviction", "telling-friend-family" ]
+    },
+    {
+      "id": "feel-safe",
+      "title": "I want to feel safe",
+      "outcomes": [ "telling-friend-family", "telling-partner" ]
+    },
+    {
+      "id": "protect-myself",
+      "title": "I want to protect myself",
+      "outcomes": [ "telling-friend-family", "telling-partner" ]
+    }
+  ]
+}
