@@ -3,7 +3,12 @@
     <v-fade-transition hide-on-leave>
       <div v-if="!selectedOutcome">
         <div v-if="user" class="pb-2">
-          <v-card color="info lighten-2">
+          <div class="d-flex justify-center">
+            <v-btn color="primary" x-small @click="signOut">
+              Sign out
+            </v-btn>
+          </div>
+          <v-card color="info lighten-2 mt-4">
             <v-card-title class="title">Your progress</v-card-title>
             <v-card-text>
               <div v-if="isExistingUser">
@@ -15,7 +20,7 @@
                 ></path-item>
 
                 <h4 class="subtitle-2 mt-4 mb-2">
-                  Others
+                  Others in progress
                 </h4>
                 <div
                   v-for="p in existingUserProgressData.incomplete"
@@ -78,9 +83,9 @@
         <h1 class="headline mt-4 px-3">What does justice look like for you?</h1>
       </div>
       <div v-else>
-        <v-btn text @click="back">
+        <v-btn text @click="backToHome">
           <v-icon left>mdi-arrow-left</v-icon>
-          Back
+          backToHome
         </v-btn>
       </div>
     </v-fade-transition>
@@ -230,8 +235,15 @@ export default {
         favouriteOutcomes: existingUserProgressData.favouriteOutcomes
       }
     },
-    back() {
+    signOut() {
+      this.isExistingUser = false
+      this.user = null
+    },
+    backToHome() {
       this.selectedOutcome = null
+    },
+    backToOutcome() {
+      this.selectedPath = null
     },
     selectOutcome(o) {
       this.selectedOutcome = o
