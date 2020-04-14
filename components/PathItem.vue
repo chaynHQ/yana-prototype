@@ -1,5 +1,5 @@
 <template>
-  <v-btn outlined color="primary" block>{{ path.title }}</v-btn>
+  <v-btn outlined color="primary" block @click="select">{{ path.title }}</v-btn>
 </template>
 
 <script>
@@ -8,6 +8,11 @@ export default {
     path: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    select() {
+      this.$emit('select', this.path)
     }
   }
 }

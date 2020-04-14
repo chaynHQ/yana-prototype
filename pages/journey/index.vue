@@ -1,7 +1,7 @@
 <template>
   <section class="id">
     <v-fade-transition hide-on-leave>
-      <div v-if="!selectedOutcome">
+      <div v-if="!selectedOutcome && !selectedPath">
         <div v-if="user" class="pb-2">
           <div class="d-flex justify-center">
             <v-btn color="primary" x-small @click="signOut">
@@ -17,6 +17,7 @@
                 </h4>
                 <path-item
                   :path="getPath(existingUserProgressData.current.id)"
+                  @select="selectPath"
                 ></path-item>
 
                 <h4 class="subtitle-2 mt-4 mb-2">
@@ -27,7 +28,10 @@
                   :key="p.id"
                   class="mb-2"
                 >
-                  <path-item :path="getPath(p.id)"></path-item>
+                  <path-item
+                    :path="getPath(p.id)"
+                    @select="selectPath"
+                  ></path-item>
                 </div>
 
                 <v-expansion-panels class="mt-4">
@@ -41,7 +45,10 @@
                         :key="p.id"
                         class="mb-2"
                       >
-                        <path-item :path="getPath(p.id)"></path-item>
+                        <path-item
+                          :path="getPath(p.id)"
+                          @select="selectPath"
+                        ></path-item>
                       </div>
                     </v-expansion-panel-content>
                   </v-expansion-panel>
@@ -55,7 +62,10 @@
                       <h4 class="subtitle-2 mb-2">
                         Suggested path
                       </h4>
-                      <path-item :path="suggestedPath"></path-item>
+                      <path-item
+                        :path="suggestedPath"
+                        @select="selectPath"
+                      ></path-item>
                     </div>
                     <div v-else>
                       <p class="body-1">Hello! Thanks for signing in.</p>
@@ -82,17 +92,23 @@
 
         <h1 class="headline mt-4 px-3">What does justice look like for you?</h1>
       </div>
+      <div v-else-if="selectedPath && selectedOutcome">
+        <v-btn text @click="backToOutcome">
+          <v-icon left>mdi-arrow-left</v-icon>
+          Back
+        </v-btn>
+      </div>
       <div v-else>
         <v-btn text @click="backToHome">
           <v-icon left>mdi-arrow-left</v-icon>
-          backToHome
+          Back
         </v-btn>
       </div>
     </v-fade-transition>
 
     <div class="mt-4">
       <v-fade-transition hide-on-leave>
-        <div v-if="!selectedOutcome">
+        <div v-if="!selectedOutcome && !selectedPath">
           <v-card class="mt-3">
             <v-list class="pa-0">
               <template v-for="(o, index) in db.outcomes">
@@ -157,6 +173,11 @@
             </v-list>
           </v-card>
         </div>
+        <div v-else-if="selectedPath">
+          <h1 class="headline">
+            {{ selectedPath.title }}
+          </h1>
+        </div>
         <div v-else>
           <h4 class="subtitle-2 mb-2">
             Available paths
@@ -166,7 +187,7 @@
             :key="p.id"
             class="mb-2"
           >
-            <path-item :path="p"></path-item>
+            <path-item :path="p" @select="selectPath"></path-item>
           </div>
         </div>
       </v-fade-transition>
@@ -241,12 +262,16 @@ export default {
     },
     backToHome() {
       this.selectedOutcome = null
+      this.selectedPath = null
     },
     backToOutcome() {
       this.selectedPath = null
     },
     selectOutcome(o) {
       this.selectedOutcome = o
+    },
+    selectPath(p) {
+      this.selectedPath = p
     },
     favourite(o) {
       this.$set(this.user.favouriteOutcomes, o.id, true)
