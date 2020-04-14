@@ -34,7 +34,7 @@
                   ></path-item>
                 </div>
 
-                <v-expansion-panels class="mt-4">
+                <v-expansion-panels flat accordion class="mt-4">
                   <v-expansion-panel>
                     <v-expansion-panel-header>
                       Finished
@@ -173,12 +173,30 @@
             </v-list>
           </v-card>
         </div>
-        <div v-else-if="selectedPath">
+        <div v-else-if="selectedPath" class="px-3">
           <h1 class="headline">
             {{ selectedPath.title }}
           </h1>
+          <h2
+            v-if="selectedPath.subtitle"
+            class="subtitle-1 grey--text text--darken-1"
+          >
+            {{ selectedPath.subtitle }}
+          </h2>
+          <p v-if="selectedPath.description" class="body-2">
+            {{ selectedPath.description }}
+          </p>
+
+          <div v-if="user" class="d-flex justify-center">
+            <v-btn color="primary">
+              Start this path
+            </v-btn>
+          </div>
         </div>
         <div v-else>
+          <h1 class="headline mb-6">
+            {{ selectedOutcome.title }}
+          </h1>
           <h4 class="subtitle-2 mb-2">
             Available paths
           </h4>
