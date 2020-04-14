@@ -35,6 +35,12 @@
         Begin
       </v-btn>
     </div>
+
+    <div class="mt-10 d-flex justify-center">
+      <v-btn class="px-8" color="primary" large to="/journey" nuxt>
+        Journey
+      </v-btn>
+    </div>
   </section>
 </template>
 

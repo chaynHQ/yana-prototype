@@ -1,108 +1,202 @@
 <template>
   <section class="id">
-    <div v-if="!selected" class="px-3">
-      <h1 class="headline">What does justice look like for you?</h1>
-    </div>
-    <div v-else>
-      <v-btn text @click="back">
-        <v-icon left>mdi-arrow-left</v-icon>
-        Back
-      </v-btn>
-    </div>
-
-    <div class="mt-4">
-      <div v-if="!selected">
-        <div v-if="user">
-          <v-card outlined>
+    <v-fade-transition hide-on-leave>
+      <div v-if="!selectedOutcome">
+        <div v-if="user" class="pb-2">
+          <v-card color="info lighten-2">
+            <v-card-title class="title">Your progress</v-card-title>
             <v-card-text>
-              Hello!
+              <div v-if="isExistingUser">
+                <h4 class="subtitle-2 mb-2">
+                  Current
+                </h4>
+                <path-item
+                  :path="getPath(existingUserProgressData.current.id)"
+                ></path-item>
+
+                <h4 class="subtitle-2 mt-4 mb-2">
+                  Others
+                </h4>
+                <div
+                  v-for="p in existingUserProgressData.incomplete"
+                  :key="p.id"
+                  class="mb-2"
+                >
+                  <path-item :path="getPath(p.id)"></path-item>
+                </div>
+
+                <v-expansion-panels class="mt-4">
+                  <v-expansion-panel>
+                    <v-expansion-panel-header>
+                      Finished
+                    </v-expansion-panel-header>
+                    <v-expansion-panel-content>
+                      <div
+                        v-for="p in existingUserProgressData.finished"
+                        :key="p.id"
+                        class="mb-2"
+                      >
+                        <path-item :path="getPath(p.id)"></path-item>
+                      </div>
+                    </v-expansion-panel-content>
+                  </v-expansion-panel>
+                </v-expansion-panels>
+              </div>
+
+              <div v-else>
+                <v-expand-transition>
+                  <div>
+                    <div v-if="favouriteOutcomesList.length">
+                      <h4 class="subtitle-2 mb-2">
+                        Suggested path
+                      </h4>
+                      <path-item :path="suggestedPath"></path-item>
+                    </div>
+                    <div v-else>
+                      <p class="body-1">Hello! Thanks for signing in.</p>
+                      <p class="body-1 mb-0">
+                        Choose the outcomes you want to focus on by clicking on
+                        the heart(s) below and we'll suggest paths for you to
+                        follow.
+                      </p>
+                    </div>
+                  </div>
+                </v-expand-transition>
+              </div>
             </v-card-text>
           </v-card>
         </div>
         <div v-else class="d-flex justify-center">
-          <v-btn color="primary" @click="signIn">Sign in</v-btn>
+          <v-btn color="primary" x-small @click="signInNew">
+            Sign in new user
+          </v-btn>
+          <v-btn color="primary" x-small class="ml-2" @click="signInExisting">
+            Sign in existing user
+          </v-btn>
         </div>
 
-        <v-card class="mt-3">
-          <h2 v-if="user" class="subtitle-2 pa-3">
-            Choose the outcomes you want to focus on by clicking on the heart
-          </h2>
-
-          <v-divider v-if="user"></v-divider>
-
-          <v-list class="pa-0">
-            <template v-for="(o, index) in paths.outcomes">
-              <v-list-item :key="o.id" :ripple="false" @click="select(o)">
-                <v-list-item-icon class="mr-4">
-                  <v-btn
-                    fab
-                    dark
-                    small
-                    color="primary"
-                    elevation="0"
-                    style="flex: none"
-                  >
-                    <v-icon dark>mdi-{{ icons[o.id] || defaultIcon }}</v-icon>
-                  </v-btn>
-                </v-list-item-icon>
-
-                <v-list-item-content>
-                  <v-list-item-title
-                    class="font-weight-bold"
-                    v-text="o.title"
-                  ></v-list-item-title>
-                </v-list-item-content>
-
-                <v-list-item-action v-if="user">
-                  <v-btn
-                    v-if="user.favourites[o.id]"
-                    icon
-                    color="accent"
-                    :ripple="false"
-                    @click.stop="unfavourite(o)"
-                  >
-                    <v-icon>
-                      mdi-heart
-                    </v-icon>
-                  </v-btn>
-                  <v-btn
-                    v-else
-                    icon
-                    color="accent"
-                    :ripple="false"
-                    @click.stop="favourite(o)"
-                  >
-                    <v-icon>
-                      mdi-heart-outline
-                    </v-icon>
-                  </v-btn>
-                </v-list-item-action>
-              </v-list-item>
-
-              <v-divider
-                v-if="index + 1 < paths.outcomes.length"
-                :key="index"
-              ></v-divider>
-            </template>
-          </v-list>
-        </v-card>
+        <h1 class="headline mt-4 px-3">What does justice look like for you?</h1>
       </div>
-      <div v-else></div>
+      <div v-else>
+        <v-btn text @click="back">
+          <v-icon left>mdi-arrow-left</v-icon>
+          Back
+        </v-btn>
+      </div>
+    </v-fade-transition>
+
+    <div class="mt-4">
+      <v-fade-transition hide-on-leave>
+        <div v-if="!selectedOutcome">
+          <v-card class="mt-3">
+            <v-list class="pa-0">
+              <template v-for="(o, index) in db.outcomes">
+                <v-list-item
+                  :key="o.id"
+                  :ripple="false"
+                  @click="selectOutcome(o)"
+                >
+                  <v-list-item-icon class="mr-4">
+                    <v-btn
+                      fab
+                      dark
+                      small
+                      color="primary"
+                      elevation="0"
+                      style="flex: none"
+                    >
+                      <v-icon dark>mdi-{{ icons[o.id] || defaultIcon }}</v-icon>
+                    </v-btn>
+                  </v-list-item-icon>
+
+                  <v-list-item-content>
+                    <v-list-item-title
+                      class="font-weight-bold"
+                      v-text="o.title"
+                    ></v-list-item-title>
+                  </v-list-item-content>
+
+                  <v-list-item-action v-if="user">
+                    <v-fade-transition hide-on-leave>
+                      <v-btn
+                        v-if="user.favouriteOutcomes[o.id]"
+                        icon
+                        color="accent"
+                        :ripple="false"
+                        @click.stop="unfavourite(o)"
+                      >
+                        <v-icon>
+                          mdi-heart
+                        </v-icon>
+                      </v-btn>
+                      <v-btn
+                        v-else
+                        icon
+                        color="accent"
+                        :ripple="false"
+                        @click.stop="favourite(o)"
+                      >
+                        <v-icon>
+                          mdi-heart-outline
+                        </v-icon>
+                      </v-btn>
+                    </v-fade-transition>
+                  </v-list-item-action>
+                </v-list-item>
+
+                <v-divider
+                  v-if="index + 1 < db.outcomes.length"
+                  :key="index"
+                ></v-divider>
+              </template>
+            </v-list>
+          </v-card>
+        </div>
+        <div v-else>
+          <h4 class="subtitle-2 mb-2">
+            Available paths
+          </h4>
+          <div
+            v-for="p in pathsForOutcome(selectedOutcome)"
+            :key="p.id"
+            class="mb-2"
+          >
+            <path-item :path="p"></path-item>
+          </div>
+        </div>
+      </v-fade-transition>
     </div>
   </section>
 </template>
 
 <script>
-import paths from '@/data/paths.json'
+import lodash from 'lodash'
+import db from '@/data/paths.json'
+
+import PathItem from '@/components/PathItem'
+
+const existingUserProgressData = {
+  favouriteOutcomes: { 'reclaim-myself': true, 'telling-partner': true },
+  current: {
+    id: 'trauma-resilience'
+  },
+  incomplete: [{ id: 'exercises-ground-you' }],
+  finished: [{ id: 'forget' }, { id: 'feel-safe' }]
+}
 
 export default {
+  components: { PathItem },
   data() {
     return {
-      selected: null,
+      db,
       user: null,
-      paths,
+      isExistingUser: false,
+      existingUserProgressData,
+      selectedOutcome: null,
+      selectedPath: null,
       defaultIcon: 'ballot',
       icons: {
+        'reclaim-myself': 'bottle-tonic-plus',
         'legal-conviction': 'gavel',
         'telling-friend-family': 'account-multiple',
         'telling-partner': 'account-heart',
@@ -113,23 +207,46 @@ export default {
       }
     }
   },
+  computed: {
+    favouriteOutcomesList() {
+      if (!this.user) return null
+
+      return lodash.filter(this.user.favouriteOutcomes, (v, k) => v)
+    },
+    suggestedPath() {
+      return db.paths[0]
+    }
+  },
   methods: {
-    signIn() {
+    signInNew() {
+      this.isExistingUser = false
       this.user = {
-        favourites: {}
+        favouriteOutcomes: {}
+      }
+    },
+    signInExisting() {
+      this.isExistingUser = true
+      this.user = {
+        favouriteOutcomes: existingUserProgressData.favouriteOutcomes
       }
     },
     back() {
-      this.selected = null
+      this.selectedOutcome = null
     },
-    select(o) {
-      this.selected = o
+    selectOutcome(o) {
+      this.selectedOutcome = o
     },
     favourite(o) {
-      this.$set(this.user.favourites, o.id, true)
+      this.$set(this.user.favouriteOutcomes, o.id, true)
     },
     unfavourite(o) {
-      this.$set(this.user.favourites, o.id, false)
+      this.$set(this.user.favouriteOutcomes, o.id, false)
+    },
+    getPath(id) {
+      return lodash.find(db.paths, ['id', id])
+    },
+    pathsForOutcome(o) {
+      return lodash.filter(db.paths, (p) => lodash.includes(p.outcomes, o.id))
     }
   }
 }

@@ -1,6 +1,10 @@
 {
   "outcomes": [
     {
+      "id": "reclaim-myself",
+      "title": "I want to reclaim myself"
+    },
+    {
       "id": "legal-conviction",
       "title": "Legal conviction"
     },
@@ -29,7 +33,17 @@
       "title": "Self-acceptance and love"
     }
   ],
-  "tracks": [
+  "paths": [
+    {
+      "id": "trauma-resilience",
+      "title": "10 week Trauma Resilience course",
+      "outcomes": ["reclaim-myself"]
+    },
+    {
+      "id": "exercises-ground-you",
+      "title": "30 days of exercises to ground you",
+      "outcomes": ["reclaim-myself"]
+    },
     {
       "id": "forget",
       "title": "I want to forget",
