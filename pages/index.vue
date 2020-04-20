@@ -37,7 +37,7 @@
     </div>
 
     <div class="mt-10 d-flex justify-center">
-      <v-btn class="px-8" color="primary" large to="/journey" nuxt>
+      <v-btn class="px-8" color="primary" large to="/journey2" nuxt>
         Journey
       </v-btn>
     </div>

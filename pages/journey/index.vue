@@ -1,5 +1,5 @@
 <template>
-  <section class="id">
+  <section class="journey">
     <v-fade-transition hide-on-leave>
       <div v-if="!selectedOutcome && !selectedPath">
         <div v-if="user" class="pb-2">

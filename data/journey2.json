@@ -1,0 +1,76 @@
+{
+  "outcomes": [
+    {
+      "id": "telling-someone",
+      "title": "Telling someone"
+    },
+    {
+      "id": "reconnecting-moving-on",
+      "title": "Reconnecting with myself and moving ahead"
+    },
+    {
+      "id": "accountable",
+      "title": "Holding them accountable"
+    }
+  ],
+  "paths": [
+    {
+      "id": "resilience",
+      "title": "Developing resilience",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto molestias, doloremque nihil minus facere et.",
+      "outcomes": ["reconnecting-moving-on"]
+    },
+    {
+      "id": "trust",
+      "title": "Rebuilding trust in systems and people",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto molestias, doloremque nihil minus facere et.",
+      "outcomes": ["reconnecting-moving-on"]
+    },
+    {
+      "id": "self-care",
+      "title": "Self-acceptance and love",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto molestias, doloremque nihil minus facere et.",
+      "outcomes": ["reconnecting-moving-on"]
+    },
+    {
+      "id": "telling-friend-family",
+      "title": "Telling a friend or family",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto molestias, doloremque nihil minus facere et.",
+      "outcomes": ["telling-someone"]
+    },
+    {
+      "id": "telling-partner",
+      "title": "Telling a partner",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto molestias, doloremque nihil minus facere et.",
+      "outcomes": ["telling-someone"]
+    },
+    {
+      "id": "report",
+      "title": "Reporting the assault(s)",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto molestias, doloremque nihil minus facere et.",
+      "outcomes": ["accountable"]
+    },
+    {
+      "id": "alternatives-reporting",
+      "title": "Alternatives to reporting",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto molestias, doloremque nihil minus facere et.",
+      "outcomes": ["accountable"]
+    }
+  ],
+  "resources": [
+    {
+      "id": "trauma-resilience",
+      "type": "course",
+      "title": "10 week Trauma Resilience course",
+      "subtitle": "Learn coping skills to move past trauma",
+      "description": "Curated and run by Chayn, learn tools, tips, and tricks for coping with and moving on from trauma. A safe space for survivors to work towards recovery and to reclaim their own power.",
+      "paths": ["resilience"]
+    },
+    {
+      "id": "exercises-ground-you",
+      "type": "course",
+      "title": "30 days of exercises to ground you",
+      "paths": ["self-care"]
+    }
+  ]
+}
