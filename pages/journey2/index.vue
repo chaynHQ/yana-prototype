@@ -8,8 +8,8 @@
     </div>
 
     <div class="mt-4">
-      <v-card color="rgb(0, 0, 0, 0.01)">
-        <v-list class="pa-0" color="rgb(0, 0, 0, 0.02)">
+      <v-card outlined tile>
+        <v-list class="pa-0">
           <template v-for="(o, index) in outcomes">
             <v-list-item :key="o.id" link nuxt :to="`/journey2/${o.id}`">
               <v-list-item-icon class="mr-4">

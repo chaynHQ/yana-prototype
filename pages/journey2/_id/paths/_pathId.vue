@@ -13,7 +13,21 @@
       </h1>
     </div>
 
-    <div class="mt-4"></div>
+    <div class="mt-4 px-3">
+      <h2 class="title mt-2 primary--text text--lighten-3">Featured</h2>
+
+      <div v-for="r in featuredResources" :key="r.id" class="mt-3">
+        <ResourceCard :resource="r"></ResourceCard>
+      </div>
+    </div>
+
+    <div class="mt-4 px-3">
+      <h2 class="title mt-2 primary--text text--lighten-3">Other</h2>
+
+      <div v-for="r in otherResources" :key="r.id" class="mt-3">
+        <ResourceCard :resource="r"></ResourceCard>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -21,7 +35,10 @@
 import lodash from 'lodash'
 import db from '@/data/journey2.json'
 
+import ResourceCard from '@/components/ResourceCard'
+
 export default {
+  components: { ResourceCard },
   asyncData({ params, error }) {
     const outcomeId = params.id
     const id = params.pathId
@@ -41,7 +58,12 @@ export default {
       lodash.includes(r.paths, path.id)
     )
 
-    return { outcomeId, path, resources }
+    const [featuredResources, otherResources] = lodash.partition(
+      resources,
+      (r) => r.featured
+    )
+
+    return { outcomeId, path, featuredResources, otherResources }
   }
 }
 </script>

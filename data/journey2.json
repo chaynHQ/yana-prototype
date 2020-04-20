@@ -61,18 +61,75 @@
     {
       "id": "trauma-resilience",
       "type": "course",
+      "featured": true,
       "title": "10 week Trauma Resilience course",
       "subtitle": "Learn coping skills to move past trauma",
       "description": "Curated and run by Chayn, learn tools, tips, and tricks for coping with and moving on from trauma. A safe space for survivors to work towards recovery and to reclaim their own power.",
       "paths": ["resilience"],
-      "tags": ["featured"]
+      "tags": ["Mind", "Body"]
     },
     {
       "id": "exercises-ground-you",
       "type": "course",
+      "featured": true,
       "title": "30 days of exercises to ground you",
       "paths": ["self-care"],
-      "tags": ["featured"]
+      "tags": ["Body"]
+    },
+    {
+      "id": "manc-pankhurst-centre",
+      "type": "website",
+      "title": "Manchester Pankhurst Centre",
+      "description": "Learn about and access vital support services, including health and childcare, for women who have experienced sexual assault and live in Manchester, UK.",
+      "url": "https://www.pankhursttrust.org/contact-us",
+      "paths": ["resilience", "self-care", "report"],
+      "tags": ["Support services"]
+    },
+    {
+      "id": "spotify-relaxation-playlist",
+      "type": "audio",
+      "service": "Spotify",
+      "title": "Relaxation Playlist",
+      "description": "Learn to relax your body and mind with guided meditations.",
+      "url": "https://open.spotify.com/album/6K2dK17vFWVplmRVXbrnPn",
+      "paths": ["resilience", "self-care"],
+      "tags": ["Mind", "Relaxation"]
+    },
+    {
+      "id": "breathing-counter",
+      "type": "mini-app",
+      "title": "Breathing Counter",
+      "description": "Take a moment to breathe.",
+      "paths": ["self-care"],
+      "tags": ["Mind", "Body"]
+    },
+    {
+      "id": "youtube-yoga-anxiety",
+      "type": "video",
+      "service": "youtube",
+      "title": "Yoga for Anxiety",
+      "description": "Adrienne’s Yoga session will help you overcome Anxiety and Feel good within just 20 minutes!",
+      "url": "https://www.youtube.com/watch?v=bJJWArRfKa0",
+      "paths": ["resilience", "self-care"],
+      "tags": ["Mind", "Body"]
+    },
+    {
+      "id": "chayn-getting-better-moving-on",
+      "type": "online-book",
+      "title": "Chayn’s Getting Better and Moving On",
+      "description": "Learn how to identify why you feel the way you do after experiencing trauma and how to get better.",
+      "url": "http://gettingbetter.chayn.co",
+      "paths": ["resilience", "self-care"],
+      "tags": ["Mind", "Body"]
+    },
+    {
+      "id": "podcast-trauma-queen",
+      "type": "podcast",
+      "title": "Trauma Queen",
+      "description": "A podcast mini-series focused on normalizing the conversation around sexual assault and other traumas.",
+      "url": "https://player.fm/series/trauma-queen",
+      "paths": ["resilience", "trust", "self-care"],
+      "tags": ["Mind", "Telling your story"]
     }
   ]
 }

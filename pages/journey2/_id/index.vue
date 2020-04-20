@@ -17,8 +17,8 @@
     </div>
 
     <div class="mt-4">
-      <v-card color="rgb(0, 0, 0, 0.01)">
-        <v-list class="pa-0" color="rgb(0, 0, 0, 0.02)">
+      <v-card outlined tile>
+        <v-list class="pa-0">
           <template v-for="(p, index) in paths">
             <v-list-item
               :key="p.id"
