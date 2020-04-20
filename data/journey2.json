@@ -64,13 +64,15 @@
       "title": "10 week Trauma Resilience course",
       "subtitle": "Learn coping skills to move past trauma",
       "description": "Curated and run by Chayn, learn tools, tips, and tricks for coping with and moving on from trauma. A safe space for survivors to work towards recovery and to reclaim their own power.",
-      "paths": ["resilience"]
+      "paths": ["resilience"],
+      "tags": ["featured"]
     },
     {
       "id": "exercises-ground-you",
       "type": "course",
       "title": "30 days of exercises to ground you",
-      "paths": ["self-care"]
+      "paths": ["self-care"],
+      "tags": ["featured"]
     }
   ]
 }
