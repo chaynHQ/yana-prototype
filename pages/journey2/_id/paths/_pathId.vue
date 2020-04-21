@@ -24,7 +24,22 @@
     <div class="mt-4 px-3">
       <h2 class="title mt-2 primary--text text--lighten-3">Other</h2>
 
-      <div v-for="r in otherResources" :key="r.id" class="mt-3">
+      <div class="d-flex justify-start flex-wrap mt-2">
+        <v-chip
+          v-for="t in tags"
+          :key="t"
+          class="mr-2 mb-2"
+          filter
+          :close="t == selectedTag"
+          :input-value="t === selectedTag"
+          @click="selectedTag = t"
+          @click:close="selectedTag = null"
+        >
+          {{ t }}
+        </v-chip>
+      </div>
+
+      <div v-for="r in filteredOtherResources" :key="r.id" class="mt-3">
         <ResourceCard :resource="r"></ResourceCard>
       </div>
     </div>
@@ -63,7 +78,26 @@ export default {
       (r) => r.featured
     )
 
-    return { outcomeId, path, featuredResources, otherResources }
+    const tags = lodash
+      .uniq(lodash.flatten(lodash.map(otherResources, 'tags')))
+      .sort()
+
+    return { outcomeId, path, featuredResources, otherResources, tags }
+  },
+  data() {
+    return {
+      selectedTag: null
+    }
+  },
+  computed: {
+    filteredOtherResources() {
+      if (this.selectedTag) {
+        return lodash.filter(this.otherResources, (r) =>
+          lodash.includes(r.tags, this.selectedTag)
+        )
+      }
+      return this.otherResources
+    }
   }
 }
 </script>
