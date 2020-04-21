@@ -11,6 +11,10 @@
       <h1 class="headline">
         {{ path.title }}
       </h1>
+
+      <p class="body-1">
+        {{ path.description }}
+      </p>
     </div>
 
     <div class="mt-4 px-3">
