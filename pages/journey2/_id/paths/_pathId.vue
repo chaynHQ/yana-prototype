@@ -26,7 +26,7 @@
     </div>
 
     <div class="mt-4 px-3">
-      <h2 class="title mt-2 primary--text text--lighten-3">Other</h2>
+      <h2 class="title mt-2 primary--text text--lighten-3">More resources</h2>
 
       <div class="d-flex justify-start flex-wrap mt-2">
         <v-chip
