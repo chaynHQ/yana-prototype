@@ -4,6 +4,25 @@
       <v-list-item-content class="overline pa-0">
         {{ resource.tags.join(', ') }}
       </v-list-item-content>
+
+      <v-list-item-action>
+        <v-btn
+          icon
+          small
+          color="accent"
+          :ripple="false"
+          @click.stop="favourited = !favourited"
+        >
+          <v-fade-transition hide-on-leave>
+            <v-icon v-if="favourited">
+              mdi-heart
+            </v-icon>
+            <v-icon v-else>
+              mdi-heart-outline
+            </v-icon>
+          </v-fade-transition>
+        </v-btn>
+      </v-list-item-action>
     </v-list-item>
 
     <v-card-title class="title pt-0 d-flex flex-nowrap">
@@ -72,6 +91,7 @@ export default {
   },
   data() {
     return {
+      favourited: false,
       icons: {
         course: 'file-multiple',
         website: 'web',
