@@ -27,7 +27,7 @@
 
     <v-card-title class="title pt-0 d-flex flex-nowrap">
       <v-icon left>mdi-{{ icons[resource.type] }}</v-icon>
-      <span class="d-block tw-truncate">{{ resource.title }}</span>
+      <span class="d-block text-truncate">{{ resource.title }}</span>
     </v-card-title>
 
     <v-card-subtitle
@@ -56,7 +56,6 @@
           class="d-flex justify-center"
         >
           <iframe
-            class="tw-border"
             :src="resource.embedSrc"
             width="320"
             height="380"
