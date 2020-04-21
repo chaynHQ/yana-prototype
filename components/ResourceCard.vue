@@ -11,12 +11,56 @@
       <span class="d-block tw-truncate">{{ resource.title }}</span>
     </v-card-title>
 
-    <v-card-subtitle v-if="resource.subtitle" class="subtitle-2">
-      {{ resource.subtitle }}
+    <v-card-subtitle
+      v-if="resource.subtitle || resource.url"
+      class="subtitle-1 mt-0"
+    >
+      <div v-if="resource.subtitle">{{ resource.subtitle }}</div>
+
+      <div v-if="resource.url">
+        <a :href="resource.url" target="_blank" rel="noopener">
+          {{ resource.url }}
+          <v-icon x-small>mdi-open-in-new</v-icon>
+        </a>
+      </div>
     </v-card-subtitle>
 
     <v-card-text v-if="resource.description">
-      <div class="body-2">{{ resource.description }}</div>
+      <div class="body-1">{{ resource.description }}</div>
+
+      <div
+        v-if="resource.service === 'Spotify' || resource.service === 'YouTube'"
+        class="mt-4"
+      >
+        <div
+          v-if="resource.service === 'Spotify'"
+          class="d-flex justify-center"
+        >
+          <iframe
+            class="tw-border"
+            :src="resource.embedSrc"
+            width="320"
+            height="380"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+        </div>
+
+        <div
+          v-if="resource.service === 'YouTube'"
+          class="d-flex justify-center"
+        >
+          <iframe
+            width="320"
+            height="180"
+            :src="resource.embedSrc"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
     </v-card-text>
   </v-card>
 </template>

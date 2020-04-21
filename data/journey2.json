@@ -92,6 +92,7 @@
       "title": "Relaxation Playlist",
       "description": "Learn to relax your body and mind with guided meditations.",
       "url": "https://open.spotify.com/album/6K2dK17vFWVplmRVXbrnPn",
+      "embedSrc": "https://open.spotify.com/embed/album/6K2dK17vFWVplmRVXbrnPn",
       "paths": ["resilience", "self-care"],
       "tags": ["Mind", "Relaxation"]
     },
@@ -106,10 +107,11 @@
     {
       "id": "youtube-yoga-anxiety",
       "type": "video",
-      "service": "youtube",
+      "service": "YouTube",
       "title": "Yoga for Anxiety",
       "description": "Adrienne’s Yoga session will help you overcome Anxiety and Feel good within just 20 minutes!",
       "url": "https://www.youtube.com/watch?v=bJJWArRfKa0",
+      "embedSrc": "https://www.youtube-nocookie.com/embed/bJJWArRfKa0",
       "paths": ["resilience", "self-care"],
       "tags": ["Mind", "Body"]
     },
